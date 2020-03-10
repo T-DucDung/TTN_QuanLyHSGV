@@ -1,0 +1,98 @@
+create database TTN_QLHSGV
+go
+
+use TTN_QLHSGV
+go
+
+--học sinh
+--giao viên
+--lớp
+--giảng dạy
+--khoa
+--khóa học
+--môn học
+
+--dangnhap
+
+create table HOCSINH(
+	MaHS int identity not null primary key,
+	TenHS nvarchar(50) not null,
+	DiaChi nvarchar(100) ,
+	GioiTinh nvarchar(4) not null,
+	SDT varchar (11),
+	MaLop int not null
+)
+go
+
+create table GIAOVIEN(
+	MaGV int identity not null primary key,
+	TenGV nvarchar(50) not null,
+	DiaChi nvarchar(100) ,
+	GioiTinh nvarchar(4) not null,
+	SDT varchar (11),
+	ChucVu nvarchar(50) not null,
+	MaMon int not null
+)
+go
+
+create table LOP(
+	MaLop int identity not null primary key,
+	TenLop nvarchar(50) not null,
+	MaGVCN int references GIAOVIEN(MaGV),
+	MaKH int not null
+)
+go
+
+create table KHOA(
+	MaKhoa int identity not null primary key,
+	TenKhoa nvarchar(50) not null,
+	MaTruongKhoa int references GIAOVIEN(MaGV)
+)
+go
+
+create table MONHOC(
+	MaMon int identity not null primary key,
+	TenMon nvarchar(50) not null,
+	MaKhoa int not null
+)
+go
+
+create table KHOAHOC(
+	MaKH int identity not null primary key,
+	TenKH nvarchar(50) not null
+)
+go
+
+alter table HOCSINH
+add foreign key (MaLop) references LOP(MaLop)
+go
+
+alter table GIAOVIEN
+add foreign key (MaMon) references MONHOC(MaMon)
+go
+
+alter table MONHOC
+add foreign key (MaKhoa) references KHOA(MaKhoa)
+
+alter table LOP
+add foreign key (MaKH) references KHOAHOC(MaKH)
+go
+
+create table GIANGDAY(
+	MaGV int not null references GIAOVIEN(MaGV),
+	MaLop int not null references LOP(MaLop),
+	SoTiet int,
+	DiaDiem nvarchar(50),
+	Thu int,
+	Tiet varchar(5),
+	primary key (MaGV, Malop)
+)
+go
+
+create table DANGNHAP(
+	ID int identity not null primary key,
+	TK varchar(100) not null,
+	MK varchar(100) not null,
+)
+go
+
