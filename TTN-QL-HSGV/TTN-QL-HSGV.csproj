@@ -50,7 +50,6 @@
     <Compile Include="DTO\GiangDay.cs" />
     <Compile Include="DTO\GiaoVien.cs" />
     <Compile Include="DTO\HocSinh.cs" />
-    <Compile Include="DTO\Lop.cs" />
     <Compile Include="DTO\MonHoc.cs" />
     <Compile Include="GUI\FormChinh.cs">
       <SubType>Form</SubType>
@@ -76,11 +75,17 @@
     <Compile Include="GUI\GiangDay\ThemLich.Designer.cs">
       <DependentUpon>ThemLich.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GiaoVien\DanhSachGiaoVien.cs">
+    <Compile Include="GUI\GiangDay\ThongTinGiangDay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GiaoVien\DanhSachGiaoVien.Designer.cs">
-      <DependentUpon>DanhSachGiaoVien.cs</DependentUpon>
+    <Compile Include="GUI\GiangDay\ThongTinGiangDay.Designer.cs">
+      <DependentUpon>ThongTinGiangDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiaoVien\SuaGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiaoVien\SuaGiaoVien.Designer.cs">
+      <DependentUpon>SuaGiaoVien.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GiaoVien\ThemGiaoVien.cs">
       <SubType>Form</SubType>
@@ -94,11 +99,11 @@
     <Compile Include="GUI\GiaoVien\ThongTinGiaoVien.Designer.cs">
       <DependentUpon>ThongTinGiaoVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\HocSinh\DanhSachHocSinh.cs">
+    <Compile Include="GUI\HocSinh\SuaHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\HocSinh\DanhSachHocSinh.Designer.cs">
-      <DependentUpon>DanhSachHocSinh.cs</DependentUpon>
+    <Compile Include="GUI\HocSinh\SuaHocSinh.Designer.cs">
+      <DependentUpon>SuaHocSinh.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\HocSinh\ThemHocSinh.cs">
       <SubType>Form</SubType>
@@ -117,6 +122,7 @@
     <EmbeddedResource Include="GUI\FormChinh.resx">
       <DependentUpon>FormChinh.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="GUI\GiangDay\DanhSachGiangDay.resx">
       <DependentUpon>DanhSachGiangDay.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +150,8 @@
     <EmbeddedResource Include="GUI\HocSinh\ThongTinHocSinh.resx">
       <DependentUpon>ThongTinHocSinh.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> parent of 08f290b... thêm form
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -168,8 +176,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BUS\" />
-    <Folder Include="GUI\Lop\" />
-    <Folder Include="GUI\TimKiem\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

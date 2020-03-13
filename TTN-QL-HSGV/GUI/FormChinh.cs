@@ -7,9 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using TTN_QL_HSGV.GUI.GiaoVien;
 using TTN_QL_HSGV.GUI.HocSinh;
 using TTN_QL_HSGV.GUI.GiangDay;
+=======
+>>>>>>> parent of 08f290b... thêm form
 
 namespace TTN_QL_HSGV
 {
@@ -24,6 +27,7 @@ namespace TTN_QL_HSGV
         {
 
         }
+<<<<<<< HEAD
 
         private void buttonGiaoVien_Click(object sender, EventArgs e)
         {
@@ -73,5 +77,7 @@ namespace TTN_QL_HSGV
         {
 
         }
+=======
+>>>>>>> parent of 08f290b... thêm form
     }
 }

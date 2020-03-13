@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TTN_QL_HSGV.GUI.GiaoVien
 {
-    public partial class ThongTinGiaoVien : Form
+    public partial class SuaGiaoVien : Form
     {
-        public ThongTinGiaoVien()
+        public SuaGiaoVien()
         {
             InitializeComponent();
         }

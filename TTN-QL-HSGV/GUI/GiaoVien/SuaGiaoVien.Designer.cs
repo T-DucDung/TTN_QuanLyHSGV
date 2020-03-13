@@ -1,6 +1,6 @@
-﻿namespace TTN_QL_HSGV.GUI.GiangDay
+﻿namespace TTN_QL_HSGV.GUI.GiaoVien
 {
-    partial class ThemLich
+    partial class SuaGiaoVien
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "ThemLich";
+            this.Text = "SuaGiaoVien";
         }
 
         #endregion

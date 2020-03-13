@@ -28,23 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPageChinh = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonTimKiem = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonLich = new System.Windows.Forms.Button();
-            this.buttonHocSinh = new System.Windows.Forms.Button();
-            this.buttonLop = new System.Windows.Forms.Button();
-            this.buttonGiaoVien = new System.Windows.Forms.Button();
-            this.tabPageTroGiup = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
-            this.tabPageChinh.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
             // label1
             // 
             this.label1.AutoSize = true;
@@ -179,41 +165,30 @@
             this.tabPageTroGiup.Text = "Trợ Giúp";
             this.tabPageTroGiup.UseVisualStyleBackColor = true;
             // 
+=======
+>>>>>>> parent of 08f290b... thêm form
             // FormChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1040, 629);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
+=======
+            this.ClientSize = new System.Drawing.Size(800, 450);
+>>>>>>> parent of 08f290b... thêm form
             this.Name = "FormChinh";
             this.Text = "Trang chủ";
             this.Load += new System.EventHandler(this.FormChinh_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPageChinh.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPageChinh;
-        private System.Windows.Forms.TabPage tabPageTroGiup;
-        private System.Windows.Forms.Button buttonLop;
-        private System.Windows.Forms.Button buttonLich;
-        private System.Windows.Forms.Button buttonHocSinh;
-        private System.Windows.Forms.Button buttonGiaoVien;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button buttonTimKiem;
     }
 }
 

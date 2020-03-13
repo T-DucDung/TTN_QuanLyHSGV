@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TTN_QL_HSGV.GUI.GiaoVien
+namespace TTN_QL_HSGV.GUI.HocSinh
 {
-    public partial class ThongTinGiaoVien : Form
+    public partial class SuaHocSinh : Form
     {
-        public ThongTinGiaoVien()
+        public SuaHocSinh()
         {
             InitializeComponent();
         }

@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // SuaLich
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 503);
-            this.MaximizeBox = false;
-            this.Name = "SuaLich";
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Text = "SuaLich";
-            this.ResumeLayout(false);
-
         }
 
         #endregion
