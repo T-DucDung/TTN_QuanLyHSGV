@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TTN_QL_HSGV.GUI.GiaoVien;
+using TTN_QL_HSGV.GUI.HocSinh;
 
 namespace TTN_QL_HSGV
 {
@@ -18,6 +20,47 @@ namespace TTN_QL_HSGV
         }
 
         private void FormChinh_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonGiaoVien_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DanhSachGiaoVien formDSGV = new DanhSachGiaoVien();
+            formDSGV.FormClosed += FormDSGV_FormClosed;
+            formDSGV.Show();
+        }
+
+        private void FormDSGV_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
+
+        private void buttonHocSinh_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DanhSachHocSinh formDSHS = new DanhSachHocSinh();
+            formDSHS.FormClosed += FormDSHS_FormClosed;
+            formDSHS.Show();
+        }
+
+        private void FormDSHS_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
+
+        private void buttonLich_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonTimKiem_Click(object sender, EventArgs e)
         {
 
         }
