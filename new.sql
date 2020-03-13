@@ -20,6 +20,7 @@ create table HOCSINH(
 	DiaChi nvarchar(100) ,
 	GioiTinh nvarchar(4) not null,
 	SDT varchar (11),
+	AnhDaiDien VARBINARY(MAX),
 	MaLop int not null
 )
 go
@@ -31,6 +32,7 @@ create table GIAOVIEN(
 	GioiTinh nvarchar(4) not null,
 	SDT varchar (11),
 	ChucVu nvarchar(50) not null,
+	AnhDaiDien VARBINARY(MAX),
 	MaMon int not null
 )
 go
