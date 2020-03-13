@@ -12,8 +12,6 @@ go
 --khóa học
 --môn học
 
---dangnhap
-
 create table HOCSINH(
 	MaHS int identity not null primary key,
 	TenHS nvarchar(50) not null,
@@ -91,10 +89,4 @@ create table GIANGDAY(
 )
 go
 
-create table DANGNHAP(
-	ID int identity not null primary key,
-	TK varchar(100) not null,
-	MK varchar(100) not null,
-)
-go
 
