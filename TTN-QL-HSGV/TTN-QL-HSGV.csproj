@@ -58,6 +58,12 @@
     <Compile Include="GUI\FormChinh.Designer.cs">
       <DependentUpon>FormChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GiangDay\DanhSachGiangDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiangDay\DanhSachGiangDay.Designer.cs">
+      <DependentUpon>DanhSachGiangDay.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GiangDay\SuaLich.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\FormChinh.resx">
       <DependentUpon>FormChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiangDay\DanhSachGiangDay.resx">
+      <DependentUpon>DanhSachGiangDay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangDay\SuaLich.resx">
       <DependentUpon>SuaLich.cs</DependentUpon>

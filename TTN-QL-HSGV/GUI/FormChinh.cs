@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTN_QL_HSGV.GUI.GiaoVien;
 using TTN_QL_HSGV.GUI.HocSinh;
+using TTN_QL_HSGV.GUI.GiangDay;
 
 namespace TTN_QL_HSGV
 {
@@ -52,7 +53,15 @@ namespace TTN_QL_HSGV
 
         private void buttonLich_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            DanhSachGiangDay formDSGD = new DanhSachGiangDay();
+            formDSGD.FormClosed += FormDSGD_FormClosed;
+            formDSGD.Show();
+        }
 
+        private void FormDSGD_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
         }
 
         private void buttonLop_Click(object sender, EventArgs e)
