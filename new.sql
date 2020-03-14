@@ -83,7 +83,7 @@ create table GIANGDAY(
 	MaLop varchar(10) not null references LOP(MaLop),
 	SoTiet int,
 	DiaDiem nvarchar(50),
-	Thu int,
+	Thu varchar(10),
 	Tiet varchar(5),
 	primary key (MaGV, Malop)
 )
