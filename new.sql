@@ -19,7 +19,7 @@ create table HOCSINH(
 	GioiTinh nvarchar(4) not null,
 	SDT varchar (11),
 	AnhDaiDien VARBINARY(MAX),
-	MaLop int 
+	MaLop int not null
 )
 go
 
