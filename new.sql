@@ -38,7 +38,7 @@ go
 create table LOP(
 	MaLop varchar(10)  not null primary key,
 	TenLop nvarchar(50) not null,
-	MaGVCN int references GIAOVIEN(MaGV),
+	MaGVCN varchar(10) references GIAOVIEN(MaGV),
 	MaKH varchar(10) not null
 )
 go
