@@ -84,7 +84,7 @@ create table GIANGDAY(
 	SoTiet int,
 	DiaDiem nvarchar(50),
 	Thu varchar(20),
-	Tiet varchar(5),
+	Tiet varchar(20),
 	primary key (MaGV, Malop)
 )
 go
