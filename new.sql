@@ -13,7 +13,7 @@ go
 --môn học
 
 create table HOCSINH(
-	MaHS varchar(10) identity not null primary key,
+	MaHS varchar(10)  not null primary key,
 	TenHS nvarchar(50) not null,
 	DiaChi nvarchar(100) ,
 	GioiTinh nvarchar(4) not null,
@@ -24,7 +24,7 @@ create table HOCSINH(
 go
 
 create table GIAOVIEN(
-	MaGV varchar(10) identity not null primary key,
+	MaGV varchar(10)  not null primary key,
 	TenGV nvarchar(50) not null,
 	DiaChi nvarchar(100) ,
 	GioiTinh nvarchar(4) not null,
@@ -36,7 +36,7 @@ create table GIAOVIEN(
 go
 
 create table LOP(
-	MaLop varchar(10) identity not null primary key,
+	MaLop varchar(10)  not null primary key,
 	TenLop nvarchar(50) not null,
 	MaGVCN int references GIAOVIEN(MaGV),
 	MaKH varchar(10) not null
@@ -44,21 +44,21 @@ create table LOP(
 go
 
 create table KHOA(
-	MaKhoa varchar(10) identity not null primary key,
+	MaKhoa varchar(10)  not null primary key,
 	TenKhoa nvarchar(50) not null,
 	MaTruongKhoa varchar(10) references GIAOVIEN(MaGV)
 )
 go
 
 create table MONHOC(
-	MaMon varchar(10) identity not null primary key,
+	MaMon varchar(10)  not null primary key,
 	TenMon nvarchar(50) not null,
 	MaKhoa varchar(10) not null
 )
 go
 
 create table KHOAHOC(
-	MaKH varchar(10) identity not null primary key,
+	MaKH varchar(10)  not null primary key,
 	TenKH nvarchar(50) not null
 )
 go
