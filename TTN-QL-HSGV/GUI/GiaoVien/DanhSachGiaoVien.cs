@@ -30,7 +30,7 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
         {
             //lấy id bằng cách chọn 1 dòng trong datagrv xong truyền qua form bên kia
             //nút chi tiết cần chỉ bật khi đang chọn 1 dòng trong datagrv nếu không chọn dòng nào thì để tắt
-            ThongTinGiaoVien formTTGV = new ThongTinGiaoVien(1);
+            ThongTinGiaoVien formTTGV = new ThongTinGiaoVien("1");
             formTTGV.Show();
         }
 

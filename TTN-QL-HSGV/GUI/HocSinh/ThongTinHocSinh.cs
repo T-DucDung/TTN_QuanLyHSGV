@@ -13,8 +13,8 @@ namespace TTN_QL_HSGV.GUI.HocSinh
     public partial class ThongTinHocSinh : Form
     {
         //ID sử dụng truy xuất và sửa thông tin
-        private int ID;
-        public ThongTinHocSinh(int IDHocSinh)
+        private string ID;
+        public ThongTinHocSinh(string IDHocSinh)
         {
             ID = IDHocSinh;
 

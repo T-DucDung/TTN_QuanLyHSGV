@@ -50,7 +50,7 @@ namespace TTN_QL_HSGV.GUI.Lop
         {
             //Truyền mã hs qua đây để xem chi tiết 
             //yêu cầu nút chi tiết chỉ bật khi có 1 dòng được chọn trên datagrv
-            ThongTinHocSinh formTTHS = new ThongTinHocSinh(1);
+            ThongTinHocSinh formTTHS = new ThongTinHocSinh("1");
             formTTHS.Show();
         }
 

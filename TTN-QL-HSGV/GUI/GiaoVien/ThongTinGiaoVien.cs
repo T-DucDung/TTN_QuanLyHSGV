@@ -13,8 +13,8 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
     public partial class ThongTinGiaoVien : Form
     {
         //ID sử dụng truy xuất và sửa thông tin
-        private int ID;
-        public ThongTinGiaoVien(int IDGiaoVien)
+        private string ID;
+        public ThongTinGiaoVien(string IDGiaoVien)
         {
             ID = IDGiaoVien;
 
