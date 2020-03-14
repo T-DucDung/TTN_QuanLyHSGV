@@ -13,52 +13,52 @@ go
 --môn học
 
 create table HOCSINH(
-	MaHS int identity not null primary key,
+	MaHS varchar(10) identity not null primary key,
 	TenHS nvarchar(50) not null,
 	DiaChi nvarchar(100) ,
 	GioiTinh nvarchar(4) not null,
 	SDT varchar (11),
 	AnhDaiDien VARBINARY(MAX),
-	MaLop int not null
+	MaLop varchar(10) not null
 )
 go
 
 create table GIAOVIEN(
-	MaGV int identity not null primary key,
+	MaGV varchar(10) identity not null primary key,
 	TenGV nvarchar(50) not null,
 	DiaChi nvarchar(100) ,
 	GioiTinh nvarchar(4) not null,
 	SDT varchar (11),
 	ChucVu nvarchar(50) not null,
 	AnhDaiDien VARBINARY(MAX),
-	MaMon int not null
+	MaMon varchar(10) not null
 )
 go
 
 create table LOP(
-	MaLop int identity not null primary key,
+	MaLop varchar(10) identity not null primary key,
 	TenLop nvarchar(50) not null,
 	MaGVCN int references GIAOVIEN(MaGV),
-	MaKH int not null
+	MaKH varchar(10) not null
 )
 go
 
 create table KHOA(
-	MaKhoa int identity not null primary key,
+	MaKhoa varchar(10) identity not null primary key,
 	TenKhoa nvarchar(50) not null,
-	MaTruongKhoa int references GIAOVIEN(MaGV)
+	MaTruongKhoa varchar(10) references GIAOVIEN(MaGV)
 )
 go
 
 create table MONHOC(
-	MaMon int identity not null primary key,
+	MaMon varchar(10) identity not null primary key,
 	TenMon nvarchar(50) not null,
-	MaKhoa int not null
+	MaKhoa varchar(10) not null
 )
 go
 
 create table KHOAHOC(
-	MaKH int identity not null primary key,
+	MaKH varchar(10) identity not null primary key,
 	TenKH nvarchar(50) not null
 )
 go
@@ -79,8 +79,8 @@ add foreign key (MaKH) references KHOAHOC(MaKH)
 go
 
 create table GIANGDAY(
-	MaGV int not null references GIAOVIEN(MaGV),
-	MaLop int not null references LOP(MaLop),
+	MaGV varchar(10) not null references GIAOVIEN(MaGV),
+	MaLop varchar(10) not null references LOP(MaLop),
 	SoTiet int,
 	DiaDiem nvarchar(50),
 	Thu int,
