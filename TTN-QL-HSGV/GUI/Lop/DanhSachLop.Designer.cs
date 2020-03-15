@@ -31,7 +31,6 @@
             this.buttonLoc = new System.Windows.Forms.Button();
             this.comboBoxKhoaHoc = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBoxTen = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonQuayLai = new System.Windows.Forms.Button();
             this.buttonChiTiet = new System.Windows.Forms.Button();
@@ -40,6 +39,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewDS_Lop = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxtenGVCN = new System.Windows.Forms.TextBox();
+            this.textBoxTenLop = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_Lop)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +60,7 @@
             this.comboBoxKhoaHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxKhoaHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxKhoaHoc.FormattingEnabled = true;
-            this.comboBoxKhoaHoc.Location = new System.Drawing.Point(297, 73);
+            this.comboBoxKhoaHoc.Location = new System.Drawing.Point(619, 72);
             this.comboBoxKhoaHoc.Name = "comboBoxKhoaHoc";
             this.comboBoxKhoaHoc.Size = new System.Drawing.Size(138, 28);
             this.comboBoxKhoaHoc.TabIndex = 64;
@@ -67,25 +69,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(198, 77);
+            this.label6.Location = new System.Drawing.Point(520, 76);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 20);
             this.label6.TabIndex = 63;
             this.label6.Text = "Khóa Học :";
-            // 
-            // comboBoxTen
-            // 
-            this.comboBoxTen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxTen.FormattingEnabled = true;
-            this.comboBoxTen.Items.AddRange(new object[] {
-            "A->Z",
-            "Z->A",
-            "None"});
-            this.comboBoxTen.Location = new System.Drawing.Point(96, 73);
-            this.comboBoxTen.Name = "comboBoxTen";
-            this.comboBoxTen.Size = new System.Drawing.Size(96, 28);
-            this.comboBoxTen.TabIndex = 58;
             // 
             // label3
             // 
@@ -93,9 +81,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(10, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 20);
+            this.label3.Size = new System.Drawing.Size(100, 20);
             this.label3.TabIndex = 57;
-            this.label3.Text = "Tên Lớp :";
+            this.label3.Text = "Tên GVCN :";
             // 
             // buttonQuayLai
             // 
@@ -171,15 +159,43 @@
             this.label1.TabIndex = 50;
             this.label1.Text = "Danh Sách Lớp\r\n";
             // 
+            // textBoxtenGVCN
+            // 
+            this.textBoxtenGVCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxtenGVCN.Location = new System.Drawing.Point(116, 72);
+            this.textBoxtenGVCN.Name = "textBoxtenGVCN";
+            this.textBoxtenGVCN.Size = new System.Drawing.Size(181, 27);
+            this.textBoxtenGVCN.TabIndex = 66;
+            // 
+            // textBoxTenLop
+            // 
+            this.textBoxTenLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTenLop.Location = new System.Drawing.Point(389, 72);
+            this.textBoxTenLop.Name = "textBoxTenLop";
+            this.textBoxTenLop.Size = new System.Drawing.Size(125, 27);
+            this.textBoxTenLop.TabIndex = 68;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(303, 76);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 20);
+            this.label4.TabIndex = 67;
+            this.label4.Text = "Tên Lớp :";
+            // 
             // DanhSachLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 503);
+            this.Controls.Add(this.textBoxTenLop);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBoxtenGVCN);
             this.Controls.Add(this.buttonLoc);
             this.Controls.Add(this.comboBoxKhoaHoc);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBoxTen);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonQuayLai);
             this.Controls.Add(this.buttonChiTiet);
@@ -201,7 +217,6 @@
         private System.Windows.Forms.Button buttonLoc;
         private System.Windows.Forms.ComboBox comboBoxKhoaHoc;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBoxTen;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonQuayLai;
         private System.Windows.Forms.Button buttonChiTiet;
@@ -210,5 +225,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridViewDS_Lop;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxtenGVCN;
+        private System.Windows.Forms.TextBox textBoxTenLop;
+        private System.Windows.Forms.Label label4;
     }
 }

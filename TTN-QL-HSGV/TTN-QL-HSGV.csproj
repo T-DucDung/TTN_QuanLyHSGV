@@ -149,6 +149,12 @@
     <Compile Include="GUI\Lop\ThongTinLop.Designer.cs">
       <DependentUpon>ThongTinLop.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\TimKiem\TimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TimKiem\TimKiem.Designer.cs">
+      <DependentUpon>TimKiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\FormChinh.resx">
@@ -199,6 +205,9 @@
     <EmbeddedResource Include="GUI\Lop\ThongTinLop.resx">
       <DependentUpon>ThongTinLop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TimKiem\TimKiem.resx">
+      <DependentUpon>TimKiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -221,8 +230,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GUI\TimKiem\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

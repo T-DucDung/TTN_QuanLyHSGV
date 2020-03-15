@@ -35,8 +35,6 @@
             this.buttonThem = new System.Windows.Forms.Button();
             this.buttonChiTiet = new System.Windows.Forms.Button();
             this.buttonQuayLai = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBoxTen = new System.Windows.Forms.ComboBox();
             this.comboBoxGioiTinh = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -123,30 +121,6 @@
             this.buttonQuayLai.UseVisualStyleBackColor = true;
             this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 20);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Tên :";
-            // 
-            // comboBoxTen
-            // 
-            this.comboBoxTen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxTen.FormattingEnabled = true;
-            this.comboBoxTen.Items.AddRange(new object[] {
-            "A->Z",
-            "Z->A",
-            "None"});
-            this.comboBoxTen.Location = new System.Drawing.Point(61, 72);
-            this.comboBoxTen.Name = "comboBoxTen";
-            this.comboBoxTen.Size = new System.Drawing.Size(81, 28);
-            this.comboBoxTen.TabIndex = 33;
-            // 
             // comboBoxGioiTinh
             // 
             this.comboBoxGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -157,16 +131,16 @@
             "Nam",
             "Khác",
             "None"});
-            this.comboBoxGioiTinh.Location = new System.Drawing.Point(240, 72);
+            this.comboBoxGioiTinh.Location = new System.Drawing.Point(104, 73);
             this.comboBoxGioiTinh.Name = "comboBoxGioiTinh";
-            this.comboBoxGioiTinh.Size = new System.Drawing.Size(84, 28);
+            this.comboBoxGioiTinh.Size = new System.Drawing.Size(98, 28);
             this.comboBoxGioiTinh.TabIndex = 35;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(148, 75);
+            this.label4.Location = new System.Drawing.Point(12, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 20);
             this.label4.TabIndex = 34;
@@ -176,7 +150,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(330, 76);
+            this.label5.Location = new System.Drawing.Point(220, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 20);
             this.label5.TabIndex = 36;
@@ -187,9 +161,9 @@
             this.comboBoxChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxChucVu.FormattingEnabled = true;
-            this.comboBoxChucVu.Location = new System.Drawing.Point(419, 72);
+            this.comboBoxChucVu.Location = new System.Drawing.Point(309, 71);
             this.comboBoxChucVu.Name = "comboBoxChucVu";
-            this.comboBoxChucVu.Size = new System.Drawing.Size(119, 28);
+            this.comboBoxChucVu.Size = new System.Drawing.Size(143, 28);
             this.comboBoxChucVu.TabIndex = 37;
             // 
             // comboBoxMon
@@ -197,16 +171,16 @@
             this.comboBoxMon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMon.FormattingEnabled = true;
-            this.comboBoxMon.Location = new System.Drawing.Point(636, 72);
+            this.comboBoxMon.Location = new System.Drawing.Point(573, 72);
             this.comboBoxMon.Name = "comboBoxMon";
-            this.comboBoxMon.Size = new System.Drawing.Size(119, 28);
+            this.comboBoxMon.Size = new System.Drawing.Size(147, 28);
             this.comboBoxMon.TabIndex = 39;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(544, 76);
+            this.label6.Location = new System.Drawing.Point(481, 76);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 20);
             this.label6.TabIndex = 38;
@@ -234,8 +208,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBoxGioiTinh);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBoxTen);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonQuayLai);
             this.Controls.Add(this.buttonChiTiet);
             this.Controls.Add(this.buttonThem);
@@ -261,8 +233,6 @@
         private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.Button buttonChiTiet;
         private System.Windows.Forms.Button buttonQuayLai;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBoxTen;
         private System.Windows.Forms.ComboBox comboBoxGioiTinh;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

@@ -33,7 +33,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxLop = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxTiet = new System.Windows.Forms.ComboBox();
+            this.comboBoxBuoi = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxThu = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -97,19 +97,19 @@
             this.label5.TabIndex = 61;
             this.label5.Text = "Lớp :";
             // 
-            // comboBoxTiet
+            // comboBoxBuoi
             // 
-            this.comboBoxTiet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxTiet.FormattingEnabled = true;
-            this.comboBoxTiet.Items.AddRange(new object[] {
-            "A->Z",
-            "Z->A",
+            this.comboBoxBuoi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBuoi.FormattingEnabled = true;
+            this.comboBoxBuoi.Items.AddRange(new object[] {
+            "Sáng",
+            "Chiều",
             "None"});
-            this.comboBoxTiet.Location = new System.Drawing.Point(222, 73);
-            this.comboBoxTiet.Name = "comboBoxTiet";
-            this.comboBoxTiet.Size = new System.Drawing.Size(84, 28);
-            this.comboBoxTiet.TabIndex = 60;
+            this.comboBoxBuoi.Location = new System.Drawing.Point(222, 73);
+            this.comboBoxBuoi.Name = "comboBoxBuoi";
+            this.comboBoxBuoi.Size = new System.Drawing.Size(84, 28);
+            this.comboBoxBuoi.TabIndex = 60;
             // 
             // label4
             // 
@@ -117,9 +117,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(169, 77);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 20);
+            this.label4.Size = new System.Drawing.Size(53, 20);
             this.label4.TabIndex = 59;
-            this.label4.Text = "Tiết :";
+            this.label4.Text = "Buổi :";
             // 
             // comboBoxThu
             // 
@@ -127,8 +127,6 @@
             this.comboBoxThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxThu.FormattingEnabled = true;
             this.comboBoxThu.Items.AddRange(new object[] {
-            "A->Z",
-            "Z->A",
             "Thứ 2",
             "Thứ 3",
             "Thứ 4",
@@ -238,7 +236,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxLop);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBoxTiet);
+            this.Controls.Add(this.comboBoxBuoi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBoxThu);
             this.Controls.Add(this.label3);
@@ -265,7 +263,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxLop;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBoxTiet;
+        private System.Windows.Forms.ComboBox comboBoxBuoi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxThu;
         private System.Windows.Forms.Label label3;
