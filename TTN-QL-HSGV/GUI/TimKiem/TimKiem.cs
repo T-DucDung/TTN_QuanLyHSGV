@@ -16,5 +16,13 @@ namespace TTN_QL_HSGV.GUI.TimKiem
         {
             InitializeComponent();
         }
+        //ghi thông tin vào 1 ô bên trên các ô còn lại có thể có hoặc không
+        //nút chi tiết chỉ mở khi có 1 dòng đc chọn trong datagrv
+        //set mặc định lúc mở của cái giới tính là None nhá
+
+        private void buttonQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

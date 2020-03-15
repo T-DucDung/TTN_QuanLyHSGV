@@ -8,28 +8,28 @@ namespace TTN_QL_HSGV.DTO
 {
     class HocSinh
     {
-        private int MaHS;
-        private string TenHS;
-        private string DiaChi;
-        private string GioiTinh;
-        private string SDT;
-        private int MaLop;
+        private int maHS;
+        private string tenHS;
+        private string diaChi;
+        private string gioiTinh;
+        private string sdt;
+        private int maLop;
 
-        public HocSinh(int maHS, string tenHS, string diaChi, string gioiTinh, string sDT, int maLop)
+        public HocSinh(int maHS, string tenHS, string diaChi, string gioiTinh, string sdt, int maLop)
         {
-            MaHS = maHS;
-            TenHS = tenHS;
-            DiaChi = diaChi;
-            GioiTinh = gioiTinh;
-            SDT = sDT;
-            MaLop = maLop;
+            this.maHS = maHS;
+            this.tenHS = tenHS;
+            this.diaChi = diaChi;
+            this.gioiTinh = gioiTinh;
+            this.sdt = sdt;
+            this.maLop = maLop;
         }
 
-        public int MaHS1 { get => MaHS; set => MaHS = value; }
-        public string TenHS1 { get => TenHS; set => TenHS = value; }
-        public string DiaChi1 { get => DiaChi; set => DiaChi = value; }
-        public string GioiTinh1 { get => GioiTinh; set => GioiTinh = value; }
-        public string SDT1 { get => SDT; set => SDT = value; }
-        public int MaLop1 { get => MaLop; set => MaLop = value; }
+        public int MaHS { get => maHS; set => maHS = value; }
+        public string TenHS { get => tenHS; set => tenHS = value; }
+        public string DiaChi { get => diaChi; set => diaChi = value; }
+        public string GioiTinh { get => gioiTinh; set => gioiTinh = value; }
+        public string Sdt { get => sdt; set => sdt = value; }
+        public int MaLop { get => maLop; set => maLop = value; }
     }
 }
