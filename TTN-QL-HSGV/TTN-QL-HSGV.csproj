@@ -50,8 +50,11 @@
     <Compile Include="DAL\DataProvider .cs" />
     <Compile Include="DTO\GiangDay.cs" />
     <Compile Include="DTO\GiaoVien.cs" />
+    <Compile Include="DTO\GiaoVienComparer.cs" />
     <Compile Include="DTO\HocSinh.cs" />
+    <Compile Include="DTO\HocSinhComparer.cs" />
     <Compile Include="DTO\Lop.cs" />
+    <Compile Include="DTO\LopComparer.cs" />
     <Compile Include="DTO\MonHoc.cs" />
     <Compile Include="GUI\FormChinh.cs">
       <SubType>Form</SubType>
