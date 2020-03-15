@@ -8,19 +8,19 @@ namespace TTN_QL_HSGV.DTO
 {
     class MonHoc
     {
-        private int MaMon;
-        private string TenMon;
-        private int MaKhoa;
+        private int maMon;
+        private string tenMon;
+        private int maKhoa;
 
         public MonHoc(int maMon, string tenMon, int maKhoa)
         {
-            MaMon = maMon;
-            TenMon = tenMon;
-            MaKhoa = maKhoa;
+            this.maMon = maMon;
+            this.tenMon = tenMon;
+            this.maKhoa = maKhoa;
         }
 
-        public int MaMon1 { get => MaMon; set => MaMon = value; }
-        public string TenMon1 { get => TenMon; set => TenMon = value; }
-        public int MaKhoa1 { get => MaKhoa; set => MaKhoa = value; }
+        public int MaMon { get => maMon; set => maMon = value; }
+        public string TenMon { get => tenMon; set => tenMon = value; }
+        public int MaKhoa { get => maKhoa; set => maKhoa = value; }
     }
 }

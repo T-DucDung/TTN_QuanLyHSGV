@@ -8,31 +8,31 @@ namespace TTN_QL_HSGV.DTO
 {
     class GiaoVien
     {
-        private int MaGV;
-        private string TenGV;
-        private string DiaChi;
-        private string GioiTinh;
-        private string SDT;
-        private string ChucVu;
-        private string MaMon;
+        private int maGV;
+        private string tenGV;
+        private string diaChi;
+        private string gioiTinh;
+        private string sdt;
+        private string chucVu;
+        private string maMon;
 
-        public GiaoVien(int maGV, string tenGV, string diaChi, string gioiTinh, string sDT, string chucVu, string maMon)
+        public GiaoVien(int maGV, string tenGV, string diaChi, string gioiTinh, string sdt, string chucVu, string maMon)
         {
-            MaGV = maGV;
-            TenGV = tenGV;
-            DiaChi = diaChi;
-            GioiTinh = gioiTinh;
-            SDT = sDT;
-            ChucVu = chucVu;
-            MaMon = maMon;
+            this.maGV = maGV;
+            this.tenGV = tenGV;
+            this.diaChi = diaChi;
+            this.gioiTinh = gioiTinh;
+            this.sdt = sdt;
+            this.chucVu = chucVu;
+            this.maMon = maMon;
         }
 
-        public int MaGV1 { get => MaGV; set => MaGV = value; }
-        public string TenGV1 { get => TenGV; set => TenGV = value; }
-        public string DiaChi1 { get => DiaChi; set => DiaChi = value; }
-        public string GioiTinh1 { get => GioiTinh; set => GioiTinh = value; }
-        public string SDT1 { get => SDT; set => SDT = value; }
-        public string ChucVu1 { get => ChucVu; set => ChucVu = value; }
-        public string MaMon1 { get => MaMon; set => MaMon = value; }
+        public int MaGV { get => maGV; set => maGV = value; }
+        public string TenGV { get => tenGV; set => tenGV = value; }
+        public string DiaChi { get => diaChi; set => diaChi = value; }
+        public string GioiTinh { get => gioiTinh; set => gioiTinh = value; }
+        public string Sdt { get => sdt; set => sdt = value; }
+        public string ChucVu { get => chucVu; set => chucVu = value; }
+        public string MaMon { get => maMon; set => maMon = value; }
     }
 }
