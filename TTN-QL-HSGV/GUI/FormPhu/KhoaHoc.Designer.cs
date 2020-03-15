@@ -33,14 +33,14 @@
             this.buttonQuayLai = new System.Windows.Forms.Button();
             this.textBoxTongSo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridViewDS_HS = new System.Windows.Forms.DataGridView();
+            this.dataGridViewDS_KH = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxMaKhoa = new System.Windows.Forms.TextBox();
             this.textBoxTenKH = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonXoa = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_HS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_KH)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLuu
@@ -96,14 +96,14 @@
             this.label2.TabIndex = 52;
             this.label2.Text = "Tổng Số  :";
             // 
-            // dataGridViewDS_HS
+            // dataGridViewDS_KH
             // 
-            this.dataGridViewDS_HS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDS_HS.Location = new System.Drawing.Point(14, 107);
-            this.dataGridViewDS_HS.Name = "dataGridViewDS_HS";
-            this.dataGridViewDS_HS.RowTemplate.Height = 24;
-            this.dataGridViewDS_HS.Size = new System.Drawing.Size(808, 320);
-            this.dataGridViewDS_HS.TabIndex = 51;
+            this.dataGridViewDS_KH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDS_KH.Location = new System.Drawing.Point(14, 107);
+            this.dataGridViewDS_KH.Name = "dataGridViewDS_KH";
+            this.dataGridViewDS_KH.RowTemplate.Height = 24;
+            this.dataGridViewDS_KH.Size = new System.Drawing.Size(808, 320);
+            this.dataGridViewDS_KH.TabIndex = 51;
             // 
             // label1
             // 
@@ -177,12 +177,12 @@
             this.Controls.Add(this.buttonQuayLai);
             this.Controls.Add(this.textBoxTongSo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridViewDS_HS);
+            this.Controls.Add(this.dataGridViewDS_KH);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "KhoaHoc";
             this.Text = "KhoaHoc";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_HS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_KH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,7 +195,7 @@
         private System.Windows.Forms.Button buttonQuayLai;
         private System.Windows.Forms.TextBox textBoxTongSo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridViewDS_HS;
+        private System.Windows.Forms.DataGridView dataGridViewDS_KH;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxMaKhoa;
         private System.Windows.Forms.TextBox textBoxTenKH;

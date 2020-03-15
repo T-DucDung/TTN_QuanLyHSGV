@@ -36,8 +36,15 @@ namespace TTN_QL_HSGV.GUI.Lop
         {
             //lấy id bằng cách chọn 1 dòng trong datagrv xong truyền qua form bên kia
             //nút chi tiết cần chỉ bật khi đang chọn 1 dòng trong datagrv nếu không chọn dòng nào thì để tắt
+            this.Hide();
             ThongTinHocSinh formTTHS = new ThongTinHocSinh("1");
+            formTTHS.FormClosed += FormTTHS_FormClosed;
             formTTHS.Show();
+        }
+
+        private void FormTTHS_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
         }
 
         private void buttonThem_Click(object sender, EventArgs e)

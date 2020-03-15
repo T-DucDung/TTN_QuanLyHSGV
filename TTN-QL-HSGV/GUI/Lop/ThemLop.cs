@@ -22,6 +22,7 @@ namespace TTN_QL_HSGV.GUI.Lop
         // tên với giới tính vẫn là dạng lọc
         // list gv và khóa học cần thêm  "thêm mới"
         // khi click vào thêm mới thì ra 2 form thêm mưới gv và khóa học
+        // khóa học ở form phụ
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
@@ -41,8 +42,15 @@ namespace TTN_QL_HSGV.GUI.Lop
         {
             //Truyền mã hs qua đây để xem chi tiết 
             //yêu cầu nút chi tiết chỉ bật khi có 1 dòng được chọn trên datagrv
+            this.Hide();
             ThongTinHocSinh formTTHS = new ThongTinHocSinh("1");
+            formTTHS.FormClosed += FormTTHS_FormClosed;
             formTTHS.Show();
+        }
+
+        private void FormTTHS_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
         }
 
         private void buttonQuayLai_Click(object sender, EventArgs e)

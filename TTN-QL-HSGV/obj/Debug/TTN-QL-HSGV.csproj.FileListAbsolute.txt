@@ -12,9 +12,11 @@ C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HS
 C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiaoVien.ThongTinGiaoVien.resources
 C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.HocSinh.ThongTinHocSinh.resources
 C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.HocSinh.DanhSachHocSinh.resources
-C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiangDay.SuaLich.resources
-C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiangDay.ThemLich.resources
 C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiaoVien.ThemGiaoVien.resources
 C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.HocSinh.ThemHocSinh.resources
 C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.DanhSachLop.resources
 C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.ThongTinLop.resources
+C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiangDay.DanhSachGiangDay.resources
+C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.KhoaHoc.resources
+C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.ThemHocSinhVaoLop.resources
+C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.ThemLop.resources

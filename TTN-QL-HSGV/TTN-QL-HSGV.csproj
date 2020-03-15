@@ -59,6 +59,30 @@
     <Compile Include="GUI\FormChinh.Designer.cs">
       <DependentUpon>FormChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormPhu\MonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormPhu\MonHoc.Designer.cs">
+      <DependentUpon>MonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiangDay\DanhSachGiangDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiangDay\DanhSachGiangDay.Designer.cs">
+      <DependentUpon>DanhSachGiangDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiangDay\ThemGiangDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiangDay\ThemGiangDay.Designer.cs">
+      <DependentUpon>ThemGiangDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GiangDay\ThongTinGiangDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GiangDay\ThongTinGiangDay.Designer.cs">
+      <DependentUpon>ThongTinGiangDay.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GiaoVien\DanhSachGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,10 +125,10 @@
     <Compile Include="GUI\Lop\DanhSachLop.Designer.cs">
       <DependentUpon>DanhSachLop.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Lop\KhoaHoc.cs">
+    <Compile Include="GUI\FormPhu\KhoaHoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Lop\KhoaHoc.Designer.cs">
+    <Compile Include="GUI\FormPhu\KhoaHoc.Designer.cs">
       <DependentUpon>KhoaHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Lop\ThemHocSinhVaoLop.cs">
@@ -130,6 +154,18 @@
     <EmbeddedResource Include="GUI\FormChinh.resx">
       <DependentUpon>FormChinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormPhu\MonHoc.resx">
+      <DependentUpon>MonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiangDay\DanhSachGiangDay.resx">
+      <DependentUpon>DanhSachGiangDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiangDay\ThemGiangDay.resx">
+      <DependentUpon>ThemGiangDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GiangDay\ThongTinGiangDay.resx">
+      <DependentUpon>ThongTinGiangDay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiaoVien\DanhSachGiaoVien.resx">
       <DependentUpon>DanhSachGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,7 +187,7 @@
     <EmbeddedResource Include="GUI\Lop\DanhSachLop.resx">
       <DependentUpon>DanhSachLop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Lop\KhoaHoc.resx">
+    <EmbeddedResource Include="GUI\FormPhu\KhoaHoc.resx">
       <DependentUpon>KhoaHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Lop\ThemHocSinhVaoLop.resx">
@@ -186,7 +222,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GUI\GiangDay\" />
     <Folder Include="GUI\TimKiem\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

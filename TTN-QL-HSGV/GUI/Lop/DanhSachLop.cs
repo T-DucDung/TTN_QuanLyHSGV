@@ -30,13 +30,28 @@ namespace TTN_QL_HSGV.GUI.Lop
         {
             //lấy id bằng cách chọn 1 dòng trong datagrv xong truyền qua form bên kia
             //nút chi tiết cần chỉ bật khi đang chọn 1 dòng trong datagrv nếu không chọn dòng nào thì để tắt
+            this.Hide();
             ThongTinLop formTTL = new ThongTinLop("1");
+            formTTL.FormClosed += FormTTL_FormClosed;
             formTTL.Show();
+        }
+
+        private void FormTTL_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
         }
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            ThemLop formTL = new ThemLop();
+            formTL.FormClosed += FormTL_FormClosed;
+            formTL.Show();
+        }
 
+        private void FormTL_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
         }
     }
 }

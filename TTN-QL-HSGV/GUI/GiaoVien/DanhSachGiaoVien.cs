@@ -30,13 +30,20 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
         {
             //lấy id bằng cách chọn 1 dòng trong datagrv xong truyền qua form bên kia
             //nút chi tiết cần chỉ bật khi đang chọn 1 dòng trong datagrv nếu không chọn dòng nào thì để tắt
+            this.Hide();
             ThongTinGiaoVien formTTGV = new ThongTinGiaoVien("1");
+            formTTGV.FormClosed += FormTTGV_FormClosed;
             formTTGV.Show();
+        }
+
+        private void FormTTGV_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
         }
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
-            this.Enabled = false;
+            this.Hide();
             ThemGiaoVien formTMGV = new ThemGiaoVien();
             formTMGV.FormClosed += FormTMGV_FormClosed;
             formTMGV.Show();
@@ -44,7 +51,7 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
 
         private void FormTMGV_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Enabled = true;
+            this.Show();
         }
     }
 }
