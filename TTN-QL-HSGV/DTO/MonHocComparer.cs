@@ -7,64 +7,53 @@ using System.Windows.Forms;
 
 namespace TTN_QL_HSGV.DTO
 {
-    class LopComparer : IComparer<Lop>
+    class MonHocComparer : IComparer<MonHoc>
     {
 
         private string memberName = string.Empty;
         private SortOrder sortOrder = SortOrder.None;
 
-        public LopComparer(string memberName, SortOrder sortOrder)
+        public MonHocComparer(string memberName, SortOrder sortOrder)
         {
             this.memberName = memberName;
             this.sortOrder = sortOrder;
         }
 
-        public int Compare(Lop x, Lop y)
+        public int Compare(MonHoc x, MonHoc y)
         {
-            switch(memberName)
+            switch (memberName)
             {
-                case "TenLop":
+                case "TenMon":
                     {
                         if (sortOrder == SortOrder.Ascending)
                         {
-                            return x.TenLop.CompareTo(y.TenLop);
+                            return x.TenMon.CompareTo(y.TenMon);
                         }
                         else
                         {
-                            return y.TenLop.CompareTo(x.TenLop);
+                            return y.TenMon.CompareTo(x.TenMon);
                         }
                     }
-                case "MaGVCN":
+                case "MaKhoa":
                     {
                         if (sortOrder == SortOrder.Ascending)
                         {
-                            return x.MaGVCN.CompareTo(y.MaGVCN);
+                            return x.MaKhoa.CompareTo(y.MaKhoa);
                         }
                         else
                         {
-                            return y.MaGVCN.CompareTo(x.MaGVCN);
-                        }
-                    }
-                case "MaKhoaHoc":
-                    {
-                        if (sortOrder == SortOrder.Ascending)
-                        {
-                            return x.MaKhoaHoc.CompareTo(y.MaKhoaHoc);
-                        }
-                        else
-                        {
-                            return y.MaKhoaHoc.CompareTo(x.MaKhoaHoc);
+                            return y.MaKhoa.CompareTo(x.MaKhoa);
                         }
                     }
                 default:
                     {
                         if (sortOrder == SortOrder.Ascending)
                         {
-                            return x.MaLop.CompareTo(y.MaLop);
+                            return x.MaMon.CompareTo(y.MaMon);
                         }
                         else
                         {
-                            return y.MaLop.CompareTo(x.MaLop);
+                            return y.MaMon.CompareTo(x.MaMon);
                         }
                     }
             }

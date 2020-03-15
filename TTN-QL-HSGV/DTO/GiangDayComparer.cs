@@ -7,56 +7,21 @@ using System.Windows.Forms;
 
 namespace TTN_QL_HSGV.DTO
 {
-    class LopComparer : IComparer<Lop>
+    class GiangDayComparer : IComparer<GiangDay>
     {
-
         private string memberName = string.Empty;
         private SortOrder sortOrder = SortOrder.None;
 
-        public LopComparer(string memberName, SortOrder sortOrder)
+        public GiangDayComparer(string memberName, SortOrder sortOrder)
         {
             this.memberName = memberName;
             this.sortOrder = sortOrder;
         }
-
-        public int Compare(Lop x, Lop y)
+        public int Compare(GiangDay x, GiangDay y)
         {
-            switch(memberName)
+            switch (memberName)
             {
-                case "TenLop":
-                    {
-                        if (sortOrder == SortOrder.Ascending)
-                        {
-                            return x.TenLop.CompareTo(y.TenLop);
-                        }
-                        else
-                        {
-                            return y.TenLop.CompareTo(x.TenLop);
-                        }
-                    }
-                case "MaGVCN":
-                    {
-                        if (sortOrder == SortOrder.Ascending)
-                        {
-                            return x.MaGVCN.CompareTo(y.MaGVCN);
-                        }
-                        else
-                        {
-                            return y.MaGVCN.CompareTo(x.MaGVCN);
-                        }
-                    }
-                case "MaKhoaHoc":
-                    {
-                        if (sortOrder == SortOrder.Ascending)
-                        {
-                            return x.MaKhoaHoc.CompareTo(y.MaKhoaHoc);
-                        }
-                        else
-                        {
-                            return y.MaKhoaHoc.CompareTo(x.MaKhoaHoc);
-                        }
-                    }
-                default:
+                case "MaLop":
                     {
                         if (sortOrder == SortOrder.Ascending)
                         {
@@ -64,10 +29,31 @@ namespace TTN_QL_HSGV.DTO
                         }
                         else
                         {
-                            return y.MaLop.CompareTo(x.MaLop);
+                            return y.TenHS.CompareTo(x.MaLop);
+                        }
+                    }
+                case "SoTiet":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            return x.SoTiet.CompareTo(y.SoTiet);
+                        }
+                        else
+                        {
+                            return y.SoTiet.CompareTo(x.SoTiet);
+                        }
+                    }
+                default:
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            return x.MaGV.CompareTo(y.MaGV);
+                        }
+                        else
+                        {
+                            return y.MaGV.CompareTo(x.MaGV);
                         }
                     }
             }
-        }
     }
 }
