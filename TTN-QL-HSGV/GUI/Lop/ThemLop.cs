@@ -12,31 +12,16 @@ using TTN_QL_HSGV.GUI.GiaoVien;
 
 namespace TTN_QL_HSGV.GUI.Lop
 {
-    public partial class ThongTinLop : Form
+    public partial class ThemLop : Form
     {
-        private string ID;
-        public ThongTinLop(string IDLop)
+        public ThemLop()
         {
-            ID = IDLop;
-
             InitializeComponent();
         }
-        // Phần lọc 2 textbox đằng sau chỉ hiển thị tên lớp với khóa học 
-        // lấy danh sách từ database ra add dưới dạng list<A> thêm 'None' vào 
-        // để mặc định hiển thị 'None' khi chọn mục này thì bỏ qua đk lọc
-        // phần combobox giáo viên và khóa học thêm phần 'thêm mới'
-        // khi click vào đó thì ra form thêm mới gv và thêm mới khóa học 
 
-        // ấn chi tiết để xem giáo viên đang được chọn trong combobox
-        // giáo viên chủ nhiệm lớp sẽ được set mặc định hiển thị của combobox, môn học tự render khi chọn gv
-        // có thể chọn giáp viên khác làm gvcn tuong tự cho tên lớp với khóa học
-
-        // xử lý sự kiện đóng form kiểm tra giáo viên được chọn trong combobox là gvcn mới hay cũ 
-        // nếu là mới thì đưa ra dialog xác nhận thay đổi gvcn
-        // tương tự kiểm tra sự thay đổi của tên lớp và khóa học của lớp
-
-        // xử lý xóa lớp đưa toàn bộ học sinh trong danh sách về null ở trường malop
-
+        // tên với giới tính vẫn là dạng lọc
+        // list gv và khóa học cần thêm  "thêm mới"
+        // khi click vào thêm mới thì ra 2 form thêm mưới gv và khóa học
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
@@ -52,7 +37,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             this.Enabled = true;
         }
 
-        private void buttonChiTiet_Click(object sender, EventArgs e)
+        private void buttonChiTietHS_Click(object sender, EventArgs e)
         {
             //Truyền mã hs qua đây để xem chi tiết 
             //yêu cầu nút chi tiết chỉ bật khi có 1 dòng được chọn trên datagrv
