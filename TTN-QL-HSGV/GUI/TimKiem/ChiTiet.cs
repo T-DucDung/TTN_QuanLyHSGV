@@ -12,8 +12,11 @@ namespace TTN_QL_HSGV.GUI.TimKiem
 {
     public partial class ChiTiet : Form
     {
-        public ChiTiet()
+        private string ID;
+        public ChiTiet(string MaTimKiem)
         {
+            ID = MaTimKiem;
+
             InitializeComponent();
         }
     }

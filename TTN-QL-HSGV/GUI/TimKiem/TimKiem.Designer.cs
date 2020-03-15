@@ -92,6 +92,7 @@
             this.buttonChiTiet.TabIndex = 108;
             this.buttonChiTiet.Text = "Chi Tiết";
             this.buttonChiTiet.UseVisualStyleBackColor = true;
+            this.buttonChiTiet.Click += new System.EventHandler(this.buttonChiTiet_Click);
             // 
             // textBoxTongSo
             // 

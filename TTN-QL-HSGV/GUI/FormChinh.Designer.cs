@@ -95,7 +95,7 @@
             this.buttonTimKiem.Name = "buttonTimKiem";
             this.buttonTimKiem.Size = new System.Drawing.Size(776, 94);
             this.buttonTimKiem.TabIndex = 4;
-            this.buttonTimKiem.Text = "Finding nemo";
+            this.buttonTimKiem.Text = "Tìm Kiếm";
             this.buttonTimKiem.UseVisualStyleBackColor = true;
             this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 

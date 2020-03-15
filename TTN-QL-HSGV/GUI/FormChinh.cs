@@ -11,6 +11,7 @@ using TTN_QL_HSGV.GUI.GiaoVien;
 using TTN_QL_HSGV.GUI.HocSinh;
 using TTN_QL_HSGV.GUI.Lop;
 using TTN_QL_HSGV.GUI.GiangDay;
+using TTN_QL_HSGV.GUI.TimKiem;
 
 namespace TTN_QL_HSGV
 {
@@ -80,7 +81,15 @@ namespace TTN_QL_HSGV
 
         private void buttonTimKiem_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            TimKiem formTK = new TimKiem();
+            formTK.FormClosed += FormTK_FormClosed;
+            formTK.Show();
+        }
 
+        private void FormTK_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
         }
     }
 }

@@ -24,5 +24,19 @@ namespace TTN_QL_HSGV.GUI.TimKiem
         {
             this.Close();
         }
+
+        private void buttonChiTiet_Click(object sender, EventArgs e)
+        {
+            // truyền mã sang form bên kia
+            this.Hide();
+            ChiTiet formCT = new ChiTiet("");
+            formCT.FormClosed += FormCT_FormClosed;
+            formCT.Show();
+        }
+
+        private void FormCT_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
     }
 }
