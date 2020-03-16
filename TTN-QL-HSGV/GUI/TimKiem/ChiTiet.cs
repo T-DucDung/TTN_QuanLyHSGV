@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TTN_QL_HSGV.GUI.GiangDay;
 
 namespace TTN_QL_HSGV.GUI.TimKiem
 {
@@ -18,6 +19,24 @@ namespace TTN_QL_HSGV.GUI.TimKiem
             ID = MaTimKiem;
 
             InitializeComponent();
+        }
+
+        private void buttonQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonChiTiet_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ThongTinGiangDay formTTGD = new ThongTinGiangDay("","");
+            formTTGD.FormClosed += FormTTGD_FormClosed;
+            formTTGD.Show();
+        }
+
+        private void FormTTGD_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
         }
     }
 }

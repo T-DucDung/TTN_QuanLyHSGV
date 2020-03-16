@@ -29,7 +29,7 @@ namespace TTN_QL_HSGV.DTO
                         }
                         else
                         {
-                            return y.TenHS.CompareTo(x.MaLop);
+                            return y.MaLop.CompareTo(x.MaLop);
                         }
                     }
                 case "SoTiet":
@@ -55,5 +55,6 @@ namespace TTN_QL_HSGV.DTO
                         }
                     }
             }
+        }
     }
 }

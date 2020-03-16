@@ -20,3 +20,8 @@ C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HS
 C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.KhoaHoc.resources
 C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.ThemHocSinhVaoLop.resources
 C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.ThemLop.resources
+C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.FormPhu.MonHoc.resources
+C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiangDay.ThemGiangDay.resources
+C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiangDay.ThongTinGiangDay.resources
+C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.TimKiem.ChiTiet.resources
+C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.TimKiem.TimKiem.resources

@@ -86,11 +86,11 @@
             // 
             this.buttonChiTiet.AutoSize = true;
             this.buttonChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonChiTiet.Location = new System.Drawing.Point(281, 461);
+            this.buttonChiTiet.Location = new System.Drawing.Point(259, 461);
             this.buttonChiTiet.Name = "buttonChiTiet";
-            this.buttonChiTiet.Size = new System.Drawing.Size(119, 30);
+            this.buttonChiTiet.Size = new System.Drawing.Size(141, 30);
             this.buttonChiTiet.TabIndex = 108;
-            this.buttonChiTiet.Text = "Chi Tiết";
+            this.buttonChiTiet.Text = "Chi Tiết Lịch";
             this.buttonChiTiet.UseVisualStyleBackColor = true;
             this.buttonChiTiet.Click += new System.EventHandler(this.buttonChiTiet_Click);
             // 

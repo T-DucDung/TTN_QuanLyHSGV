@@ -59,11 +59,11 @@ namespace TTN_QL_HSGV.DTO
                     {
                         if (sortOrder == SortOrder.Ascending)
                         {
-                            return x.SDT.CompareTo(y.SDT);
+                            return x.Sdt.CompareTo(y.Sdt);
                         }
                         else
                         {
-                            return y.SDT.CompareTo(x.SDT);
+                            return y.Sdt.CompareTo(x.Sdt);
                         }
                     }
                 case "MaLop":

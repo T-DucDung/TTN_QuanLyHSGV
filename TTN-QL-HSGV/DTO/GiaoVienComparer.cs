@@ -21,7 +21,7 @@ namespace TTN_QL_HSGV.DTO
 
         public int Compare(GiaoVien x, GiaoVien y)
         {
-            switch(memberName)
+            switch (memberName)
             {
                 case "TenGV":
                     {
@@ -60,11 +60,11 @@ namespace TTN_QL_HSGV.DTO
                     {
                         if (sortOrder == SortOrder.Ascending)
                         {
-                            return x.SDT.CompareTo(y.SDT);
+                            return x.Sdt.CompareTo(y.Sdt);
                         }
                         else
                         {
-                            return y.SDT.CompareTo(x.SDT);
+                            return y.Sdt.CompareTo(x.Sdt);
                         }
                     }
                 case "ChucVu":
@@ -97,10 +97,11 @@ namespace TTN_QL_HSGV.DTO
                         }
                         else
                         {
-                            return y.MaMaGV.CompareTo(x.MaGV);
+                            return y.MaGV.CompareTo(x.MaGV);
                         }
                     }
+                }
             }
         }
     }
-}
+
