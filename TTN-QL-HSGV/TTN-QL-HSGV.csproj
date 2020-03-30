@@ -47,7 +47,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\Converter.cs" />
+    <Compile Include="BUS\GiaoVienBUS.cs" />
+    <Compile Include="BUS\HocSinhBUS.cs" />
+    <Compile Include="BUS\KhoaHocBUSHieu.cs" />
+    <Compile Include="BUS\LopHocBUSHieu.cs" />
+    <Compile Include="BUS\MonBUSHieu.cs" />
     <Compile Include="DAL\DataProvider .cs" />
+    <Compile Include="DAL\GiaoVienDAL.cs" />
+    <Compile Include="DAL\HocSinhDAL.cs" />
+    <Compile Include="DAL\KhoaHocDALHieu.cs" />
+    <Compile Include="DAL\LopHocDALHieu.cs" />
+    <Compile Include="DAL\MonDALHieu.cs" />
     <Compile Include="DTO\GiangDay.cs" />
     <Compile Include="DTO\GiaoVien.cs" />
     <Compile Include="DTO\HocSinh.cs" />

@@ -14,9 +14,15 @@ namespace TTN_QL_HSGV.DTO
         private string gioiTinh;
         private string sdt;
         private string chucVu;
-        private string maMon;
+        private int maMon;
+        //private byte[] anhDaiDien;
 
-        public GiaoVien(int maGV, string tenGV, string diaChi, string gioiTinh, string sdt, string chucVu, string maMon)
+        public GiaoVien()
+        {
+
+        }
+
+        public GiaoVien(int maGV, string tenGV, string diaChi, string gioiTinh, string sdt, string chucVu, int maMon)
         {
             this.maGV = maGV;
             this.tenGV = tenGV;
@@ -25,6 +31,7 @@ namespace TTN_QL_HSGV.DTO
             this.sdt = sdt;
             this.chucVu = chucVu;
             this.maMon = maMon;
+            //this.anhDaiDien = anhDaiDien;
         }
 
         public int MaGV { get => maGV; set => maGV = value; }
@@ -33,6 +40,7 @@ namespace TTN_QL_HSGV.DTO
         public string GioiTinh { get => gioiTinh; set => gioiTinh = value; }
         public string Sdt { get => sdt; set => sdt = value; }
         public string ChucVu { get => chucVu; set => chucVu = value; }
-        public string MaMon { get => maMon; set => maMon = value; }
+        public int MaMon { get => maMon; set => maMon = value; }
+        //public byte[] AnhDaiDien { get => anhDaiDien; set => anhDaiDien = value; }
     }
 }
