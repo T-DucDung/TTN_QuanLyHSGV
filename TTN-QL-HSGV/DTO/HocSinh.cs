@@ -15,11 +15,6 @@ namespace TTN_QL_HSGV.DTO
         private string sdt;
         private int maLop;
 
-        public HocSinh()
-        {
-
-        }
-
         public HocSinh(int maHS, string tenHS, string diaChi, string gioiTinh, string sdt, int maLop)
         {
             this.maHS = maHS;
