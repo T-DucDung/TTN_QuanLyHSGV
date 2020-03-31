@@ -91,6 +91,7 @@ go
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 GO
@@ -400,5 +401,7 @@ INSERT [dbo].[MONHOC] ([MaMon], [TenMon], [MaKhoa]) VALUES (N'THEDUC', N'THỂ D
 INSERT [dbo].[MONHOC] ([MaMon], [TenMon], [MaKhoa]) VALUES (N'TIN', N'TIN HỌC', N'TUNHIEN')
 INSERT [dbo].[MONHOC] ([MaMon], [TenMon], [MaKhoa]) VALUES (N'TOAN', N'TOÁN HỌC', N'TUNHIEN')
 INSERT [dbo].[MONHOC] ([MaMon], [TenMon], [MaKhoa]) VALUES (N'VAN', N'NGỮ VĂN', N'XAHOI')
+=======
+>>>>>>> parent of da026a5... Merge pull request #4 from vudeveloperr/master
 =======
 >>>>>>> parent of da026a5... Merge pull request #4 from vudeveloperr/master
