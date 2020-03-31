@@ -9,19 +9,19 @@ namespace TTN_QL_HSGV.DTO
 {
     class GiangDay
     {
-        private int maGV;
-        private int maLop;
+        private string maGV;
+        private string maLop;
         private int soTiet;
 
-        public GiangDay(int maGV, int maLop, int soTiet)
+        public GiangDay(string maGV, string maLop, int soTiet)
         {
             this.maGV = maGV;
             this.maLop = maLop;
             this.soTiet = soTiet;
         }
 
-        public int MaGV { get => maGV; set => maGV = value; }
-        public int MaLop { get => maLop; set => maLop = value; }
+        public string MaGV { get => maGV; set => maGV = value; }
+        public string MaLop { get => maLop; set => maLop = value; }
         public int SoTiet { get => soTiet; set => soTiet = value; }
     }
 }
