@@ -1,16 +1,9 @@
-CREATE database TTN_QLHSGV
+create database TTN_QLHSGV
 go
 
 use TTN_QLHSGV
 go
-/*
-ANH EM CHÚ Ý DO CÁI DATABASE NÀY HƠI LẰNG NHẰNG 1 TẸO THÔI AE SẼ PHẢI XEM CHỈ DẪN CHI TIẾT STEP BY STEP
 
-			NÀO CHÀO MỪNG CÁC BẠN ĐẾN VỚI BUỔI DATABASE QUICK TUTORIAL CỦA VŨ 
-			
-			ANH EM THẤY HAY THÌ LIKE KHÔNG HAY THÌ LIKE  !!!!
-
-*/
 --học sinh
 --giao viên
 --lớp
@@ -19,57 +12,53 @@ ANH EM CHÚ Ý DO CÁI DATABASE NÀY HƠI LẰNG NHẰNG 1 TẸO THÔI AE SẼ P
 --khóa học
 --môn học
 
-/* 
-ĐOẠN TẠO BẢNG VÀ THAO TÁC VỚI KHÓA HỌC CHẠY 1 MẠCH ĐƯỢC NHÉ !
-*/
-
 create table HOCSINH(
-	MaHS varchar(10) not null primary key,
+	MaHS varchar(10)  not null primary key,
 	TenHS nvarchar(50) not null,
 	DiaChi nvarchar(100) ,
 	GioiTinh nvarchar(4) not null,
 	SDT varchar (11),
 	AnhDaiDien VARBINARY(MAX),
-	MaLop varchar(10) 
+	MaLop varchar(10) not null
 )
 go
 
 create table GIAOVIEN(
-	MaGV varchar(10) not null primary key,
+	MaGV varchar(10)  not null primary key,
 	TenGV nvarchar(50) not null,
 	DiaChi nvarchar(100) ,
 	GioiTinh nvarchar(4) not null,
 	SDT varchar (11),
 	ChucVu nvarchar(50) not null,
 	AnhDaiDien VARBINARY(MAX),
-	MaMon varchar(10)
+	MaMon varchar(10) not null
 )
 go
 
 create table LOP(
-	MaLop varchar(10) not null primary key,
+	MaLop varchar(10)  not null primary key,
 	TenLop nvarchar(50) not null,
-	MaGVCN VARCHAR(10) references GIAOVIEN(MaGV),
-	MaKH varchar(10) 
-	)
+	MaGVCN varchar(10) references GIAOVIEN(MaGV),
+	MaKH varchar(10) not null
+)
 go
 
 create table KHOA(
-	MaKhoa varchar(10) not null primary key,
+	MaKhoa varchar(10)  not null primary key,
 	TenKhoa nvarchar(50) not null,
 	MaTruongKhoa varchar(10) references GIAOVIEN(MaGV)
 )
 go
 
 create table MONHOC(
-	MaMon varchar(10) not null primary key,
+	MaMon varchar(10)  not null primary key,
 	TenMon nvarchar(50) not null,
-	MaKhoa varchar(10)
+	MaKhoa varchar(10) not null
 )
 go
 
 create table KHOAHOC(
-	MaKH varchar(10) not null primary key,
+	MaKH varchar(10)  not null primary key,
 	TenKH nvarchar(50) not null
 )
 go
@@ -91,7 +80,7 @@ go
 
 create table GIANGDAY(
 	MaGV varchar(10) not null references GIAOVIEN(MaGV),
- 	MaLop varchar(10) not null references LOP(MaLop),
+	MaLop varchar(10) not null references LOP(MaLop),
 	SoTiet int,
 	DiaDiem nvarchar(50),
 	Thu varchar(20),
@@ -101,6 +90,7 @@ create table GIANGDAY(
 go
 
 
+<<<<<<< HEAD
 
 
 GO
@@ -410,3 +400,5 @@ INSERT [dbo].[MONHOC] ([MaMon], [TenMon], [MaKhoa]) VALUES (N'THEDUC', N'THỂ D
 INSERT [dbo].[MONHOC] ([MaMon], [TenMon], [MaKhoa]) VALUES (N'TIN', N'TIN HỌC', N'TUNHIEN')
 INSERT [dbo].[MONHOC] ([MaMon], [TenMon], [MaKhoa]) VALUES (N'TOAN', N'TOÁN HỌC', N'TUNHIEN')
 INSERT [dbo].[MONHOC] ([MaMon], [TenMon], [MaKhoa]) VALUES (N'VAN', N'NGỮ VĂN', N'XAHOI')
+=======
+>>>>>>> parent of da026a5... Merge pull request #4 from vudeveloperr/master
