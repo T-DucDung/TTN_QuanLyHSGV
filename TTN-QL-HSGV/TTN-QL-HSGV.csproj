@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\Converter.cs" />
+    <Compile Include="BUS\GiaoVienBUS.cs" />
     <Compile Include="DAL\DataProvider .cs" />
     <Compile Include="DTO\GiangDay.cs" />
     <Compile Include="DTO\GiangDayComparer.cs" />

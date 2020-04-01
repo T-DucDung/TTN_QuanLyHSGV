@@ -1,30 +1,32 @@
 --them
-CREATE PROC ThemGV ( @TenGV nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
-@SDT varchar(11), @ChucVu nvarchar(50), @AnhDaiDien varbinary(max),@MaMon int)
+create PROC ThemGV ( @TenGV nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
+@SDT varchar(11), @ChucVu nvarchar(50), @AnhDaiDien varbinary(max),@MaMon varchar(10) )
 As
 BEGIN
-	INSERT INTO GIAOVIEN(TenGV ,DiaChi, GioiTinh, SDT , ChucVu, AnhDaiDien, MaMon)
-	VALUES (@TenGV, @DiaChi, @GioiTinh, @SDT, @ChucVu, @AnhDaiDien, @MaMon)
+	declare @maGV varchar(10), @temp int, @i varchar(10)
+	if((select COUNT(MaGV) from GIAOVIEN) = 0)
+		set @temp=0
+	else 
+		set @temp=( select MAX(CAST(MaGV as int)) from GIAOVIEN )
+	set @temp=@temp+1
+	set @i=CAST(@temp as varchar(10))
+	INSERT INTO GIAOVIEN(MaGV, TenGV,DiaChi, GioiTinh, SDT , ChucVu, AnhDaiDien, MaMon)
+	VALUES (@i ,@TenGV, @DiaChi, @GioiTinh, @SDT, @ChucVu, @AnhDaiDien, @MaMon)
 END
 go
 
+
+exec ThemGV N'h', N'h',N'h', '2', N'h', 0, 'Toan'
+
+
 --Sua
-CREATE PROC SuaGV (@Ma int, @TenGV nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
-@SDT varchar(11), @ChucVu nvarchar(50), @AnhDaiDien varbinary(max),@MaMon int)
+CREATE PROC SuaGV (@Ma varchar(10), @TenGV nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
+@SDT varchar(11), @ChucVu nvarchar(50), @AnhDaiDien varbinary(max),@MaMon varchar(10))
 AS
 BEGIN
 	UPDATE GIAOVIEN
 	SET TenGV=@TenGV, DiaChi=@DiaChi, GioiTinh=@GioiTinh, SDT=@SDT, ChucVu=@ChucVu, AnhDaiDien=@AnhDaiDien, MaMon=@MaMon
 	where MaGV = @Ma
-END
-go
-
---Xoa
-CREATE PROC XoaGV(@Ma int)
-AS
-BEGIN
-	DELETE FROM GIAOVIEN
-	WHERE MaGV = @Ma
 END
 go
 
@@ -35,7 +37,7 @@ BEGIN
 END
 go
 -- xem 1 gv
-CREATE PROC XemChiTietGV(@Ma int) 
+alter PROC XemChiTietGV(@Ma varchar(10)) 
 AS
 BEGIN
 	SELECT * FROM GIAOVIEN
@@ -55,43 +57,54 @@ begin
 	group by ChucVu
 end
 
-create proc SearchGiaoVien (@GioiTinh nvarchar(4), @ChucVu nvarchar(50), @MaMon int)
+create proc SearchGiaoVien (@GioiTinh nvarchar(4), @ChucVu nvarchar(50), @MaMon varchar(10))
 as
 begin
-	if(@GioiTinh = 'none' and @ChucVu = 'none' and @MaMon = 0)
+	if(@GioiTinh = 'None' and @ChucVu = 'None' and @MaMon = 'None')
 		select * from GIAOVIEN
-	if(@GioiTinh != 'none' and @ChucVu = 'none' and @MaMon = 0)
+	if(@GioiTinh != 'None' and @ChucVu = 'None' and @MaMon = 'None')
 		select * from GIAOVIEN where GioiTinh = @GioiTinh
-	if(@GioiTinh = 'none' and @ChucVu != 'none' and @MaMon = 0)
+	if(@GioiTinh = 'None' and @ChucVu != 'None' and @MaMon = 'None')
 		select * from GIAOVIEN where ChucVu = @ChucVu
-	if(@GioiTinh = 'none' and @ChucVu = 'none' and @MaMon != 0)
+	if(@GioiTinh = 'None' and @ChucVu = 'None' and @MaMon != 'None')
 		select * from GIAOVIEN where MaMon = @MaMon
-	if(@GioiTinh != 'none' and @ChucVu != 'none' and @MaMon = 0)
+	if(@GioiTinh != 'None' and @ChucVu != 'None' and @MaMon = 'None')
 		select * from GIAOVIEN where GioiTinh = @GioiTinh and ChucVu = @ChucVu
-	if(@GioiTinh != 'none' and @ChucVu = 'none' and @MaMon != 0)
+	if(@GioiTinh != 'None' and @ChucVu = 'None' and @MaMon != 'None')
 		select * from GIAOVIEN where GioiTinh = @GioiTinh and MaMon = @MaMon
-	if(@GioiTinh = 'none' and @ChucVu != 'none' and @MaMon != 0)
+	if(@GioiTinh = 'None' and @ChucVu != 'None' and @MaMon != 'None')
 		select * from GIAOVIEN where MaMon = @MaMon and ChucVu = @ChucVu
-	if(@GioiTinh != 'none' and @ChucVu != 'none' and @MaMon != 0)
+	if(@GioiTinh != 'None' and @ChucVu != 'None' and @MaMon != 'None')
 		select * from GIAOVIEN where GioiTinh=@GioiTinh and ChucVu=@ChucVu and MaMon=@MaMon
 end
 
-exec SearchGiaoVien N'none', N'none', 0 
+exec SearchGiaoVien N'None', N'None', 'None' 
 
 -----------------------------------HS-----------------------------
 --them
-CREATE PROC ThemHS ( @TenHS nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
-@SDT varchar(11), @AnhDaiDien varbinary(max),@MaLop int)
+
+create PROC ThemHS ( @TenHS nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
+@SDT varchar(11), @AnhDaiDien varbinary(max),@MaLop varchar(10) )
 As
 BEGIN
-	INSERT INTO HOCSINH(TenHS ,DiaChi, GioiTinh, SDT, AnhDaiDien, MaLop)
-	VALUES (@TenHS, @DiaChi, @GioiTinh, @SDT, @AnhDaiDien, @MaLop)
+	declare @maHS varchar(10), @temp int, @i varchar(10)
+	select * from HOCSINH
+	if((select COUNT(MaHS) from HOCSINH) = 0)
+		set @temp=0
+	else 
+		set @temp=( select MAX(CAST(MaHS as int)) from HOCSINH )
+	set @temp=@temp+1
+	set @i=CAST(@temp as varchar(10))
+	INSERT INTO HOCSINH(MaHS,TenHS ,DiaChi, GioiTinh, SDT, AnhDaiDien, MaLop)
+	VALUES (@i ,@TenHS, @DiaChi, @GioiTinh, @SDT, @AnhDaiDien, @MaLop)
 END
+go
+exec ThemHS N'h', N'h',N'h', '2', 0, 'Lop6'
 go
 
 --Sua
-CREATE PROC SuaHS (@Ma int, @TenHS nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
-@SDT varchar(11), @AnhDaiDien varbinary(max), @MaLop int)
+CREATE PROC SuaHS (@Ma varchar(10), @TenHS nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
+@SDT varchar(11), @AnhDaiDien varbinary(max), @MaLop varchar(10))
 AS
 BEGIN
 	UPDATE HOCSINH
@@ -128,37 +141,37 @@ end
 
 go
 
-create proc SearchHocSinh (@GioiTinh nvarchar(4), @MaLop int, @MaKhoa int)
+create proc SearchHocSinh (@GioiTinh nvarchar(4), @MaLop varchar(10), @MaKhoa varchar(10))
 as
 begin
-	if(@GioiTinh = 'none' and @MaLop = 0 and @MaKhoa = 0)
+	if(@GioiTinh = 'None' and @MaLop = 'None' and @MaKhoa = 'None')
 		select HOCSINH.* 
 		from HOCSINH join LOP on HOCSINH.MaLop = LOP.MaLop inner join KHOAHOC on LOP.MaKH = KHOAHOC.MaKH
-	if(@GioiTinh != 'none' and @MaLop = 0 and @MaKhoa = 0)
+	if(@GioiTinh != 'None' and @MaLop = 'None' and @MaKhoa = 'None')
 		select HOCSINH.* 
 		from HOCSINH join LOP on HOCSINH.MaLop = LOP.MaLop inner join KHOAHOC on LOP.MaKH = KHOAHOC.MaKH
 		where GioiTinh = @GioiTinh
-	if(@GioiTinh = 'none' and @MaLop != 0 and @MaKhoa = 0)
+	if(@GioiTinh = 'None' and @MaLop != 'None' and @MaKhoa = 'None')
 		select HOCSINH.* 
 		from HOCSINH join LOP on HOCSINH.MaLop = LOP.MaLop inner join KHOAHOC on LOP.MaKH = KHOAHOC.MaKH
 		where Lop.MaLop = @MaLop
-	if(@GioiTinh = 'none' and @MaLop = 0 and @MaKhoa != 0)
+	if(@GioiTinh = 'None' and @MaLop = 'None' and @MaKhoa != 'None')
 		select HOCSINH.* 
 		from HOCSINH join LOP on HOCSINH.MaLop = LOP.MaLop inner join KHOAHOC on LOP.MaKH = KHOAHOC.MaKH
 		where KHOAHOC.MaKH = @MaKhoa
-	if(@GioiTinh != 'none' and @MaLop != 0 and @MaKhoa = 0)
+	if(@GioiTinh != 'None' and @MaLop != 'None' and @MaKhoa = 'None')
 		select HOCSINH.* 
 		from HOCSINH join LOP on HOCSINH.MaLop = LOP.MaLop inner join KHOAHOC on LOP.MaKH = KHOAHOC.MaKH
 		where GioiTinh = @GioiTinh and LOP.MaLop = @MaLop
-	if(@GioiTinh != 'none' and @MaLop = 0 and @MaKhoa != 0)
+	if(@GioiTinh != 'None' and @MaLop = 'None' and @MaKhoa != 'None')
 		select HOCSINH.* 
 		from HOCSINH join LOP on HOCSINH.MaLop = LOP.MaLop inner join KHOAHOC on LOP.MaKH = KHOAHOC.MaKH
 		where GioiTinh = @GioiTinh and KHOAHOC.MaKH = @MaKhoa
-	if(@GioiTinh = 'none' and @MaLop != 0 and @MaKhoa != 0)
+	if(@GioiTinh = 'None' and @MaLop != 'None' and @MaKhoa != 'None')
 		select HOCSINH.* 
 		from HOCSINH join LOP on HOCSINH.MaLop = LOP.MaLop inner join KHOAHOC on LOP.MaKH = KHOAHOC.MaKH
 		where LOP.MaLop = @MaLop and KHOAHOC.MaKH = @MaKhoa
-	if(@GioiTinh != 'none' and @MaLop != 0 and @MaKhoa != 0)
+	if(@GioiTinh != 'None' and @MaLop != 'None' and @MaKhoa != 'None')
 		select HOCSINH.* 
 		from HOCSINH join LOP on HOCSINH.MaLop = LOP.MaLop inner join KHOAHOC on LOP.MaKH = KHOAHOC.MaKH
 		where GioiTinh=@GioiTinh and LOP.MaLop = @MaLop and KHOAHOC.MaKH = @MaKhoa
