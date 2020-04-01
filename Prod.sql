@@ -57,28 +57,6 @@ begin
 	group by ChucVu
 end
 
-create proc SearchGiaoVien (@GioiTinh nvarchar(4), @ChucVu nvarchar(50), @MaMon varchar(10))
-as
-begin
-	if(@GioiTinh = 'None' and @ChucVu = 'None' and @MaMon = 'None')
-		select * from GIAOVIEN
-	if(@GioiTinh != 'None' and @ChucVu = 'None' and @MaMon = 'None')
-		select * from GIAOVIEN where GioiTinh = @GioiTinh
-	if(@GioiTinh = 'None' and @ChucVu != 'None' and @MaMon = 'None')
-		select * from GIAOVIEN where ChucVu = @ChucVu
-	if(@GioiTinh = 'None' and @ChucVu = 'None' and @MaMon != 'None')
-		select * from GIAOVIEN where MaMon = @MaMon
-	if(@GioiTinh != 'None' and @ChucVu != 'None' and @MaMon = 'None')
-		select * from GIAOVIEN where GioiTinh = @GioiTinh and ChucVu = @ChucVu
-	if(@GioiTinh != 'None' and @ChucVu = 'None' and @MaMon != 'None')
-		select * from GIAOVIEN where GioiTinh = @GioiTinh and MaMon = @MaMon
-	if(@GioiTinh = 'None' and @ChucVu != 'None' and @MaMon != 'None')
-		select * from GIAOVIEN where MaMon = @MaMon and ChucVu = @ChucVu
-	if(@GioiTinh != 'None' and @ChucVu != 'None' and @MaMon != 'None')
-		select * from GIAOVIEN where GioiTinh=@GioiTinh and ChucVu=@ChucVu and MaMon=@MaMon
-end
-
-exec SearchGiaoVien N'None', N'None', 'None' 
 
 -----------------------------------HS-----------------------------
 --them
@@ -117,7 +95,9 @@ go
 --XEM THONG TIN Gv
 create PROC XemTatCaHS AS
 BEGIN
-	SELECT * FROM HOCSINH
+	SELECT HOCSINH.*,  KHOAHOC.MaKH
+	FROM HOCSINH inner join LOP on HOCSINH.MaLop = LOP.MaLop
+	inner join KHOAHOC on LOP.MaKH = KHOAHOC.MaKH
 END
 go
 -- xem 1 gv

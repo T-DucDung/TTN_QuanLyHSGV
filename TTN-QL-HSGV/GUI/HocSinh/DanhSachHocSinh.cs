@@ -117,7 +117,22 @@ namespace TTN_QL_HSGV.GUI.HocSinh
             string lop = comboBoxLop.SelectedValue.ToString();
             string khoahoc = comboBoxKhoaHoc.SelectedValue.ToString();
 
-            dataGridViewDS_HS.DataSource = controllerHS.SearchHocSinh(gt, lop, khoahoc);
+            List<DTO.HocSinh> dsHocSinh = controllerHS.XemTatCaHS();
+            List<DTO.HocSinh> items = dsHocSinh;
+            if (gt != "None")
+            {
+                items = dsHocSinh.FindAll(item => item.GioiTinh == gt);
+            }
+            if (lop != "None")
+            {
+                items = items.FindAll(item => item.MaLop == lop);
+            }
+            //if (khoahoc != "None")
+            //{
+            //    items = items.FindAll(item => item.khoa == khoahoc);
+            //}
+            
+            dataGridViewDS_HS.DataSource = items;
             dataGridViewDS_HS.Refresh();
         }
     }

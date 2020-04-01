@@ -31,7 +31,7 @@ namespace TTN_QL_HSGV.BUS
             string query = string.Format("exec XemTatCaHS ");
 
             return DataProvider.Instance.ExecuteQuery(query).AsEnumerable().Select(m =>
-           new HocSinh(m.Field<string>("MaHS"), m.Field<string>("TenHS"), m.Field<string>("DiaChi"), m.Field<string>("GioiTinh"), m.Field<string>("SDT"), m.Field<string>("MaLop"))).ToList();
+           new HocSinh(m.Field<string>("MaHS"), m.Field<string>("TenHS"), m.Field<string>("DiaChi"), m.Field<string>("GioiTinh"), m.Field<string>("SDT"), m.Field<string>("MaLop")  )).ToList();
         }
 
         public HocSinh XemChiTietHS(string maHS)
@@ -50,34 +50,6 @@ namespace TTN_QL_HSGV.BUS
             hs.Sdt = dt.Rows[0]["SDT"].ToString();
             hs.MaLop = dt.Rows[0]["MaLop"].ToString();
 
-            return hs;
-        }
-
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-HKOJN4O;Initial Catalog=TTN_QLHSGV;Integrated Security=True");
-
-        public List<HocSinh> SearchHocSinh(string gioitinh, string malop, string makhoa)
-        {
-            List<HocSinh> hs = new List<HocSinh>();
-            string query;
-            sqlConnection.Open();
-
-            query = "exec SearchHocSinh N'" + gioitinh + "', N'" + malop + "', '" + makhoa + "' ";
-
-            try
-            {
-                SqlCommand command = new SqlCommand(query, sqlConnection);
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    hs.Add(new HocSinh((string)reader["MaHS"], (string)reader["TenHS"], (string)reader["DiaChi"], (string)reader["GioiTinh"], (string)reader["SDT"], (string)reader["MaLop"]));
-                }
-                reader.Close();
-            }
-            catch (SqlException e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            sqlConnection.Close();
             return hs;
         }
 

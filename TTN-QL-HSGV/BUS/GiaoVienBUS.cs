@@ -54,34 +54,6 @@ namespace TTN_QL_HSGV.BUS
             return gv;
         }
 
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-HKOJN4O;Initial Catalog=TTN_QLHSGV;Integrated Security=True");
-
-        public List<GiaoVien> SearchGiaoVien(string gioitinh, string chucvu, string mamon)
-        {
-            List<GiaoVien> gv = new List<GiaoVien>();
-            string query;
-            sqlConnection.Open();
-
-            query = "exec SearchGiaoVien N'" + gioitinh + "', N'" + chucvu + "', '" + mamon + "' ";
-
-            try
-            {
-                SqlCommand command = new SqlCommand(query, sqlConnection);
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    gv.Add(new GiaoVien((string)reader["MaGV"], (string)reader["TenGV"], (string)reader["DiaChi"], (string)reader["GioiTinh"], (string)reader["SDT"], (string)reader["ChucVu"], (string)reader["MaMon"]));
-                }
-                reader.Close();
-            }
-            catch (SqlException e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            sqlConnection.Close();
-            return gv;
-        }
-
         public DataTable XemTatCaMonHoc()
         {
             string query = string.Format("exec XemTatCaMonHoc ");

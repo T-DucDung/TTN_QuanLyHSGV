@@ -112,7 +112,22 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
             string chucvu = comboBoxChucVu.SelectedItem.ToString();
             string mon = comboBoxMon.SelectedValue.ToString();
 
-            dataGridViewDS_GV.DataSource = controllerGV.SearchGiaoVien(gt, chucvu, mon);
+            List<DTO.GiaoVien> dsGiaoVien = controllerGV.XemTatCaGV();
+            List<DTO.GiaoVien> items = dsGiaoVien;
+            if (gt != "None")
+            {
+                items = dsGiaoVien.FindAll(item => item.GioiTinh == gt);
+            }
+            if(chucvu != "None")
+            {
+                items = items.FindAll(item => item.ChucVu == chucvu);
+            }
+            if (mon != "None")
+            {
+                items = items.FindAll(item => item.MaMon == mon);
+            }
+
+            dataGridViewDS_GV.DataSource = items;
             dataGridViewDS_GV.Refresh();
         }
     }
