@@ -77,3 +77,30 @@ C:\Users\admin\source\repos\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.Pro
 C:\Users\admin\source\repos\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csproj.GenerateResource.cache
 C:\Users\admin\source\repos\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.exe
 C:\Users\admin\source\repos\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.pdb
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\bin\Debug\TTN-QL-HSGV.exe.config
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\bin\Debug\TTN-QL-HSGV.exe
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\bin\Debug\TTN-QL-HSGV.pdb
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csprojAssemblyReference.cache
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.FormChinh.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.FormPhu.MonHoc.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiangDay.DanhSachGiangDay.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiangDay.ThemGiangDay.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiangDay.ThongTinGiangDay.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiaoVien.DanhSachGiaoVien.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiaoVien.ThemGiaoVien.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiaoVien.ThongTinGiaoVien.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.HocSinh.DanhSachHocSinh.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.HocSinh.ThemHocSinh.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.HocSinh.ThongTinHocSinh.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.DanhSachLop.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.KhoaHoc.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.ThemHocSinhVaoLop.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.ThemLop.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.ThongTinLop.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.TimKiem.ChiTiet.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.TimKiem.TimKiem.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.Properties.Resources.resources
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csproj.GenerateResource.cache
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csproj.CoreCompileInputs.cache
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.exe
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.pdb
