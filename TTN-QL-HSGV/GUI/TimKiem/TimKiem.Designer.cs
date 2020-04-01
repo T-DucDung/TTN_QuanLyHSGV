@@ -119,6 +119,7 @@
             this.dataGridViewDS_HS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDS_HS.Location = new System.Drawing.Point(14, 141);
             this.dataGridViewDS_HS.Name = "dataGridViewDS_HS";
+            this.dataGridViewDS_HS.RowHeadersWidth = 51;
             this.dataGridViewDS_HS.RowTemplate.Height = 24;
             this.dataGridViewDS_HS.Size = new System.Drawing.Size(808, 287);
             this.dataGridViewDS_HS.TabIndex = 104;
@@ -227,6 +228,7 @@
             this.buttonTimKiem.TabIndex = 134;
             this.buttonTimKiem.Text = "Tìm Kiếm";
             this.buttonTimKiem.UseVisualStyleBackColor = true;
+            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
             // comboBoxGioiTinh
             // 
@@ -236,8 +238,7 @@
             this.comboBoxGioiTinh.Items.AddRange(new object[] {
             "Nữ",
             "Nam",
-            "Khác",
-            "None"});
+            "Không"});
             this.comboBoxGioiTinh.Location = new System.Drawing.Point(635, 69);
             this.comboBoxGioiTinh.Name = "comboBoxGioiTinh";
             this.comboBoxGioiTinh.Size = new System.Drawing.Size(185, 28);
@@ -270,6 +271,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "TimKiem";
             this.Text = "TimKiem";
+            this.Load += new System.EventHandler(this.TimKiem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_HS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

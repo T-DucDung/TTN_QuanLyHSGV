@@ -38,5 +38,43 @@ namespace TTN_QL_HSGV.GUI.TimKiem
         {
             this.Show();
         }
+
+        private void TimKiem_Load(object sender, EventArgs e)
+        {
+            dataGridViewDS_HS.DataSource = BUS.TimKiem.TimKiemKoThongTin();
+            textBoxTongSo.Text = dataGridViewDS_HS.RowCount.ToString();
+            comboBoxGioiTinh.SelectedIndex = 2;
+        }
+        
+        private void buttonTimKiem_Click(object sender, EventArgs e)
+        {
+            string HoTen;
+            if (textBoxTen.Text != "")
+                HoTen = textBoxTen.Text;
+            else
+                HoTen = "";
+
+            string GioiTinh = comboBoxGioiTinh.SelectedItem.ToString();
+            //string Lop = textBoxLop.Text;
+            string Lop = "";
+            //string KhoaHoc = textBoxKhoa.Text;
+            string KhoaHoc = "";
+            if (HoTen == "" && GioiTinh == "Không" && Lop == "" && KhoaHoc == "")
+            {
+                dataGridViewDS_HS.DataSource = BUS.TimKiem.TimKiemKoThongTin();
+                textBoxTongSo.Text = dataGridViewDS_HS.RowCount.ToString();
+            }    
+            else if (textBoxLop.Text == "")
+            {
+                dataGridViewDS_HS.DataSource = BUS.TimKiem.TimKiemThongTinKoDungLop(HoTen, GioiTinh);
+                textBoxTongSo.Text = dataGridViewDS_HS.RowCount.ToString();
+            }   
+            else if (textBoxLop.Text != "")
+            {
+                dataGridViewDS_HS.DataSource = BUS.TimKiem.TimKiemThongTinDungLop(HoTen, GioiTinh,Lop,KhoaHoc);
+                textBoxTongSo.Text = dataGridViewDS_HS.RowCount.ToString();
+            }
+
+        }
     }
 }
