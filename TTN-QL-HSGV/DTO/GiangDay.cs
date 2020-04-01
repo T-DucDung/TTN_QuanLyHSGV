@@ -25,7 +25,7 @@ namespace TTN_QL_HSGV.DTO
             this.DiaDiem = diaDiem;
             this.Thu = thu;
             this.Tiet = tiet;
-        }*/
+        }
 
         public string MaGV { get => maGV; set => maGV = value; }
         public string MaLop { get => maLop; set => maLop = value; }
