@@ -158,6 +158,7 @@
             this.dataGridViewDS_Lop.Size = new System.Drawing.Size(606, 260);
             this.dataGridViewDS_Lop.TabIndex = 51;
             this.dataGridViewDS_Lop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDS_Lop_CellClick);
+            this.dataGridViewDS_Lop.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewDS_Lop_ColumnHeaderMouseClick);
             // 
             // label1
             // 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTN_QL_HSGV.BUS;
+using TTN_QL_HSGV.DTO;
 using TTN_QL_HSGV.GUI.Lop;
 
 namespace TTN_QL_HSGV.GUI.Lop
@@ -15,10 +16,12 @@ namespace TTN_QL_HSGV.GUI.Lop
     public partial class DanhSachLop : Form
     {
         LopBUS bus;
+        List<DTO.Lop> lops;
         public DanhSachLop()
         {
             InitializeComponent();
             bus = new LopBUS();
+            lops = new List<DTO.Lop>();
         }
 
         // phần lọc lấy danh sách từ database ra add dưới dạng list<A> thêm 'None' vào 
@@ -79,6 +82,16 @@ namespace TTN_QL_HSGV.GUI.Lop
             {
                 dataGridViewDS_Lop.DataSource = bus.GetDanhSachLop(comboBoxKhoaHoc.Text);
             }
+        }
+
+        private void dataGridViewDS_Lop_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string strColumnName = dataGridViewDS_Lop.Columns[e.ColumnIndex].Name;
+            SortOrder strSortOrder = getSortOrder(e.ColumnIndex);
+            hocSinhs.Sort(new HocSinhComparer(strColumnName, strSortOrder));
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = hocSinhs;
+            dataGridView1.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection = strSortOrder;
         }
     }
 }
