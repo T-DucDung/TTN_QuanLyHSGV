@@ -17,7 +17,7 @@ namespace TTN_QL_HSGV.DTO
         private string tiet;
        
 
-       /* public GiangDay(string maGV, string maLop, int soTiet , string diaDiem , string thu , string tiet)
+        public GiangDay(string maGV, string maLop, int soTiet)
         {
             this.MaGV = maGV;
             this.MaLop = maLop;
@@ -26,7 +26,6 @@ namespace TTN_QL_HSGV.DTO
             this.Thu = thu;
             this.Tiet = tiet;
         }*/
-
 
         public string MaGV { get => maGV; set => maGV = value; }
         public string MaLop { get => maLop; set => maLop = value; }
