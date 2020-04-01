@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\Converter.cs" />
+    <Compile Include="BUS\GiangDayBUS.cs" />
     <Compile Include="DAL\DataProvider .cs" />
     <Compile Include="DTO\GiangDay.cs" />
     <Compile Include="DTO\GiangDayComparer.cs" />
@@ -168,6 +169,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TTN_QLHSGVDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TTN_QLHSGVDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GUI\FormChinh.resx">
       <DependentUpon>FormChinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +246,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TTN_QLHSGVDataSet.xsc">
+      <DependentUpon>TTN_QLHSGVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TTN_QLHSGVDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TTN_QLHSGVDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TTN_QLHSGVDataSet.xss">
+      <DependentUpon>TTN_QLHSGVDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

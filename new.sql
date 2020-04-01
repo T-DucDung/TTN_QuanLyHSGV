@@ -132,7 +132,6 @@ BEGIN
 	WHERE MaKH = @MAKHOAHOC
 END
 
-/* PHẦN 2 BẮT ĐẦU TẠI ĐÂY
 
 
 
@@ -185,7 +184,7 @@ END
 
 -- THAO TÁC VS MÔN HỌC
 GO
-ALTER PROC INSERTMONHOC(@MAMONHOC VARCHAR(10),@TENMONHOC NVARCHAR(50),@MAKHOA VARCHAR(10))AS
+CREATE PROC INSERTMONHOC(@MAMONHOC VARCHAR(10),@TENMONHOC NVARCHAR(50),@MAKHOA VARCHAR(10))AS
 BEGIN
 	INSERT INTO MONHOC(MaMon,TenMon ,MaKhoa)
 	VALUES(@MAMONHOC ,@TENMONHOC , @MAKHOA)
@@ -249,12 +248,29 @@ K
 /*
 GV001		NGUYỄN HOÀNG NAM		43 Trần Duy Hưng, Trung Hoà, Cầu Giấy, Hà Nội			NAM			0987346782		GIẢNG VIÊN			(ẢNH ĐẠI DIỆN ĐỂ KO)	TOAN
 
-GV002		HOÀNG HẢI YẾN			133 TRẦN HƯNG ĐẠO , HOÀNG MAI, Hà Nội					NỮ			0354674345		GIẢNG VIÊN			(ẢNH ĐẠI DIỆN ĐỂ KO)	NGUVAN
+GV002		HOÀNG HẢI YẾN			133 TRẦN HƯNG ĐẠO , HOÀNG MAI, Hà Nội					NỮ			0354674345		GIẢNG VIÊN			(ẢNH ĐẠI DIỆN ĐỂ KO)	VAN
 
 GV003		BÙI HOÀNG VIỆT			43 Trần Duy Hưng, Trung Hoà, Cầu Giấy, Hà Nội			NAM			0936643737		PHÓ HIỆU TRƯỞNG		(ẢNH ĐẠI DIỆN ĐỂ KO)	TOAN
 
-GV004		NGÔ XUÂN KHIÊM			43 Trần Duy Hưng, Trung Hoà, Cầu Giấy, Hà Nội			NAM			0387620987		GIẢNG VIÊN			(ẢNH ĐẠI DIỆN ĐỂ KO)	HOA
+'GV004' 'NGÔ XUÂN KHIÊM' '62 Trung Hoà, Cầu Giấy, Hà Nội' 'NAM'	'0387620987' 'GIẢNG VIÊN' '' LI
 
+'GV005'  'BÙI XUÂN HUẤN'   'Phan Văn Trường, Dịch Vọng Hậu, Cầu Giấy, Hà Nội' 	'NAM'	'0387620987' 'GIẢNG VIÊN' 'NULL' 'MYTHUAT'
+
+'GV006' 'NGÔ THI THANH'	'15, Phạm Hùng, Phường Mỹ Đình 2, Quận Nam Từ Liêm, Hà Nội'	'NAM' '0387620987' 'GIẢNG VIÊN' 'NGOAINGU'
+
+GV007 HOÀNG THÙY LINH Số 6 Ngõ 370 Nguyễn Văn Cừ, Ngọc Lâm, Long Biên, Hà Nội  NAM	0387620987 GIẢNG VIÊN (ẢNH ĐẠI DIỆN ĐỂ KO) TIN
+
+GV008 VÕ TRUNG TÚ 12 Hàng Chĩnh, Hàng Buồm, Hoàn Kiếm, Hà Nội	NAM	0387620987 GIẢNG VIÊN (ẢNH ĐẠI DIỆN ĐỂ KO) SINH
+
+GV009 BÙI VĂN BẢO	234, Văn Cao, Liễu Giai, Ba Đình, Hà Nội  NAM	0387620987 GIẢNG VIÊN	 DIA
+
+GV010 TRƯƠNG TUẤN NGHĨA 716 Nguyễn Văn Cừ, Ngọc Lâm, Long Biên, Hà Nội  NAM	0387620987 GIẢNG VIÊN	 GDCD
+
+GV011 HOÀNG ANH QUÝ 44 Trần Quốc Hoàn, Dịch Vọng Hậu, Cầu Giấy, Hà Nội  NAM	0387620987 GIẢNG VIÊN	 THEDUC
+
+GV012 ĐỖ THỊ HẠNH 54 Liễu Giai, Cống Vị, Ba Đình, Hà Nội  NAM	0387620987 GIẢNG VIÊN	 VAN
+
+GV013 ĐÀO DIỆU LINH  12 Chùa Bộc, Quang Trung, Đống Đa, Hà Nội  NAM	0387620987 GIẢNG VIÊN  TOAN
 */
 
 
@@ -290,14 +306,14 @@ GO
 UPDATELOPHOC 'L6B',N'6B','GV002','KH20182022'
 GO
 UPDATELOPHOC 'L6C',N'6C','GV003','KH20182022'
-/*
+
 GO
-UPDATELOPHOC 'L7A',N'7A','GV0','KH20172021'
+INSERTLOPHOC 'L7A',N'7A','GV005','KH20172021'
 GO
-UPDATELOPHOC 'L7B',N'7B','GV0','KH20172021'
+INSERTLOPHOC 'L7B',N'7B','GV006','KH20172021'
 GO
-UPDATELOPHOC 'L7C',N'7C','GV0','KH20172021'
-*/
+INSERTLOPHOC 'L7C',N'7C','GV007','KH20172021'
+
 
 GO
 CREATE PROC DELETELOPHOC(@MALOP VARCHAR(10))AS
@@ -350,6 +366,10 @@ GO
 INSERTGIANGDAY 'GV004','L6A','30',N'TÒA B,P102','5','3-5'
 GO
 INSERTGIANGDAY 'GV004','L6B','30',N'TÒA B,P103','4','1-3'
+go
+INSERTGIANGDAY 'GV002','L6B','45',N'TÒA B,P103','2,4','1-3'
+delete GIANGDAY
+where MaGV='GV002' and MaLop='L6B'
 
 
 /*8 ĐOẠN NÀY NGHĨ 1 HỒI THÌ SẼ ĐỂ LÀ THEO MÃ LỚP . AE CÓ CAO KIẾN KHÁC THÌ BÁO .
@@ -357,15 +377,197 @@ VÌ NGHĨ THEO KIỂU CHUYỂN GIÁO VIÊN KHÁC ĐẾN DẠY LỚP NÀY DẠY T
 CHUYỂN GIÁO VIÊN SANG LỚP KHÁC DẠY . VÀ NÓ SẼ UPDATE LỊCH GIẢNG DẠY LIÊN TỤC KHI CÓ THAY ĐỔI NÊN SẼ KHÔNG CHỚI XÓA
 */
 GO
-CREATE PROC UPDATEGIANGDAY(@MAGV VARCHAR(10),@MALOP VARCHAR(10) ,@SOTIET INT , @DIADIEM NVARCHAR(50) ,@THU VARCHAR(20),@TIET VARCHAR(20))AS
+alter PROC UPDATEGIANGDAY(@MAGV VARCHAR(10),@MAGV1 VARCHAR(10), @MALOP VARCHAR(10) ,@MALOP1 VARCHAR(10),@SOTIET INT , @DIADIEM NVARCHAR(50) ,@THU VARCHAR(20),@TIET VARCHAR(20))AS
 BEGIN
 	
-	UPDATE GIANGDAY
-	SET MaLop = @MALOP , SoTiet = @SOTIET , DiaDiem = @DIADIEM , Thu = @THU , Tiet = @TIET
-	WHERE MaGV = @MAGV
+		UPDATE GIANGDAY
+		SET MaLop = @MALOP1 ,MaGV = @MAGV1, SoTiet = @SOTIET , DiaDiem = @DIADIEM , Thu = @THU , Tiet = @TIET 
+		WHERE MaGV = @MAGV and MaLop = @MALOP
 
+END
+UPDATEGIANGDAY 'GV004','GV002','L6B','L6C','35',N'TÒA B,P103','2,4','1-3' 
+
+create proc XEMLICHGIANGDAY AS
+BEGIN
+	select * from GIANGDAY
+END
+
+select * from GIANGDAY
+
+
+create view XEMMALOP AS
+SELECT MaLop
+FROM LOP
+
+SELECT * FROM XEMMALOP 
+
+select count(*) tongso
+from GIANGDAY
+
+
+create proc FilterInfo(@MAGV VARCHAR(10), @MALOP VARCHAR(10),@THU VARCHAR(20),@TIET VARCHAR(20))as
+begin
+	 IF(@MALOP = 'Tất cả' and @MAGV='Tất cả' and ((@THU = '' or @THU = 'None') and (@TIET = '' or @TIET = 'None')))
+		begin
+			select * from GIANGDAY
+		end
+
+	if(@MALOP = 'Tất cả' and @MAGV='Tất cả'and @TIET = 'Sáng' and ( @THU='' or @THU='None'))
+		begin
+			select * from GIANGDAY
+			where Tiet LIKE '%1%' or Tiet Like '%2%' or Tiet LIKE '%3%' or Tiet LIKE '%4%' or Tiet LIKE '%5%' or Tiet LIKE '%6%'
+		end
+
+	if(@MALOP = 'Tất cả' and @MAGV='Tất cả'and @TIET = 'Chiều' and ( @THU='' or @THU='None'))
+		begin
+			select * from GIANGDAY
+			where Tiet LIKE '%7%' or Tiet Like '%8%' or Tiet LIKE '%9%' or Tiet LIKE '%10%' or Tiet LIKE '%11%' or Tiet LIKE '%12%'
+		end
+
+	if(@MALOP = 'Tất cả' and @MAGV='Tất cả'and @TIET = 'Sáng')
+		begin
+			select * from GIANGDAY
+			where (Tiet LIKE '%1%' or Tiet Like '%2%' or Tiet LIKE '%3%' or Tiet LIKE '%4%' or Tiet LIKE '%5%' or Tiet LIKE '%6%')
+			and (Thu LIKE CAST(('%'+@THU+'%') AS varchar(20)))
+		end
+
+	if(@MALOP = 'Tất cả' and @MAGV='Tất cả'and @TIET = 'Chiều' )
+		begin
+			select * from GIANGDAY
+			where (Tiet LIKE '%7%' or Tiet Like '%8%' or Tiet LIKE '%9%' or Tiet LIKE '%10%' or Tiet LIKE '%11%' or Tiet LIKE '%12%')
+			and (Thu LIKE CAST(('%'+@THU+'%') AS varchar(20)))
+		end
+
+	 if(@MALOP = 'Tất cả' and @MAGV='Tất cả' and (@TIET= '' or @TIET= 'None') )
+		begin
+			select * from GIANGDAY
+			where (Thu LIKE CAST(('%'+@THU+'%') AS varchar(20)))
+		end
+
+	 if(@MALOP = 'Tất cả' and @MAGV='Tất cả' and (@THU= '' or @THU= 'None') )
+		begin
+			select * from GIANGDAY
+			where (Thu LIKE CAST(('%'+@THU+'%') AS varchar(20)))
+		end
+
+	if(@MALOP = 'Tất cả' and @TIET = 'Sáng' and (@THU!=''or @THU!='None'))
+		begin
+			select * from GIANGDAY
+			where (Tiet LIKE '%1%' or Tiet Like '%2%' or Tiet LIKE '%3%' or Tiet LIKE '%4%' or Tiet LIKE '%5%' or Tiet LIKE '%6%')
+			and (Thu LIKE CAST(('%'+@THU+'%') AS varchar(20))) and MaGV = @MAGV
+		end
+
+	 if(@MALOP = 'Tất cả' and @TIET = 'Chiều' and (@THU!=''or @THU!='None'))
+		begin
+			select * from GIANGDAY
+			where (Tiet LIKE '%7%' or Tiet Like '%8%' or Tiet LIKE '%9%' or Tiet LIKE '%10%' or Tiet LIKE '%11%' or Tiet LIKE '%12%')
+			and (Thu LIKE CAST(('%'+@THU+'%') AS varchar(20))) and MaGV = @MAGV
+		end
+
+	if(@MALOP = 'Tất cả' and @TIET = 'Sáng'  and (@THU=''or @THU='None'))
+		begin
+			select * from GIANGDAY
+			where (Tiet LIKE '%1%' or Tiet Like '%2%' or Tiet LIKE '%3%' or Tiet LIKE '%4%' or Tiet LIKE '%5%' or Tiet LIKE '%6%')
+			and MaGV = @MAGV
+		end
+
+	if(@MALOP = 'Tất cả' and @TIET = 'Chiều'  and (@THU=''or @THU='None'))
+		begin
+			select * from GIANGDAY
+			where (Tiet LIKE '%7%' or Tiet Like '%8%' or Tiet LIKE '%9%' or Tiet LIKE '%10%' or Tiet LIKE '%11%' or Tiet LIKE '%12%')
+			 and MaGV = @MAGV
+		end
+
+	if(@MAGV = 'Tất cả' and @TIET = 'Sáng'and (@THU!=''or @THU!='None'))
+		begin
+			select * from GIANGDAY
+			where (Tiet LIKE '%1%' or Tiet Like '%2%' or Tiet LIKE '%3%' or Tiet LIKE '%4%' or Tiet LIKE '%5%' or Tiet LIKE '%6%')
+			and (Thu LIKE CAST(('%'+@THU+'%') AS varchar(20))) and MaLop=@MALOP
+		end
+
+	if(@MAGV = 'Tất cả' and @TIET = 'Chiều' and (@THU!=''or @THU!='None'))
+		begin
+			select * from GIANGDAY
+			where (Tiet LIKE '%7%' or Tiet Like '%8%' or Tiet LIKE '%9%' or Tiet LIKE '%10%' or Tiet LIKE '%11%' or Tiet LIKE '%12%')
+			and (Thu LIKE CAST(('%'+@THU+'%') AS varchar(20))) and MaLop=@MALOP
+		end
+
+	 if(@MAGV = 'Tất cả' and @TIET = 'Sáng' and (@THU = 'None' or @THU=''))
+		begin
+			select * from GIANGDAY
+			where (Tiet LIKE '%1%' or Tiet Like '%2%' or Tiet LIKE '%3%' or Tiet LIKE '%4%' or Tiet LIKE '%5%' or Tiet LIKE '%6%')
+			and MaLop=@MALOP
+		end
+
+	if(@MAGV = 'Tất cả' and @TIET = 'Chiều' and (@THU='None'or @THU=''))
+		begin
+			select * from GIANGDAY
+			where (Tiet LIKE '%7%' or Tiet Like '%8%' or Tiet LIKE '%9%' or Tiet LIKE '%10%' or Tiet LIKE '%11%' or Tiet LIKE '%12%')
+			 and MaLop=@MALOP
+		end
+
+	 if(@MALOP = 'Tất cả' and ((@TIET = 'None' and @THU = 'None')or (@TIET = '' and @THU = '')) )
+		begin
+			select * from GIANGDAY
+			where  MaGV = @MAGV
+		end
+
+	if(@MAGV = 'Tất cả'  and ((@TIET = 'None' and @THU = 'None')or (@TIET = '' and @THU = '')) )
+		begin
+			select * from GIANGDAY
+			where  MaLop=@MALOP
+		end
+
+	if(@TIET = 'Sáng')
+		begin
+			select * from GIANGDAY
+			where (Tiet LIKE '%1%' or Tiet Like '%2%' or Tiet LIKE '%3%' or Tiet LIKE '%4%' or Tiet LIKE '%5%' or Tiet LIKE '%6%')
+			and (Thu LIKE CAST(('%'+@THU+'%') AS varchar(20))) and MaLop=@MALOP and MaGV = @MAGV
+		end
+	else 
+		begin
+			select * from GIANGDAY
+			where (Tiet LIKE '%7%' or Tiet Like '%8%' or Tiet LIKE '%9%' or Tiet LIKE '%10%' or Tiet LIKE '%11%' or Tiet LIKE '%12%')
+			and (Thu LIKE CAST(('%'+@THU+'%') AS varchar(20))) and MaLop=@MALOP and MaGV = @MAGV
+		end
+end
+
+
+/*
+select * from GIANGDAY
+where Thu LIKE '%1%' or Thu Like '%2%' or Thu LIKE '%3%' or Thu LIKE '%4%' or Thu LIKE '%5%' or Thu LIKE '%6%'
+
+create view chianho
+as
+select 
+
+CREATE FUNCTION dbo.splitstring ( @stringToSplit VARCHAR(MAX) )
+RETURNS
+ @returnList TABLE ([Name] [nvarchar] (500))
+AS
+BEGIN
+
+ DECLARE @name NVARCHAR(255)
+ DECLARE @pos INT
+
+ WHILE CHARINDEX(',', @stringToSplit) > 0
+ BEGIN
+  SELECT @pos  = CHARINDEX(',', @stringToSplit)  
+  SELECT @name = SUBSTRING(@stringToSplit, 1, @pos-1)
+
+  INSERT INTO @returnList 
+  SELECT @name
+
+  SELECT @stringToSplit = SUBSTRING(@stringToSplit, @pos+1, LEN(@stringToSplit)-@pos)
+ END
+
+ INSERT INTO @returnList
+ SELECT @stringToSplit
+
+ RETURN
 END
 
 
--- NÚT CUỐI PHẦN 2 ĐÂY
-THIS-->*/
+SELECT * FROM dbo.splitstring(GIANGDAY.Thu)
+
+*/

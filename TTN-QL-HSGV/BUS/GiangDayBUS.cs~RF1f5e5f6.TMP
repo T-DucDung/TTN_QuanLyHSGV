@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Windows.Forms;
+using TTN_QL_HSGV.DAL;
+using TTN_QL_HSGV.DTO;
+
+namespace TTN_QL_HSGV.BUS
+{
+    class GiangDayBUS : IConverter
+    {
+        private static GiangDayBUS instance;
+
+        //DataProvider data = new DataProvider();
+
+        public static GiangDayBUS Instance
+        {
+            get { if (instance == null) instance = new GiangDayBUS(); return GiangDayBUS.instance; }
+            private set { GiangDayBUS.instance = value; }
+        }
+
+        private GiangDayBUS() { }
+
+
+        public DataTable LoadGiangDay()
+        {
+            return DataProvider.Instance.ExecuteQuery("XEMLICHGIANGDAY");
+        }
+
+
+        public List<GiangDay> ThemMoiGiangDay()
+        {
+            List<GiangDay> giangDays = new List<GiangDay>();
+
+
+            return giangDays;
+
+        }
+
+        public List<object> GetDanhSachLop()
+        {
+            
+            DataTable dt;
+            dt = DataProvider.Instance.ExecuteQuery("SELECT * FROM XEMMALOP ");
+
+            List<object> dsLop = dt.AsEnumerable().ToList<object>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                dsLop.Add(dr);
+            }
+
+            return dsLop;
+        }
+
+    }
+
+    public interface IConverter
+    {
+        
+    }
+}

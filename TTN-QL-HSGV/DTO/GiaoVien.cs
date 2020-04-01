@@ -8,7 +8,7 @@ namespace TTN_QL_HSGV.DTO
 {
     class GiaoVien
     {
-        private int maGV;
+        private string maGV;
         private string tenGV;
         private string diaChi;
         private string gioiTinh;
@@ -16,9 +16,11 @@ namespace TTN_QL_HSGV.DTO
         private string chucVu;
         private string maMon;
 
-        public GiaoVien(int maGV, string tenGV, string diaChi, string gioiTinh, string sdt, string chucVu, string maMon)
+       
+
+        public GiaoVien(string maGV, string tenGV, string diaChi, string gioiTinh, string sdt, string chucVu, string maMon)
         {
-            this.maGV = maGV;
+            this.MaGV = maGV;
             this.tenGV = tenGV;
             this.diaChi = diaChi;
             this.gioiTinh = gioiTinh;
@@ -27,12 +29,12 @@ namespace TTN_QL_HSGV.DTO
             this.maMon = maMon;
         }
 
-        public int MaGV { get => maGV; set => maGV = value; }
         public string TenGV { get => tenGV; set => tenGV = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }
         public string GioiTinh { get => gioiTinh; set => gioiTinh = value; }
         public string Sdt { get => sdt; set => sdt = value; }
         public string ChucVu { get => chucVu; set => chucVu = value; }
         public string MaMon { get => maMon; set => maMon = value; }
+        public string MaGV { get => maGV; set => maGV = value; }
     }
 }

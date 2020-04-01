@@ -1,0 +1,82 @@
+﻿using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using TTN_QL_HSGV.DAL;
+using TTN_QL_HSGV.DTO;
+
+namespace TTN_QL_HSGV.BUS
+{
+    class GiangDayBUS : IConverter
+    {
+        private static GiangDayBUS instance;
+
+        //DataProvider data = new DataProvider();
+
+        public static GiangDayBUS Instance
+        {
+            get { if (instance == null) instance = new GiangDayBUS(); return GiangDayBUS.instance; }
+            private set { GiangDayBUS.instance = value; }
+        }
+
+        private GiangDayBUS() { }
+
+
+        public DataTable LoadGiangDay()
+        {
+            return DataProvider.Instance.ExecuteQuery("XEMLICHGIANGDAY");
+        }
+
+        public List<GiangDay> GiangDays()
+        {
+            List<GiangDay> giangDays = new List<GiangDay>();
+            string query = "XEMLICHGIANGDAY";
+
+            DataProvider.Instance.ExecuteQuery(query);
+
+
+            return giangDays;
+        }
+
+
+
+        public List<GiangDay> ThemMoiGiangDay()
+        {
+            List<GiangDay> giangDays = new List<GiangDay>();
+
+
+            return giangDays;
+
+        }
+
+        public DataTable GetDanhSachLop()
+        {
+            //DataProvider.Instance.ExecuteQuery("select MaLop from GiangDay");
+            return DataProvider.Instance.ExecuteQuery("SELECT * FROM XEMMALOP ");
+            /*List<string> lop = new List<string>() ;
+            string query;
+            query = "select MaLop from LOP";
+            try
+            {
+                SqlCommand command = new SqlCommand(query);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    lop.Add((string)reader["MaLop"]);
+                }
+                reader.Close();
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return lop;
+        }*/
+
+    }
+
+    public interface IConverter
+    {
+        
+    }
+}

@@ -21,7 +21,7 @@ namespace TTN_QL_HSGV.DAL
         private DataProvider() { }
 
 
-        private string str = @"Data Source=nguyenvanvu563a\sqlexpress;Initial Catalog=TTN_QLHSGV;Integrated Security=True";
+        private string str = "Data Source=DESKTOP-7EOTJ4J;Initial Catalog=TTN_QLHSGV;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query)
         {
@@ -61,6 +61,11 @@ namespace TTN_QL_HSGV.DAL
             return data;
         }
 
+        internal SqlDataReader ExecuteReader()
+        {
+            throw new NotImplementedException();
+        }
+
         public object ExecuteScalar(string query)
         {
             object data;
@@ -78,11 +83,5 @@ namespace TTN_QL_HSGV.DAL
 
             return data;
         }
-
-
-        /*public ExecuteReader()
-        {
-
-        }*/
     }
 }

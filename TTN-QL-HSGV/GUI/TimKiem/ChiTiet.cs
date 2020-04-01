@@ -29,7 +29,7 @@ namespace TTN_QL_HSGV.GUI.TimKiem
         private void buttonChiTiet_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ThongTinGiangDay formTTGD = new ThongTinGiangDay("","");
+            ThongTinGiangDay formTTGD = new ThongTinGiangDay();
             formTTGD.FormClosed += FormTTGD_FormClosed;
             formTTGD.Show();
         }

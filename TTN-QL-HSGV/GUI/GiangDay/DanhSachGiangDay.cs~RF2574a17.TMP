@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTN_QL_HSGV.BUS;
-using TTN_QL_HSGV.DAL;
 
 
 namespace TTN_QL_HSGV.GUI.GiangDay
@@ -19,11 +17,8 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         public DanhSachGiangDay()
         {
             InitializeComponent();
-            dataGridViewDS_HS.DataSource = GiangDayBUS.LoadGiangDay();
-            comboBoxLop.DataSource = GiangDayBUS.GetDanhSachLop();
-            comboBoxGiaoVien.DataSource = GiangDayBUS.GetDanhSachGiaoVien();
-            textBoxTongSo.Text = DataProvider.Instance.ExecuteScalar("select count(*) tongso from GIANGDAY").ToString();
-
+            LoadDanhDachGiangDay();
+            LoadDanhSachLop();
         }
 
         // khi lấy list danh sách đưa lên 2 combobox thì thêm 1 tùy chọn là "thêm mới"
@@ -31,7 +26,18 @@ namespace TTN_QL_HSGV.GUI.GiangDay
 
 
         #region MyMethod
-       
+        public void LoadDanhDachGiangDay()
+        {
+            dataGridViewDS_HS.DataSource = GiangDayBUS.Instance.LoadGiangDay();
+        }
+
+        
+        public void LoadDanhSachLop() 
+        {
+            comboBoxLop.DataSource = GiangDayBUS.Instance.GetDanhSachLop<string>();
+            //MessageBox.Show(GiangDayBUS.Instance.GetDanhSachLop<object>().ToString());
+        }
+
 
 
         #endregion
@@ -60,7 +66,6 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         private void FormTTGD_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
-            dataGridViewDS_HS.DataSource = GiangDayBUS.LoadGiangDay();
         }
 
         private void buttonQuayLai_Click(object sender, EventArgs e)
@@ -80,8 +85,6 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         private void FormTMGD_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
-            dataGridViewDS_HS.DataSource = GiangDayBUS.LoadGiangDay();
-            textBoxTongSo.Text = DataProvider.Instance.ExecuteScalar("select count(*) tongso from GIANGDAY").ToString();
         }
 
         private void dataGridViewDS_HS_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -92,18 +95,6 @@ namespace TTN_QL_HSGV.GUI.GiangDay
 
         }
 
-        private void buttonLoc_Click(object sender, EventArgs e)
-        {
-            Trace.WriteLine(comboBoxGiaoVien.Text);
-            Trace.WriteLine(comboBoxBuoi.Text);
-            Trace.WriteLine(comboBoxLop.Text);
-            Trace.WriteLine(comboBoxThu.Text);
-            Trace.WriteLine("----------------------");
-
-            dataGridViewDS_HS.DataSource = GiangDayBUS.Filter(comboBoxGiaoVien.Text ,comboBoxLop.Text ,comboBoxThu.Text ,comboBoxBuoi.Text);
-
-            
-        }
 
 
         #endregion
