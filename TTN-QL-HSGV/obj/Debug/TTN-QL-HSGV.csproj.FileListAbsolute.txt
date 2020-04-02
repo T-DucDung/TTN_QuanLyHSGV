@@ -104,3 +104,30 @@ E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj
 E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csproj.CoreCompileInputs.cache
 E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.exe
 E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.pdb
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\bin\Debug\TTN-QL-HSGV.exe.config
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\bin\Debug\TTN-QL-HSGV.exe
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\bin\Debug\TTN-QL-HSGV.pdb
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csprojAssemblyReference.cache
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.FormChinh.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.FormPhu.MonHoc.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiangDay.DanhSachGiangDay.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiangDay.ThemGiangDay.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiangDay.ThongTinGiangDay.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiaoVien.DanhSachGiaoVien.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiaoVien.ThemGiaoVien.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiaoVien.ThongTinGiaoVien.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.HocSinh.DanhSachHocSinh.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.HocSinh.ThemHocSinh.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.HocSinh.ThongTinHocSinh.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.DanhSachLop.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.KhoaHoc.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.ThemHocSinhVaoLop.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.ThemLop.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.Lop.ThongTinLop.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.TimKiem.ChiTiet.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.TimKiem.TimKiem.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.Properties.Resources.resources
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csproj.GenerateResource.cache
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.exe
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.pdb
+D:\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csproj.CoreCompileInputs.cache

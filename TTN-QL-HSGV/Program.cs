@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TTN_QL_HSGV.GUI.Lop;
 
 namespace TTN_QL_HSGV
 {
@@ -16,7 +17,7 @@ namespace TTN_QL_HSGV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormChinh());
+            Application.Run(new DanhSachLop());
         }
     }
 }

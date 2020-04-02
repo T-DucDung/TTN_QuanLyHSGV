@@ -13,6 +13,14 @@ namespace TTN_QL_HSGV.DTO
         private string maGVCN;
         private string maKhoaHoc;
 
+        public Lop()
+        {
+            this.maLop = "";
+            this.tenLop = "";
+            this.maGVCN = "";
+            this.maKhoaHoc = "";
+        }
+
         public Lop(string maLop, string tenLop, string maGVCN, string maKhoaHoc)
         {
             this.maLop = maLop;

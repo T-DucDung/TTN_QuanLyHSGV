@@ -9,16 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTN_QL_HSGV.GUI.HocSinh;
 using TTN_QL_HSGV.GUI.GiaoVien;
+using TTN_QL_HSGV.BUS;
 
 namespace TTN_QL_HSGV.GUI.Lop
 {
     public partial class ThongTinLop : Form
     {
         private string ID;
+        private LopBUS bus;
         public ThongTinLop(string IDLop)
         {
             ID = IDLop;
-
+            bus = new LopBUS();
             InitializeComponent();
         }
         // Phần lọc 2 textbox đằng sau chỉ hiển thị tên lớp với khóa học 
@@ -84,6 +86,11 @@ namespace TTN_QL_HSGV.GUI.Lop
         private void FormTTGV_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
+        }
+
+        private void ThongTinLop_Load(object sender, EventArgs e)
+        {
+            comboBoxKhoaHoc.DataSource = bus.GetDanhSachKhoaHoc();
         }
     }
 }

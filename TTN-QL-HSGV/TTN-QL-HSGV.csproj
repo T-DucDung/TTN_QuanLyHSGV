@@ -49,6 +49,7 @@
     <Compile Include="BUS\Converter.cs" />
     <Compile Include="BUS\GiangDayBUS.cs" />
     <Compile Include="BUS\TimKiem.cs" />
+    <Compile Include="BUS\LopBUS.cs" />
     <Compile Include="DAL\DataProvider .cs" />
     <Compile Include="DTO\GiangDay.cs" />
     <Compile Include="DTO\GiangDayComparer.cs" />

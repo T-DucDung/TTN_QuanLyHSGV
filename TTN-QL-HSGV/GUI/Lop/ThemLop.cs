@@ -9,14 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTN_QL_HSGV.GUI.HocSinh;
 using TTN_QL_HSGV.GUI.GiaoVien;
+using TTN_QL_HSGV.BUS;
 
 namespace TTN_QL_HSGV.GUI.Lop
 {
     public partial class ThemLop : Form
     {
+        LopBUS bus;
         public ThemLop()
         {
             InitializeComponent();
+            bus = new LopBUS();
         }
 
         // tên với giới tính vẫn là dạng lọc
@@ -69,6 +72,11 @@ namespace TTN_QL_HSGV.GUI.Lop
         private void FormTTGV_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
+        }
+
+        private void ThemLop_Load(object sender, EventArgs e)
+        {
+            comboBoxKhoaHoc.DataSource = bus.GetDanhSachKhoaHoc();
         }
     }
 }
