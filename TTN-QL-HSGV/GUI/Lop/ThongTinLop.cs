@@ -17,11 +17,16 @@ namespace TTN_QL_HSGV.GUI.Lop
     {
         private string ID;
         private LopBUS bus;
+
+        HocSinhBUS controllerHS = new HocSinhBUS();
+
         public ThongTinLop(string IDLop)
         {
             ID = IDLop;
             bus = new LopBUS();
             InitializeComponent();
+            dataGridViewDS_HS.DataSource = controllerHS.XemTatCaHSLop(IDLop);
+
         }
         // Phần lọc 2 textbox đằng sau chỉ hiển thị tên lớp với khóa học 
         // lấy danh sách từ database ra add dưới dạng list<A> thêm 'None' vào 

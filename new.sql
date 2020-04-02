@@ -519,6 +519,18 @@ begin
 		end
 end
 
+create proc GetDanhSachHocSinhLop(@malop varchar(10))as
+begin
+	select * from HOCSINH
+	where MaLop = @malop
+end
+
+xemchitietmotlop 'L6A'
+
+
+
+select * from HOCSINH
+where MaLop = 'L6A'
 
 /*
 select * from GIANGDAY

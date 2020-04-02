@@ -37,7 +37,7 @@ BEGIN
 END
 go
 -- xem 1 gv
-alter PROC XemChiTietGV(@Ma varchar(10)) 
+CREATE PROC XemChiTietGV(@Ma varchar(10)) 
 AS
 BEGIN
 	SELECT * FROM GIAOVIEN

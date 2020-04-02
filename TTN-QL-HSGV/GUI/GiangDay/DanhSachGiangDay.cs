@@ -94,15 +94,8 @@ namespace TTN_QL_HSGV.GUI.GiangDay
 
         private void buttonLoc_Click(object sender, EventArgs e)
         {
-            Trace.WriteLine(comboBoxGiaoVien.Text);
-            Trace.WriteLine(comboBoxBuoi.Text);
-            Trace.WriteLine(comboBoxLop.Text);
-            Trace.WriteLine(comboBoxThu.Text);
-            Trace.WriteLine("----------------------");
 
             dataGridViewDS_HS.DataSource = GiangDayBUS.Filter(comboBoxGiaoVien.Text ,comboBoxLop.Text ,comboBoxThu.Text ,comboBoxBuoi.Text);
-
-            
         }
 
 

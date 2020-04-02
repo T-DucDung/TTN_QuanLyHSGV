@@ -42,7 +42,6 @@ namespace TTN_QL_HSGV.BUS
 
             GiaoVien gv = new GiaoVien();
 
-
             gv.MaGV = dt.Rows[0]["MaGV"].ToString();
             gv.TenGV = dt.Rows[0]["TenGV"].ToString();
             gv.DiaChi = dt.Rows[0]["DiaChi"].ToString();

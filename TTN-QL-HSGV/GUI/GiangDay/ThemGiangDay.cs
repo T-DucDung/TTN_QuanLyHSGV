@@ -64,7 +64,7 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         private void buttonChiTietGV_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ThongTinGiaoVien formTTGV = new ThongTinGiaoVien("1");
+            ThongTinGiaoVien formTTGV = new ThongTinGiaoVien(comboBoxGiaoVien.Text);
             formTTGV.FormClosed += FormTTGV_FormClosed;
             formTTGV.Show();
         }
@@ -77,7 +77,7 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         private void buttonChiTietLop_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ThongTinLop formTTL = new ThongTinLop("1");
+            ThongTinLop formTTL = new ThongTinLop(comboBoxLop.Text);
             formTTL.FormClosed += FormTTL_FormClosed;
             formTTL.Show();
         }

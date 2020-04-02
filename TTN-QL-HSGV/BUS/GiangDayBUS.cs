@@ -22,14 +22,6 @@ namespace TTN_QL_HSGV.BUS
         }
 
 
-        public List<GiangDay> ThemMoiGiangDay()
-        {
-            List<GiangDay> giangDays = new List<GiangDay>();
-
-
-            return giangDays;
-
-        }
 
         public static List<string> GetDanhSachLop()
         {

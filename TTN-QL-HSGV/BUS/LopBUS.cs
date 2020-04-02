@@ -42,6 +42,7 @@ namespace TTN_QL_HSGV.BUS
             return Convert(dataTable);
         }
 
+
         public List<Lop> GetDanhSachLop(string KhoaHoc)
         {
             DataTable dataTable = DataProvider.Instance.ExecuteQuery("GetDanhSachLopTheoKhoa N'" + KhoaHoc +"'");
