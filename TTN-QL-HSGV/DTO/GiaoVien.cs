@@ -16,6 +16,7 @@ namespace TTN_QL_HSGV.DTO
         private string chucVu;
         private string maMon;
 
+        public GiaoVien() { }
         public GiaoVien(string maGV, string tenGV, string diaChi, string gioiTinh, string sdt, string chucVu, string maMon)
         {
             this.maGV = maGV;
