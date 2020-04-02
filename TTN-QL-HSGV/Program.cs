@@ -17,7 +17,7 @@ namespace TTN_QL_HSGV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DanhSachLop());
+            Application.Run(new FormChinh());
         }
     }
 }
