@@ -34,6 +34,22 @@ namespace TTN_QL_HSGV.BUS
            new GiaoVien(m.Field<string>("MaGV"), m.Field<string>("TenGV"), m.Field<string>("DiaChi"), m.Field<string>("GioiTinh"), m.Field<string>("SDT"), m.Field<string>("ChucVu"), m.Field<string>("MaMon"))).ToList();
         }
 
+        public List<string> XemDanhSachTenGV()
+        {
+            string query = string.Format("exec GetDanhSachTenGV ");
+            return ConvertString(DataProvider.Instance.ExecuteQuery(query));
+        }
+
+        public List<string> ConvertString(DataTable datatable)
+        {
+            List<string> list = new List<string>();
+            foreach (DataRow dr in datatable.Rows)
+            {
+                list.Add(dr[0].ToString());
+            }
+            return list;
+        }
+
         public GiaoVien XemChiTietGV(string maGV)
         {
             string query = string.Format("exec XemChiTietGV '{0}' ", maGV);

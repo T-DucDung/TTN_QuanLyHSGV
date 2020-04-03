@@ -27,14 +27,14 @@ namespace TTN_QL_HSGV.BUS
 
         public List<string> ConvertString(DataTable datatable)
         {
-            List<string> khoahocs = new List<string>();
-            khoahocs.Add("None");
+            List<string> list = new List<string>();
             foreach (DataRow dr in datatable.Rows)
             {
-                khoahocs.Add(dr[0].ToString());
+                list.Add(dr[1].ToString());
             }
-            return khoahocs;
+            return list;
         }
+
 
         public List<Lop> GetDanhSachLop()
         {
@@ -42,6 +42,11 @@ namespace TTN_QL_HSGV.BUS
             return Convert(dataTable);
         }
 
+        public List<string> GetDanhSachLopString()
+        {
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery("GetDanhSachLop");
+            return ConvertString(dataTable);
+        }
 
         public List<Lop> GetDanhSachLop(string KhoaHoc)
         {
@@ -66,6 +71,37 @@ namespace TTN_QL_HSGV.BUS
         {
             DataTable dataTable = DataProvider.Instance.ExecuteQuery("GetDanhSachKhoaHoc");
             return ConvertString(dataTable);
+        }
+
+        public void UpdateLop(string malop, string tenlop, string tengvcn, string tenkhoahoc)
+        {
+            DataProvider.Instance.ExecuteNonQuery("UpdateLop '" + malop + "','" + tenlop + "','" + tengvcn + "',N'" + tenkhoahoc + "'");
+        }
+
+        public string ThemLop(string tenlop, string magvcn, string tenkhochoc)
+        {
+            object obj =  DataProvider.Instance.ExecuteScalar("AddLop N'" + tenlop + "','" + magvcn + "',N'" + tenkhochoc + "'");
+            if (obj != null)
+            {
+                return obj.ToString();
+            }
+            else
+            {
+                return "";
+            }    
+        }
+
+        public string GetTenLop(string MaLop)
+        {
+            object obj = DataProvider.Instance.ExecuteScalar("GetTenLop '" + MaLop + "'").ToString();
+            if (obj != null)
+            {
+                return obj.ToString();
+            }
+            else
+            {
+                return "";
+            }
         }
     }
 }

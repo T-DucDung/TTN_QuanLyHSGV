@@ -26,9 +26,26 @@ namespace TTN_QL_HSGV.BUS
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
 
+
         public List<HocSinh> XemTatCaHS()
         {
             string query = string.Format("exec XemTatCaHS ");
+
+            return DataProvider.Instance.ExecuteQuery(query).AsEnumerable().Select(m =>
+           new HocSinh(m.Field<string>("MaHS"), m.Field<string>("TenHS"), m.Field<string>("DiaChi"), m.Field<string>("GioiTinh"), m.Field<string>("SDT"), m.Field<string>("MaLop")  )).ToList();
+        }
+
+        public List<HocSinh> XemTatCaHSLop(string MaLop)
+        {
+            string query = string.Format("exec GetDanhSachHocSinhLop N'" + MaLop + "'");
+
+            return DataProvider.Instance.ExecuteQuery(query).AsEnumerable().Select(m =>
+           new HocSinh(m.Field<string>("MaHS"), m.Field<string>("TenHS"), m.Field<string>("DiaChi"), m.Field<string>("GioiTinh"), m.Field<string>("SDT"), m.Field<string>("MaLop"))).ToList();
+        }
+
+        public List<HocSinh> XemTatCaHSGT(string Gt)
+        {
+            string query = string.Format("exec GetDanhSachHocSinhGt N'" + Gt + "'");
 
             return DataProvider.Instance.ExecuteQuery(query).AsEnumerable().Select(m =>
            new HocSinh(m.Field<string>("MaHS"), m.Field<string>("TenHS"), m.Field<string>("DiaChi"), m.Field<string>("GioiTinh"), m.Field<string>("SDT"), m.Field<string>("MaLop"))).ToList();
@@ -42,6 +59,16 @@ namespace TTN_QL_HSGV.BUS
             return DataProvider.Instance.ExecuteQuery(query).AsEnumerable().Select(m =>
            new HocSinh_KhoaHoc(m.Field<string>("MaHS"), m.Field<string>("TenHS"), m.Field<string>("DiaChi"), m.Field<string>("GioiTinh"), m.Field<string>("SDT"), m.Field<string>("MaLop"), m.Field<string>("TenKH"), m.Field<string>("MaKH"))).ToList();
         }
+
+        public List<HocSinh> XemTatCaHSLopGT(string MaLop, string Gt)
+        {
+            string query = string.Format("exec GetDanhSachHocSinhLopGt N'" + MaLop + "',N'" + Gt +"'");
+
+            return DataProvider.Instance.ExecuteQuery(query).AsEnumerable().Select(m =>
+           new HocSinh(m.Field<string>("MaHS"), m.Field<string>("TenHS"), m.Field<string>("DiaChi"), m.Field<string>("GioiTinh"), m.Field<string>("SDT"), m.Field<string>("MaLop"))).ToList();
+        }
+
+
 
         public HocSinh XemChiTietHS(string maHS)
         {
