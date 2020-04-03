@@ -62,6 +62,7 @@
             this.dataGridViewDS_GV.Location = new System.Drawing.Point(9, 86);
             this.dataGridViewDS_GV.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDS_GV.Name = "dataGridViewDS_GV";
+            this.dataGridViewDS_GV.ReadOnly = true;
             this.dataGridViewDS_GV.RowTemplate.Height = 24;
             this.dataGridViewDS_GV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDS_GV.Size = new System.Drawing.Size(606, 260);
@@ -136,8 +137,8 @@
             this.comboBoxGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxGioiTinh.FormattingEnabled = true;
             this.comboBoxGioiTinh.Items.AddRange(new object[] {
-            "Nữ",
-            "Nam",
+            "NỮ",
+            "NAM",
             "None"});
             this.comboBoxGioiTinh.Location = new System.Drawing.Point(78, 59);
             this.comboBoxGioiTinh.Margin = new System.Windows.Forms.Padding(2);
@@ -173,8 +174,8 @@
             this.comboBoxChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxChucVu.FormattingEnabled = true;
             this.comboBoxChucVu.Items.AddRange(new object[] {
-            "Phó hiệu trưởng",
-            "Giáo viên",
+            "PHÓ HIỆU TRƯỞNG",
+            "GIẢNG VIÊN",
             "None"});
             this.comboBoxChucVu.Location = new System.Drawing.Point(232, 58);
             this.comboBoxChucVu.Margin = new System.Windows.Forms.Padding(2);

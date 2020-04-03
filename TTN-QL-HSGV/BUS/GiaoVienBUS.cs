@@ -48,7 +48,7 @@ namespace TTN_QL_HSGV.BUS
             gv.DiaChi = dt.Rows[0]["DiaChi"].ToString();
             gv.GioiTinh = dt.Rows[0]["GioiTinh"].ToString();
             gv.Sdt = dt.Rows[0]["SDT"].ToString();
-            gv.ChucVu = dt.Rows[0]["GioiTinh"].ToString();
+            gv.ChucVu = dt.Rows[0]["ChucVu"].ToString();
             gv.MaMon = dt.Rows[0]["MaMon"].ToString();
 
             return gv;

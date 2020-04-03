@@ -50,7 +50,7 @@
             this.buttonQuayLai.AutoSize = true;
             this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonQuayLai.Location = new System.Drawing.Point(392, 375);
-            this.buttonQuayLai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonQuayLai.Margin = new System.Windows.Forms.Padding(2);
             this.buttonQuayLai.Name = "buttonQuayLai";
             this.buttonQuayLai.Size = new System.Drawing.Size(89, 27);
             this.buttonQuayLai.TabIndex = 38;
@@ -64,7 +64,7 @@
             this.buttonChiTiet.Enabled = false;
             this.buttonChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonChiTiet.Location = new System.Drawing.Point(291, 375);
-            this.buttonChiTiet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonChiTiet.Margin = new System.Windows.Forms.Padding(2);
             this.buttonChiTiet.Name = "buttonChiTiet";
             this.buttonChiTiet.Size = new System.Drawing.Size(86, 27);
             this.buttonChiTiet.TabIndex = 37;
@@ -77,7 +77,7 @@
             this.buttonThem.AutoSize = true;
             this.buttonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThem.Location = new System.Drawing.Point(146, 375);
-            this.buttonThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonThem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(129, 27);
             this.buttonThem.TabIndex = 36;
@@ -90,7 +90,7 @@
             this.textBoxTongSo.Enabled = false;
             this.textBoxTongSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTongSo.Location = new System.Drawing.Point(515, 349);
-            this.textBoxTongSo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTongSo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTongSo.Name = "textBoxTongSo";
             this.textBoxTongSo.Size = new System.Drawing.Size(101, 23);
             this.textBoxTongSo.TabIndex = 35;
@@ -111,8 +111,9 @@
             // 
             this.dataGridViewDS_HS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDS_HS.Location = new System.Drawing.Point(9, 86);
-            this.dataGridViewDS_HS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewDS_HS.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDS_HS.Name = "dataGridViewDS_HS";
+            this.dataGridViewDS_HS.ReadOnly = true;
             this.dataGridViewDS_HS.RowTemplate.Height = 24;
             this.dataGridViewDS_HS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDS_HS.Size = new System.Drawing.Size(606, 260);
@@ -134,7 +135,7 @@
             // 
             this.buttonLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLoc.Location = new System.Drawing.Point(571, 57);
-            this.buttonLoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLoc.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLoc.Name = "buttonLoc";
             this.buttonLoc.Size = new System.Drawing.Size(44, 24);
             this.buttonLoc.TabIndex = 49;
@@ -148,7 +149,7 @@
             this.comboBoxKhoaHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxKhoaHoc.FormattingEnabled = true;
             this.comboBoxKhoaHoc.Location = new System.Drawing.Point(435, 58);
-            this.comboBoxKhoaHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxKhoaHoc.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxKhoaHoc.Name = "comboBoxKhoaHoc";
             this.comboBoxKhoaHoc.Size = new System.Drawing.Size(111, 25);
             this.comboBoxKhoaHoc.TabIndex = 48;
@@ -170,7 +171,7 @@
             this.comboBoxLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxLop.FormattingEnabled = true;
             this.comboBoxLop.Location = new System.Drawing.Point(205, 59);
-            this.comboBoxLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxLop.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxLop.Name = "comboBoxLop";
             this.comboBoxLop.Size = new System.Drawing.Size(108, 25);
             this.comboBoxLop.TabIndex = 46;
@@ -196,7 +197,7 @@
             "Nam",
             "None"});
             this.comboBoxGioiTinh.Location = new System.Drawing.Point(78, 59);
-            this.comboBoxGioiTinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxGioiTinh.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxGioiTinh.Name = "comboBoxGioiTinh";
             this.comboBoxGioiTinh.Size = new System.Drawing.Size(74, 25);
             this.comboBoxGioiTinh.TabIndex = 44;
@@ -231,7 +232,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewDS_HS);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "DanhSachHocSinh";
             this.Text = "DanhSachHocSinh";
