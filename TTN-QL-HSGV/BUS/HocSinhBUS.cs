@@ -31,7 +31,16 @@ namespace TTN_QL_HSGV.BUS
             string query = string.Format("exec XemTatCaHS ");
 
             return DataProvider.Instance.ExecuteQuery(query).AsEnumerable().Select(m =>
-           new HocSinh(m.Field<string>("MaHS"), m.Field<string>("TenHS"), m.Field<string>("DiaChi"), m.Field<string>("GioiTinh"), m.Field<string>("SDT"), m.Field<string>("MaLop")  )).ToList();
+           new HocSinh(m.Field<string>("MaHS"), m.Field<string>("TenHS"), m.Field<string>("DiaChi"), m.Field<string>("GioiTinh"), m.Field<string>("SDT"), m.Field<string>("MaLop"))).ToList();
+        }
+
+        // get all hocsinh + mon hoc
+        public List<HocSinh_KhoaHoc> XemTatCaHS_KhoaHoc()
+        {
+            string query = string.Format("exec XemTatCaHS ");
+
+            return DataProvider.Instance.ExecuteQuery(query).AsEnumerable().Select(m =>
+           new HocSinh_KhoaHoc(m.Field<string>("MaHS"), m.Field<string>("TenHS"), m.Field<string>("DiaChi"), m.Field<string>("GioiTinh"), m.Field<string>("SDT"), m.Field<string>("MaLop"), m.Field<string>("TenKH"), m.Field<string>("MaKH"))).ToList();
         }
 
         public HocSinh XemChiTietHS(string maHS)
