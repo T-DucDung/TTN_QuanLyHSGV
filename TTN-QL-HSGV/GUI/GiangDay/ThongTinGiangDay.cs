@@ -43,6 +43,8 @@ namespace TTN_QL_HSGV.GUI.GiangDay
             textBoxTiet.Text = tiet;
             comboBoxGiaoVien.Enabled = true;
             textBoxDiaDiem.Enabled = true;
+            textBoxMon.Text = DataProvider.Instance.ExecuteScalar("gettenmonhoc '" + maGV + "'").ToString();
+            
             maGVTam = maGV;
             maLopTam = maLop;
         }
@@ -223,6 +225,14 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         private void comboBoxLop_Click(object sender, EventArgs e)
         {
             comboBoxLop.DataSource = GiangDayBUS.GetDanhSachLop();
+        }
+
+        private void comboBoxGiaoVien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxGiaoVien.SelectedIndex > -1)
+            {
+                textBoxMon.Text = DataProvider.Instance.ExecuteScalar("gettenmonhoc '" + comboBoxGiaoVien.Text + "'").ToString();
+            }
         }
 
         #endregion

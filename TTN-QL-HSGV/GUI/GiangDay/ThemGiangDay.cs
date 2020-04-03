@@ -12,6 +12,7 @@ using TTN_QL_HSGV.GUI.Lop;
 using TTN_QL_HSGV.DAL;
 using TTN_QL_HSGV.BUS;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace TTN_QL_HSGV.GUI.GiangDay
 {
@@ -23,6 +24,7 @@ namespace TTN_QL_HSGV.GUI.GiangDay
             InitializeComponent();
             comboBoxLop.DataSource = GiangDayBUS.GetDanhSachLop();
             comboBoxGiaoVien.DataSource = GiangDayBUS.GetDanhSachGiaoVienCaTruong();
+            uploaddata();
         }
 
         public ThemGiangDay(string maGV,string maLop , int soTiet, string diaDiem, string thu , string tiet )
@@ -54,6 +56,11 @@ namespace TTN_QL_HSGV.GUI.GiangDay
             return s;
         }
 
+        public void uploaddata()
+        {
+            textBoxMon.Text = DataProvider.Instance.ExecuteScalar("gettenmonhoc '" + comboBoxGiaoVien.Text + "'").ToString();
+        }
+
         #endregion
 
 
@@ -61,6 +68,19 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         // nếu ấn chọn cái đấy thì link tới 2 form đó là thêm gv mới và thêm lớp mới
 
         #region Event
+
+        private void textBoxMon_TextChanged(object sender, EventArgs e)
+        {
+             
+        }
+        private void comboBoxGiaoVien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxGiaoVien.SelectedIndex > -1)
+            {
+                textBoxMon.Text = DataProvider.Instance.ExecuteScalar("gettenmonhoc '" + comboBoxGiaoVien.Text + "'").ToString();
+            }
+        }
+
         private void buttonChiTietGV_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -195,6 +215,9 @@ namespace TTN_QL_HSGV.GUI.GiangDay
             }
         }
 
+
         #endregion
+
+        
     }
 }

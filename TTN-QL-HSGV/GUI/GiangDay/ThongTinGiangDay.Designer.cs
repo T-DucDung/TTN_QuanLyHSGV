@@ -87,6 +87,7 @@
             this.comboBoxGiaoVien.Name = "comboBoxGiaoVien";
             this.comboBoxGiaoVien.Size = new System.Drawing.Size(194, 25);
             this.comboBoxGiaoVien.TabIndex = 53;
+            this.comboBoxGiaoVien.SelectedIndexChanged += new System.EventHandler(this.comboBoxGiaoVien_SelectedIndexChanged);
             this.comboBoxGiaoVien.Click += new System.EventHandler(this.comboBoxGiaoVien_Click);
             // 
             // buttonChiTietGV

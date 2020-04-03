@@ -20,7 +20,7 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         {
             InitializeComponent();
             dataGridViewDS_HS.DataSource = GiangDayBUS.LoadGiangDay();
-            comboBoxLop.DataSource = GiangDayBUS.GetDanhSachLop();
+            comboBoxLop.DataSource = GiangDayBUS.GetDanhSachLop2();
             comboBoxGiaoVien.DataSource = GiangDayBUS.GetDanhSachGiaoVien();
             textBoxTongSo.Text = DataProvider.Instance.ExecuteScalar("select count(*) tongso from GIANGDAY").ToString();
 
@@ -81,7 +81,7 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         {
             this.Show();
             dataGridViewDS_HS.DataSource = GiangDayBUS.LoadGiangDay();
-            textBoxTongSo.Text = DataProvider.Instance.ExecuteScalar("select count(*) tongso from GIANGDAY").ToString();
+            
         }
 
         private void dataGridViewDS_HS_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -96,6 +96,7 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         {
 
             dataGridViewDS_HS.DataSource = GiangDayBUS.Filter(comboBoxGiaoVien.Text ,comboBoxLop.Text ,comboBoxThu.Text ,comboBoxBuoi.Text);
+            textBoxTongSo.Text = (dataGridViewDS_HS.Rows.Count-1).ToString();
         }
 
 
