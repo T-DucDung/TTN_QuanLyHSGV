@@ -59,6 +59,8 @@
     <Compile Include="DTO\GiaoVienComparer.cs" />
     <Compile Include="DTO\HocSinh.cs" />
     <Compile Include="DTO\HocSinhComparer.cs" />
+    <Compile Include="DTO\HocSinh_KhoaHoc.cs" />
+    <Compile Include="DTO\HocSinh_KhoaHocComparer.cs" />
     <Compile Include="DTO\Lop.cs" />
     <Compile Include="DTO\LopComparer.cs" />
     <Compile Include="DTO\MonHoc.cs" />

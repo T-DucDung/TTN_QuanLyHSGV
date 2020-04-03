@@ -116,9 +116,10 @@ namespace TTN_QL_HSGV.GUI.HocSinh
             string gt = comboBoxGioiTinh.SelectedItem.ToString();
             string lop = comboBoxLop.SelectedValue.ToString();
             string khoahoc = comboBoxKhoaHoc.SelectedValue.ToString();
+            
+            List<DTO.HocSinh_KhoaHoc> dsHocSinh = controllerHS.XemTatCaHS_KhoaHoc();
 
-            List<DTO.HocSinh> dsHocSinh = controllerHS.XemTatCaHS();
-            List<DTO.HocSinh> items = dsHocSinh;
+            List<DTO.HocSinh_KhoaHoc> items = dsHocSinh;
             if (gt != "None")
             {
                 items = dsHocSinh.FindAll(item => item.GioiTinh == gt);
@@ -127,11 +128,11 @@ namespace TTN_QL_HSGV.GUI.HocSinh
             {
                 items = items.FindAll(item => item.MaLop == lop);
             }
-            //if (khoahoc != "None")
-            //{
-            //    items = items.FindAll(item => item.khoa == khoahoc);
-            //}
-            
+            if (khoahoc != "None")
+            {
+                items = items.FindAll(item => item.MaKH == khoahoc);
+            }
+
             dataGridViewDS_HS.DataSource = items;
             dataGridViewDS_HS.Refresh();
         }
