@@ -77,7 +77,6 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         {
             if (comboBoxGiaoVien.SelectedIndex > -1)
             {
-                Trace.WriteLine("hihi");
                 textBoxMon.Text = DataProvider.Instance.ExecuteScalar("gettenmonhoc '" + comboBoxGiaoVien.Text + "'").ToString();
             }
         }
