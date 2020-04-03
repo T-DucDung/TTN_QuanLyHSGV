@@ -36,10 +36,17 @@ namespace TTN_QL_HSGV.GUI.Lop
         {
             //lấy id bằng cách chọn 1 dòng trong datagrv xong truyền qua form bên kia
             //nút chi tiết cần chỉ bật khi đang chọn 1 dòng trong datagrv nếu không chọn dòng nào thì để tắt
-            this.Hide();
-            ThongTinLop formTTL = new ThongTinLop("1");
-            formTTL.FormClosed += FormTTL_FormClosed;
-            formTTL.Show();
+            try
+            {
+                this.Hide();
+                ThongTinLop formTTL = new ThongTinLop(dataGridViewDS_Lop.CurrentRow.Cells[0].Value.ToString());
+                formTTL.FormClosed += FormTTL_FormClosed;
+                formTTL.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lớp được chọn không khả dụng");
+            }
         }
 
         private void FormTTL_FormClosed(object sender, FormClosedEventArgs e)
@@ -65,7 +72,9 @@ namespace TTN_QL_HSGV.GUI.Lop
             lops = bus.GetDanhSachLop();
             dataGridViewDS_Lop.DataSource = lops;
             textBoxtenGVCN.Text = bus.GetTenGiaoVien(dataGridViewDS_Lop.CurrentRow.Cells[0].Value.ToString());
-            comboBoxKhoaHoc.DataSource = bus.GetDanhSachKhoaHoc();
+            List<string> danhSachKhoaHoc = bus.GetDanhSachKhoaHoc();
+            danhSachKhoaHoc.Insert(0, "None");
+            comboBoxKhoaHoc.DataSource = danhSachKhoaHoc;
         }
 
         private void dataGridViewDS_Lop_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -96,7 +105,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             dataGridViewDS_Lop.DataSource = lops;
             dataGridViewDS_Lop.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection = strSortOrder;
         }
-          private SortOrder getSortOrder(int columnIndex)
+        private SortOrder getSortOrder(int columnIndex)
         {
             if (dataGridViewDS_Lop.Columns[columnIndex].HeaderCell.SortGlyphDirection == SortOrder.None ||
                  dataGridViewDS_Lop.Columns[columnIndex].HeaderCell.SortGlyphDirection == SortOrder.Descending)
