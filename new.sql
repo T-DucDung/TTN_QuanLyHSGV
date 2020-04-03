@@ -12,6 +12,10 @@ go
 --khóa học
 --môn học
 
+
+-- 
+
+
 create table HOCSINH(
 	MaHS varchar(10)  not null primary key,
 	TenHS nvarchar(50) not null,
@@ -614,4 +618,6 @@ INSERT [dbo].[MONHOC] ([MaMon], [TenMon], [MaKhoa]) VALUES (N'THEDUC', N'THỂ D
 INSERT [dbo].[MONHOC] ([MaMon], [TenMon], [MaKhoa]) VALUES (N'TIN', N'TIN HỌC', N'TUNHIEN')
 INSERT [dbo].[MONHOC] ([MaMon], [TenMon], [MaKhoa]) VALUES (N'TOAN', N'TOÁN HỌC', N'TUNHIEN')
 INSERT [dbo].[MONHOC] ([MaMon], [TenMon], [MaKhoa]) VALUES (N'VAN', N'NGỮ VĂN', N'XAHOI')
+
+
 

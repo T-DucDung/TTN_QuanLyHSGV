@@ -273,6 +273,7 @@
             this.comboBoxGiaoVien.Name = "comboBoxGiaoVien";
             this.comboBoxGiaoVien.Size = new System.Drawing.Size(194, 25);
             this.comboBoxGiaoVien.TabIndex = 98;
+            this.comboBoxGiaoVien.SelectedIndexChanged += new System.EventHandler(this.comboBoxGiaoVien_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -327,6 +328,7 @@
             this.textBoxMon.Name = "textBoxMon";
             this.textBoxMon.Size = new System.Drawing.Size(194, 23);
             this.textBoxMon.TabIndex = 106;
+            this.textBoxMon.TextChanged += new System.EventHandler(this.textBoxMon_TextChanged);
             // 
             // textBoxThu
             // 

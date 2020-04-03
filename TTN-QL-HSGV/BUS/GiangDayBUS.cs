@@ -31,6 +31,13 @@ namespace TTN_QL_HSGV.BUS
             return Convert(dt);
         }
 
+        public static List<string> GetDanhSachLop2()
+        {
+            DataTable dt = new DataTable();
+            dt = DataProvider.Instance.ExecuteQuery("SELECT MaLop FROM LOP");
+
+            return Convert2(dt);
+        }
 
         public static List<string> GetDanhSachGiaoVien()
         {
@@ -38,7 +45,7 @@ namespace TTN_QL_HSGV.BUS
             
             dt = DataProvider.Instance.ExecuteQuery("SELECT DISTINCT MaGV From GIANGDAY");
 
-            return Convert(dt);
+            return Convert2(dt);
         }
 
 
@@ -54,7 +61,7 @@ namespace TTN_QL_HSGV.BUS
 
         public static List<string> Convert(DataTable dt)
         {
-            List<string> List = new List<string>() { "Tất cả" };
+            List<string> List = new List<string>() ;
 
             foreach (DataRow dr in dt.Rows)
             {
@@ -65,6 +72,17 @@ namespace TTN_QL_HSGV.BUS
             {
                 Trace.WriteLine(item);
             }*/
+            return List;
+        }
+
+        public static List<string> Convert2(DataTable dt)
+        {
+            List<string> List = new List<string>() { "Tất cả" };
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                List.Add(dr[0].ToString());
+            }
             return List;
         }
 
@@ -80,14 +98,19 @@ namespace TTN_QL_HSGV.BUS
 
         public static DataTable Filter(string maGV, string maLop, string thu, string tiet)
         {
-            Trace.WriteLine(maGV);
-            Trace.WriteLine(maLop);
-            Trace.WriteLine(thu);
-            Trace.WriteLine(tiet);
             return DataProvider.Instance.ExecuteQuery("FilterInfo '"+maGV+"','"+maLop+"','"+thu+"','"+tiet+"'");
         }
 
         
+        public static List<string> GetTenMonTheoGiaoVien(string maGV)
+        {
+            DataTable dt = new DataTable();
+
+            dt = DataProvider.Instance.ExecuteQuery("gettenmonhoc '" + maGV + "'");
+
+            return Convert(dt);
+        }
+
     }
 
 }
