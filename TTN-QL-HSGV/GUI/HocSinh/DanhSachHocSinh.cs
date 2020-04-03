@@ -133,6 +133,8 @@ namespace TTN_QL_HSGV.GUI.HocSinh
                 items = items.FindAll(item => item.MaKH == khoahoc);
             }
 
+            textBoxTongSo.Text = dths.Rows.Count.ToString();
+
             dataGridViewDS_HS.DataSource = items;
             dataGridViewDS_HS.Refresh();
         }

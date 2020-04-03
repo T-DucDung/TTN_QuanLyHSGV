@@ -1,5 +1,5 @@
 --them
-create PROC ThemGV ( @TenGV nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
+alter PROC ThemGV ( @TenGV nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
 @SDT varchar(11), @ChucVu nvarchar(50), @AnhDaiDien varbinary(max),@MaMon varchar(10) )
 As
 BEGIN
@@ -7,16 +7,16 @@ BEGIN
 	if((select COUNT(MaGV) from GIAOVIEN) = 0)
 		set @temp=0
 	else 
-		set @temp=( select MAX(CAST(MaGV as int)) from GIAOVIEN )
+		set @temp = (select MAX(So.so) from (select REPLACE(MaGV, 'GV', '') as so from GiaoVien) as So)
 	set @temp=@temp+1
-	set @i=CAST(@temp as varchar(10))
+	set @i= CONCAT('GV', @temp)
+
 	INSERT INTO GIAOVIEN(MaGV, TenGV,DiaChi, GioiTinh, SDT , ChucVu, AnhDaiDien, MaMon)
 	VALUES (@i ,@TenGV, @DiaChi, @GioiTinh, @SDT, @ChucVu, @AnhDaiDien, @MaMon)
 END
 go
 
-
-exec ThemGV N'h', N'h',N'h', '2', N'h', 0, 'Toan'
+exec ThemGV N'1h', N'h',N'h', '2', N'h', 0, 'Toan'
 
 
 --Sua
@@ -61,18 +61,18 @@ end
 -----------------------------------HS-----------------------------
 --them
 
-create PROC ThemHS ( @TenHS nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
+alter PROC ThemHS ( @TenHS nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
 @SDT varchar(11), @AnhDaiDien varbinary(max),@MaLop varchar(10) )
 As
 BEGIN
 	declare @maHS varchar(10), @temp int, @i varchar(10)
-	select * from HOCSINH
 	if((select COUNT(MaHS) from HOCSINH) = 0)
 		set @temp=0
 	else 
-		set @temp=( select MAX(CAST(MaHS as int)) from HOCSINH )
+		set @temp = (select MAX(So.so) from (select REPLACE(MaHS, 'HS', '') as so from HOCSINH) as So)
 	set @temp=@temp+1
-	set @i=CAST(@temp as varchar(10))
+	set @i= CONCAT('HS', @temp)
+
 	INSERT INTO HOCSINH(MaHS,TenHS ,DiaChi, GioiTinh, SDT, AnhDaiDien, MaLop)
 	VALUES (@i ,@TenHS, @DiaChi, @GioiTinh, @SDT, @AnhDaiDien, @MaLop)
 END
