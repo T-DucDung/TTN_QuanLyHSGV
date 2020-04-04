@@ -21,7 +21,7 @@ namespace TTN_QL_HSGV.DAL
         private DataProvider() { }
 
 
-        private string str = @"Data Source=DESKTOP-CDU70QA;Initial Catalog=TTN_QLHSGV;Integrated Security=True";
+        private string str = @"Data Source=DESKTOP-LAOT6MD\GNOS02;Initial Catalog=TTN_QLHSGV;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query)
         {
