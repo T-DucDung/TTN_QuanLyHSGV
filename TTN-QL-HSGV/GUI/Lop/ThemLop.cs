@@ -163,6 +163,17 @@ namespace TTN_QL_HSGV.GUI.Lop
                 return SortOrder.None;
             }
         }
+        public void GoiKhoaHoc()
+        {
+            this.Hide();
+            KhoaHoc khoaHoc = new KhoaHoc();
+            khoaHoc.FormClosed += KhoaHoc_FormClosed;
+            khoaHoc.Show();
+        }
 
+        private void KhoaHoc_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
     }
 }
