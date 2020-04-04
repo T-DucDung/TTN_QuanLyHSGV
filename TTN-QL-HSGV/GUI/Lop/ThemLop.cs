@@ -170,6 +170,7 @@ namespace TTN_QL_HSGV.GUI.Lop
         {
             if(comboBoxKhoaHoc.Text == "Thêm khoá học")
             {
+                comboBoxKhoaHoc.SelectedIndex = 0;
                 GoiKhoaHoc();
             }    
         }
