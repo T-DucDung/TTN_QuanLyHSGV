@@ -75,7 +75,7 @@ namespace TTN_QL_HSGV.BUS
         public static DataTable XemLichHocSinh(string MaHS)
         {
             DataTable result = DAL.DataProvider.Instance.ExecuteQuery("" +
-                "select MaGV,MaLop,SoTiet,DiaDiem,Thu,Tiet " +
+                "select MaGV,HOCSINH.MaLop,SoTiet,DiaDiem,Thu,Tiet " +
                 "from GIANGDAY,HOCSINH " +
                 $"where MaHS = '{MaHS}' " +
                 "and " +
@@ -86,7 +86,7 @@ namespace TTN_QL_HSGV.BUS
         {
             XuLyDauVao(ref Thu, ref Buoi,ref MaGV,ref MaLop);
             DataTable result = DAL.DataProvider.Instance.ExecuteQuery("" +
-                "select MaGV,MaLop,SoTiet,DiaDiem,Thu,Tiet " +
+                "select MaGV,HOCSINH.MaLop,SoTiet,DiaDiem,Thu,Tiet " +
                 "from GIANGDAY,HOCSINH " +
                 $"where MaHS like '{MaHS}' " +
                 "and " +
