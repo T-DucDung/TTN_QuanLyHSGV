@@ -165,7 +165,7 @@ namespace TTN_QL_HSGV.GUI.Lop
                 return SortOrder.None;
             }
         }
-        public void GoiKhoaHoc()
+        private void GoiKhoaHoc()
         {
             this.Hide();
             KhoaHoc khoaHoc = new KhoaHoc();
@@ -176,14 +176,15 @@ namespace TTN_QL_HSGV.GUI.Lop
         private void KhoaHoc_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
-            
+        }
+
         private void comboBoxKhoaHoc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBoxKhoaHoc.Text == "Thêm khoá học")
+            if (comboBoxKhoaHoc.Text == "Thêm khoá học")
             {
                 comboBoxKhoaHoc.SelectedIndex = 0;
                 GoiKhoaHoc();
-            }    
+            }
         }
     }
 }

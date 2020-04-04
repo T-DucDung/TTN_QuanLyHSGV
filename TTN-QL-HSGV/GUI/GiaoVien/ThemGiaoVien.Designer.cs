@@ -290,7 +290,7 @@
             // 
             this.buttonThemMon.AutoSize = true;
             this.buttonThemMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThemMon.Location = new System.Drawing.Point(662, 373);
+            this.buttonThemMon.Location = new System.Drawing.Point(649, 373);
             this.buttonThemMon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonThemMon.Name = "buttonThemMon";
             this.buttonThemMon.Size = new System.Drawing.Size(100, 33);

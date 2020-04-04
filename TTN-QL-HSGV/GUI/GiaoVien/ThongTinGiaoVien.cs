@@ -70,17 +70,17 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
             comboBoxDayMon.SelectedValue = controllerGV.XemChiTietGV(ID).MaMon.ToString();
         }
 
-        private void buttonThemMon_Click(object sender, EventArgs e)
-        {
-            GUI.FormPhu.MonHoc monHoc = new GUI.FormPhu.MonHoc();
-            this.Hide();
-            monHoc.FormClosed += MonHoc_FormClosed;
-            monHoc.Show();
-        }
-
         private void MonHoc_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
+        }
+
+        private void buttonThemMon_Click(object sender, EventArgs e)
+        {
+            GUI.FormPhu.MonHoc monHoc = new FormPhu.MonHoc();
+            monHoc.FormClosed += MonHoc_FormClosed;
+            monHoc.Show();
+            this.Hide();
         }
     }
 }
