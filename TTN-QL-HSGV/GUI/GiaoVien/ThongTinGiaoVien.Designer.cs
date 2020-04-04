@@ -51,6 +51,7 @@
             this.textBoxChucVu = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.buttonThemMon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -285,11 +286,25 @@
             this.label9.TabIndex = 43;
             this.label9.Text = "Chức Vụ";
             // 
+            // buttonThemMon
+            // 
+            this.buttonThemMon.AutoSize = true;
+            this.buttonThemMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThemMon.Location = new System.Drawing.Point(662, 373);
+            this.buttonThemMon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonThemMon.Name = "buttonThemMon";
+            this.buttonThemMon.Size = new System.Drawing.Size(100, 33);
+            this.buttonThemMon.TabIndex = 70;
+            this.buttonThemMon.Text = "Thêm Môn";
+            this.buttonThemMon.UseVisualStyleBackColor = true;
+            this.buttonThemMon.Click += new System.EventHandler(this.buttonThemMon_Click);
+            // 
             // ThongTinGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 503);
+            this.Controls.Add(this.buttonThemMon);
             this.Controls.Add(this.textBoxChucVu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label9);
@@ -349,5 +364,6 @@
         private System.Windows.Forms.TextBox textBoxChucVu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button buttonThemMon;
     }
 }
