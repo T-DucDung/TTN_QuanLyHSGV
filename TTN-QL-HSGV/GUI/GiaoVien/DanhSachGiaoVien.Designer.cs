@@ -175,8 +175,6 @@
             this.comboBoxChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxChucVu.FormattingEnabled = true;
             this.comboBoxChucVu.Items.AddRange(new object[] {
-            "PHÓ HIỆU TRƯỞNG",
-            "GIẢNG VIÊN",
             "None"});
             this.comboBoxChucVu.Location = new System.Drawing.Point(232, 58);
             this.comboBoxChucVu.Margin = new System.Windows.Forms.Padding(2);
