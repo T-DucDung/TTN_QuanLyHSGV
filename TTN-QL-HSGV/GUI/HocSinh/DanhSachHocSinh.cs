@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTN_QL_HSGV.BUS;
+using TTN_QL_HSGV.DTO;
 using TTN_QL_HSGV.GUI.HocSinh;
 
 namespace TTN_QL_HSGV.GUI.HocSinh
@@ -137,6 +138,35 @@ namespace TTN_QL_HSGV.GUI.HocSinh
 
             dataGridViewDS_HS.DataSource = items;
             dataGridViewDS_HS.Refresh();
+        }
+
+        private void DataGridViewDS_HS_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            List<DTO.HocSinh> dsHSSort = controllerHS.XemTatCaHS();
+            List<DTO.HocSinh> itemSort = dsHSSort;
+
+            string strColumnName = dataGridViewDS_HS.Columns[e.ColumnIndex].Name;
+            SortOrder strSortOrder = getSortOrder(e.ColumnIndex);
+            itemSort.Sort(new HocSinhComparer(strColumnName, strSortOrder));
+            dataGridViewDS_HS.DataSource = null;
+            dataGridViewDS_HS.DataSource = itemSort;
+            dataGridViewDS_HS.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection = strSortOrder;
+
+            dataGridViewDS_HS.Refresh();
+        }
+        private SortOrder getSortOrder(int columnIndex)
+        {
+            if (dataGridViewDS_HS.Columns[columnIndex].HeaderCell.SortGlyphDirection == SortOrder.None ||
+                 dataGridViewDS_HS.Columns[columnIndex].HeaderCell.SortGlyphDirection == SortOrder.Descending)
+            {
+                dataGridViewDS_HS.Columns[columnIndex].HeaderCell.SortGlyphDirection = SortOrder.Ascending;
+                return SortOrder.Ascending;
+            }
+            else
+            {
+                dataGridViewDS_HS.Columns[columnIndex].HeaderCell.SortGlyphDirection = SortOrder.Descending;
+                return SortOrder.Descending;
+            }
         }
     }
 }
