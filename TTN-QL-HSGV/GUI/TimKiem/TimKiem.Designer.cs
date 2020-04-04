@@ -123,6 +123,7 @@
             this.dataGridViewDS_HS.RowTemplate.Height = 24;
             this.dataGridViewDS_HS.Size = new System.Drawing.Size(808, 287);
             this.dataGridViewDS_HS.TabIndex = 104;
+            this.dataGridViewDS_HS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDS_HS_CellClick);
             // 
             // label1
             // 
@@ -236,9 +237,9 @@
             this.comboBoxGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxGioiTinh.FormattingEnabled = true;
             this.comboBoxGioiTinh.Items.AddRange(new object[] {
+            "None",
             "Nữ",
-            "Nam",
-            "Không"});
+            "Nam"});
             this.comboBoxGioiTinh.Location = new System.Drawing.Point(635, 69);
             this.comboBoxGioiTinh.Name = "comboBoxGioiTinh";
             this.comboBoxGioiTinh.Size = new System.Drawing.Size(185, 28);
@@ -270,6 +271,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "TimKiem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TimKiem";
             this.Load += new System.EventHandler(this.TimKiem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_HS)).EndInit();

@@ -28,8 +28,12 @@ namespace TTN_QL_HSGV.GUI.TimKiem
         private void buttonChiTiet_Click(object sender, EventArgs e)
         {
             // truyền mã sang form bên kia
+            DataGridViewRow current = dataGridViewDS_HS.CurrentRow;
+            string MaTimKiem = current.Cells[0].Value.ToString();
+            string ChucVu = current.Cells[5].Value.ToString();
             this.Hide();
-            ChiTiet formCT = new ChiTiet("");
+
+            ChiTiet formCT = new ChiTiet(MaTimKiem,ChucVu);
             formCT.FormClosed += FormCT_FormClosed;
             formCT.Show();
         }
@@ -41,9 +45,11 @@ namespace TTN_QL_HSGV.GUI.TimKiem
 
         private void TimKiem_Load(object sender, EventArgs e)
         {
-            dataGridViewDS_HS.DataSource = BUS.TimKiem.TimKiemKoThongTin();
+            dataGridViewDS_HS.DataSource = BUS.TimKiemBUS.TimKiemKoThongTin();
             textBoxTongSo.Text = dataGridViewDS_HS.RowCount.ToString();
-            comboBoxGioiTinh.SelectedIndex = 2;
+            comboBoxGioiTinh.SelectedIndex = 0;
+            buttonChiTiet.Enabled = false;
+
         }
         
         private void buttonTimKiem_Click(object sender, EventArgs e)
@@ -61,20 +67,25 @@ namespace TTN_QL_HSGV.GUI.TimKiem
             string KhoaHoc = "";
             if (HoTen == "" && GioiTinh == "Không" && Lop == "" && KhoaHoc == "")
             {
-                dataGridViewDS_HS.DataSource = BUS.TimKiem.TimKiemKoThongTin();
-                textBoxTongSo.Text = dataGridViewDS_HS.RowCount.ToString();
+                dataGridViewDS_HS.DataSource = BUS.TimKiemBUS.TimKiemKoThongTin();
+                textBoxTongSo.Text = (dataGridViewDS_HS.RowCount -1).ToString();
             }    
             else if (textBoxLop.Text == "")
             {
-                dataGridViewDS_HS.DataSource = BUS.TimKiem.TimKiemThongTinKoDungLop(HoTen, GioiTinh);
-                textBoxTongSo.Text = dataGridViewDS_HS.RowCount.ToString();
+                dataGridViewDS_HS.DataSource = BUS.TimKiemBUS.TimKiemThongTinKoDungLop(HoTen, GioiTinh);
+                textBoxTongSo.Text = (dataGridViewDS_HS.RowCount -1).ToString();
             }   
             else if (textBoxLop.Text != "")
             {
-                dataGridViewDS_HS.DataSource = BUS.TimKiem.TimKiemThongTinDungLop(HoTen, GioiTinh,Lop,KhoaHoc);
-                textBoxTongSo.Text = dataGridViewDS_HS.RowCount.ToString();
+                dataGridViewDS_HS.DataSource = BUS.TimKiemBUS.TimKiemThongTinDungLop(HoTen, GioiTinh,Lop,KhoaHoc);
+                textBoxTongSo.Text = (dataGridViewDS_HS.RowCount -1 ).ToString();
             }
 
+        }
+
+        private void dataGridViewDS_HS_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            buttonChiTiet.Enabled = true;
         }
     }
 }

@@ -7,19 +7,23 @@ using System.Threading.Tasks;
 
 namespace TTN_QL_HSGV.BUS
 {
-    class TimKiem
+    class TimKiemBUS
     {
-        private static void XuLyDauVao1(string HoTen,string GioiTinh,string Lop,string KhoaHoc)
+        private static void XuLyDauVao1(ref string HoTen, ref string GioiTinh, ref string Lop, ref string KhoaHoc)
         {
             if (HoTen == "") HoTen = "%";
+            else HoTen = "%" + HoTen + "%";
             if (Lop == "") Lop = "%";
-            if (GioiTinh == "Không") GioiTinh = "%";
+            else Lop = "%" + Lop + "%";
+            if (GioiTinh == "None") GioiTinh = "%";
             if (KhoaHoc == "") KhoaHoc = "%";
+            else KhoaHoc = "%" + KhoaHoc + "%";
         }
-        private static void XuLyDauVao2(string HoTen, string GioiTinh)
+        private static void XuLyDauVao2(ref string HoTen, ref string GioiTinh)
         {
             if (HoTen == "") HoTen = "%";
-            if (GioiTinh == "Không") GioiTinh = "%";
+            else HoTen = "%" + HoTen + "%";
+            if (GioiTinh == "None") GioiTinh = "%";
         }
         public static DataTable TimKiemKoThongTin()
         {
@@ -57,7 +61,7 @@ namespace TTN_QL_HSGV.BUS
         }
         public static DataTable TimKiemThongTinDungLop(string HoTen,string GioiTinh,string Lop,string KhoaHoc)
         {
-            XuLyDauVao1(HoTen, GioiTinh, Lop, KhoaHoc);
+            XuLyDauVao1(ref HoTen,ref GioiTinh,ref Lop,ref KhoaHoc);
 
             DataTable Result = new DataTable();
             DataTable dths = new DataTable();
@@ -83,10 +87,10 @@ namespace TTN_QL_HSGV.BUS
         public static DataTable TimKiemThongTinKoDungLop(string HoTen, string GioiTinh)
         {
 
-            //XuLyDauVao2(HoTen, GioiTinh);
-            if (HoTen == "") HoTen = "%";
+            XuLyDauVao2(ref HoTen, ref GioiTinh);
+            /*if (HoTen == "") HoTen = "%";
             else HoTen = "%" + HoTen + "%";
-            if (GioiTinh == "Không") GioiTinh = "%";
+            if (GioiTinh == "None") GioiTinh = "%";*/
 
             DataTable Result = new DataTable();
 
