@@ -80,8 +80,17 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
             this.Hide();
             ThemGiaoVien formTMGV = new ThemGiaoVien();
             formTMGV.FormClosed += FormTMGV_FormClosed;
-            formTMGV.Show();
+            formTMGV.ShowDialog();
+            DataTable dtcv = controllerGV.LayChucVu();
 
+            comboBoxChucVu.Items.Clear();
+            for (int i = 0; i < dtcv.Rows.Count; i++)
+            {
+                DataRow row = dtcv.Rows[i];
+                comboBoxChucVu.Items.Add(row.Field<string>("ChucVu"));
+            }
+            comboBoxChucVu.Items.Add("None");
+            comboBoxChucVu.SelectedItem = "None";
         }
 
         private void FormTMGV_FormClosed(object sender, FormClosedEventArgs e)
