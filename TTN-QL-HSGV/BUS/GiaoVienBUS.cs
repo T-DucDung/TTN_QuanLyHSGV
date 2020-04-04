@@ -75,5 +75,12 @@ namespace TTN_QL_HSGV.BUS
 
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public DataTable LayChucVu()
+        {
+            string query = string.Format("exec LayChucVu ");
+
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

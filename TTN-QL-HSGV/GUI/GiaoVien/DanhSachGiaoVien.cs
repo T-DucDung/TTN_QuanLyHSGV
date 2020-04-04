@@ -21,7 +21,6 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
         GiaoVienBUS controllerGV = new GiaoVienBUS();
         public static DataGridView Dtgv { get => dtgv; set => dtgv = value; }
         public static TextBox TextboxSoLuong { get => textboxSoLuong; set => textboxSoLuong = value; }
-
         public DanhSachGiaoVien()
         {
             InitializeComponent();
@@ -35,11 +34,17 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
 
             DataTable dt = controllerGV.XemTatCaMonHoc();
             dt.Rows.Add(new Object[] { "None", "None" });
-
-
+            
             comboBoxMon.DataSource = dt;
             comboBoxMon.DisplayMember = "TenMon";
             comboBoxMon.ValueMember = "MaMon";
+
+            DataTable dtcv = controllerGV.LayChucVu();
+            for (int i = 0; i < dtcv.Rows.Count; i++)
+            {
+                DataRow row = dtcv.Rows[i];
+                comboBoxChucVu.Items.Add(row.Field<string>("ChucVu"));
+            }   
 
             comboBoxGioiTinh.SelectedItem = "None";
             comboBoxChucVu.SelectedItem = "None";
@@ -62,6 +67,7 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
             ThongTinGiaoVien formTTGV = new ThongTinGiaoVien(maGV);
             formTTGV.FormClosed += FormTTGV_FormClosed;
             formTTGV.Show();
+
         }
 
         private void FormTTGV_FormClosed(object sender, FormClosedEventArgs e)
@@ -74,7 +80,17 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
             this.Hide();
             ThemGiaoVien formTMGV = new ThemGiaoVien();
             formTMGV.FormClosed += FormTMGV_FormClosed;
-            formTMGV.Show();
+            formTMGV.ShowDialog();
+            DataTable dtcv = controllerGV.LayChucVu();
+
+            comboBoxChucVu.Items.Clear();
+            for (int i = 0; i < dtcv.Rows.Count; i++)
+            {
+                DataRow row = dtcv.Rows[i];
+                comboBoxChucVu.Items.Add(row.Field<string>("ChucVu"));
+            }
+            comboBoxChucVu.Items.Add("None");
+            comboBoxChucVu.SelectedItem = "None";
         }
 
         private void FormTMGV_FormClosed(object sender, FormClosedEventArgs e)
