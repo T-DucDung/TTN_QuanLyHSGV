@@ -88,7 +88,9 @@ namespace TTN_QL_HSGV.GUI.Lop
 
         private void ThemLop_Load(object sender, EventArgs e)
         {
-            comboBoxKhoaHoc.DataSource = Lbus.GetDanhSachKhoaHoc();
+            List<string> khoaHocs = Lbus.GetDanhSachKhoaHoc();
+            khoaHocs.Add("Thêm khoá học");
+            comboBoxKhoaHoc.DataSource = khoaHocs;
             hocSinhs = HSbus.XemTatCaHS();
             dataGridViewDS_HS.DataSource = hocSinhs;
             AddCotCheckbox();
@@ -174,6 +176,14 @@ namespace TTN_QL_HSGV.GUI.Lop
         private void KhoaHoc_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
+            
+        private void comboBoxKhoaHoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBoxKhoaHoc.Text == "Thêm khoá học")
+            {
+                comboBoxKhoaHoc.SelectedIndex = 0;
+                GoiKhoaHoc();
+            }    
         }
     }
 }

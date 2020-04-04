@@ -195,6 +195,7 @@
             this.comboBoxKhoaHoc.Name = "comboBoxKhoaHoc";
             this.comboBoxKhoaHoc.Size = new System.Drawing.Size(248, 25);
             this.comboBoxKhoaHoc.TabIndex = 96;
+            this.comboBoxKhoaHoc.SelectedIndexChanged += new System.EventHandler(this.comboBoxKhoaHoc_SelectedIndexChanged);
             // 
             // label4
             // 
