@@ -55,22 +55,25 @@
             this.buttonLoc.TabIndex = 81;
             this.buttonLoc.Text = "Lọc";
             this.buttonLoc.UseVisualStyleBackColor = true;
+            this.buttonLoc.Click += new System.EventHandler(this.buttonLoc_Click);
             // 
             // comboBoxGiaoVien
             // 
             this.comboBoxGiaoVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGiaoVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxGiaoVien.FormattingEnabled = true;
-            this.comboBoxGiaoVien.Location = new System.Drawing.Point(573, 73);
+            this.comboBoxGiaoVien.Items.AddRange(new object[] {
+            "None"});
+            this.comboBoxGiaoVien.Location = new System.Drawing.Point(601, 73);
             this.comboBoxGiaoVien.Name = "comboBoxGiaoVien";
-            this.comboBoxGiaoVien.Size = new System.Drawing.Size(184, 28);
+            this.comboBoxGiaoVien.Size = new System.Drawing.Size(156, 28);
             this.comboBoxGiaoVien.TabIndex = 80;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(475, 77);
+            this.label6.Location = new System.Drawing.Point(503, 77);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 20);
             this.label6.TabIndex = 79;
@@ -81,7 +84,9 @@
             this.comboBoxLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxLop.FormattingEnabled = true;
-            this.comboBoxLop.Location = new System.Drawing.Point(365, 73);
+            this.comboBoxLop.Items.AddRange(new object[] {
+            "None"});
+            this.comboBoxLop.Location = new System.Drawing.Point(393, 71);
             this.comboBoxLop.Name = "comboBoxLop";
             this.comboBoxLop.Size = new System.Drawing.Size(104, 28);
             this.comboBoxLop.TabIndex = 78;
@@ -90,7 +95,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(312, 76);
+            this.label5.Location = new System.Drawing.Point(337, 76);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 20);
             this.label5.TabIndex = 77;
@@ -102,12 +107,12 @@
             this.comboBoxBuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBuoi.FormattingEnabled = true;
             this.comboBoxBuoi.Items.AddRange(new object[] {
+            "Cả sáng, chiều",
             "Sáng",
-            "Chiều",
-            "None"});
+            "Chiều"});
             this.comboBoxBuoi.Location = new System.Drawing.Point(222, 73);
             this.comboBoxBuoi.Name = "comboBoxBuoi";
-            this.comboBoxBuoi.Size = new System.Drawing.Size(84, 28);
+            this.comboBoxBuoi.Size = new System.Drawing.Size(109, 28);
             this.comboBoxBuoi.TabIndex = 76;
             // 
             // label4
@@ -126,14 +131,13 @@
             this.comboBoxThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxThu.FormattingEnabled = true;
             this.comboBoxThu.Items.AddRange(new object[] {
+            "Cả Tuần",
             "Thứ 2",
             "Thứ 3",
             "Thứ 4",
             "Thứ 5",
             "Thứ 6",
-            "Thứ 7",
-            "Chủ Nhật",
-            "None"});
+            "Thứ 7"});
             this.comboBoxThu.Location = new System.Drawing.Point(63, 73);
             this.comboBoxThu.Name = "comboBoxThu";
             this.comboBoxThu.Size = new System.Drawing.Size(100, 28);
@@ -164,7 +168,6 @@
             // buttonChiTiet
             // 
             this.buttonChiTiet.AutoSize = true;
-            this.buttonChiTiet.Enabled = false;
             this.buttonChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonChiTiet.Location = new System.Drawing.Point(269, 462);
             this.buttonChiTiet.Name = "buttonChiTiet";
@@ -199,6 +202,7 @@
             this.dataGridViewDS_HS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDS_HS.Location = new System.Drawing.Point(14, 107);
             this.dataGridViewDS_HS.Name = "dataGridViewDS_HS";
+            this.dataGridViewDS_HS.RowHeadersWidth = 51;
             this.dataGridViewDS_HS.RowTemplate.Height = 24;
             this.dataGridViewDS_HS.Size = new System.Drawing.Size(808, 320);
             this.dataGridViewDS_HS.TabIndex = 67;
@@ -235,7 +239,9 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ChiTiet";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChiTiet";
+            this.Load += new System.EventHandler(this.ChiTiet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_HS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
