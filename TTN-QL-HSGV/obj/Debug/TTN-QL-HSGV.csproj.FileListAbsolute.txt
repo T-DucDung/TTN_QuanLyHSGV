@@ -1,4 +1,3 @@
-C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csprojAssemblyReference.cache
 C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.FormChinh.resources
 C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.Properties.Resources.resources
 C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csproj.GenerateResource.cache

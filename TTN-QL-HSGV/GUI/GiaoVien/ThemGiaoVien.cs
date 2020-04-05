@@ -152,7 +152,7 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
 
         private void buttonThemMon_Click(object sender, EventArgs e)
         {
-            GUI.FormPhu.MonHoc monHoc = new FormPhu.MonHoc();
+            FormPhu.MonHoc monHoc = new FormPhu.MonHoc();
             monHoc.FormClosed += MonHoc_FormClosed;
             monHoc.Show();
             this.Hide();
