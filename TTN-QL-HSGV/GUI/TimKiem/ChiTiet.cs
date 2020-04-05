@@ -29,10 +29,19 @@ namespace TTN_QL_HSGV.GUI.TimKiem
 
         private void buttonChiTiet_Click(object sender, EventArgs e)
         {
+            DataGridViewRow current = dataGridViewDS_HS.CurrentRow;
             this.Hide();
-            ThongTinGiangDay formTTGD = new ThongTinGiangDay();
+            ThongTinGiangDay formTTGD = new ThongTinGiangDay(
+                current.Cells[0].Value.ToString(),
+                current.Cells[1].Value.ToString(),
+                Convert.ToInt32(current.Cells[2].Value),
+                current.Cells[3].Value.ToString(),
+                current.Cells[4].Value.ToString(),
+                current.Cells[5].Value.ToString());
             formTTGD.FormClosed += FormTTGD_FormClosed;
             formTTGD.Show();
+
+
         }
 
         private void FormTTGD_FormClosed(object sender, FormClosedEventArgs e)
