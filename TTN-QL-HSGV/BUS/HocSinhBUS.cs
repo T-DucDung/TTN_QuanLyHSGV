@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,10 +16,17 @@ namespace TTN_QL_HSGV.BUS
     {
         public bool ThemHS(HocSinh hocSinh)
         {
-            string query = string.Format("exec ThemHS N'{0}', N'{1}', N'{2}', {3}, {4}, '{5}' ", hocSinh.TenHS, hocSinh.DiaChi, hocSinh.GioiTinh, hocSinh.Sdt, 0, hocSinh.MaLop);
+            string query = string.Format("exec ThemHS N'{0}', N'{1}', N'{2}', {3}, {4}, '{5}' ", hocSinh.TenHS, hocSinh.DiaChi, hocSinh.GioiTinh,0, hocSinh.Sdt, hocSinh.MaLop);
 
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
+        public bool ThemHS(HocSinh hocSinh ,byte[] img)
+        {
+            string query = string.Format("exec ThemHS N'{0}', N'{1}', N'{2}', {3}, {4}, '{5}' ", hocSinh.TenHS, hocSinh.DiaChi, hocSinh.GioiTinh, hocSinh.Sdt, img ,hocSinh.MaLop);
+
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
+
         public bool SuaHS(HocSinh hocSinh)
         {
             string query = string.Format("exec SuaHS '{0}', N'{1}', N'{2}', N'{3}', '{4}', {5}, '{6}' ", hocSinh.MaHS, hocSinh.TenHS, hocSinh.DiaChi, hocSinh.GioiTinh, hocSinh.Sdt, 0, hocSinh.MaLop);

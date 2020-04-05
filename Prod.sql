@@ -1,5 +1,5 @@
 --them
-alter PROC ThemGV ( @TenGV nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
+create PROC ThemGV ( @TenGV nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
 @SDT varchar(11), @ChucVu nvarchar(50), @AnhDaiDien varbinary(max),@MaMon varchar(10) )
 As
 BEGIN
@@ -86,7 +86,7 @@ end
 -----------------------------------HS-----------------------------
 --them
 
-alter PROC ThemHS ( @TenHS nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
+create PROC ThemHS ( @TenHS nvarchar(50),@DiaChi nvarchar(100), @GioiTinh nvarchar(4),
 @SDT varchar(11), @AnhDaiDien varbinary(max),@MaLop varchar(10) )
 As
 BEGIN
