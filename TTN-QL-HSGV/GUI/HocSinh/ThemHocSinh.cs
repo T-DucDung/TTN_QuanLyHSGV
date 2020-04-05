@@ -15,6 +15,7 @@ namespace TTN_QL_HSGV.GUI.HocSinh
 {
     public partial class ThemHocSinh : Form
     {
+        private byte[] image;
         public ThemHocSinh()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace TTN_QL_HSGV.GUI.HocSinh
             comboBoxThuocLop.DataSource = controllerHS.XemTatCaLopHoc();
             comboBoxThuocLop.DisplayMember = "TenLop";
             comboBoxThuocLop.ValueMember = "MaLop";
+            image = null;
         }
 
         HocSinhBUS controllerHS = new HocSinhBUS();
@@ -35,13 +37,13 @@ namespace TTN_QL_HSGV.GUI.HocSinh
         {
             this.Close();
         }
-        private byte[] image;
+
         private void ImageChooseBtn_Click(object sender, EventArgs e)
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.ShowDialog();
             pictureBox.Image = Image.FromFile(fileDialog.FileName);
-            image = (byte[])(new ImageConverter()).ConvertTo(pictureBox.Image, typeof(byte[]));
+            image = File.ReadAllBytes(fileDialog.FileName);
         }
 
         private void ButtonThem_Click(object sender, EventArgs e)
@@ -112,48 +114,56 @@ namespace TTN_QL_HSGV.GUI.HocSinh
                 }
                 else
                 {
-                    DTO.HocSinh hs = new DTO.HocSinh("0", textBoxTenHS.Text, textBoxDiaChi.Text, textBoxGT.Text, textBoxSDT.Text,comboBoxThuocLop.SelectedValue.ToString());
+                    DTO.HocSinh hs = new DTO.HocSinh("0", textBoxTenHS.Text, textBoxDiaChi.Text, textBoxGT.Text, textBoxSDT.Text, comboBoxThuocLop.SelectedValue.ToString());
 
                     // nam sửa lại theo biến .
+                    if (image == null)
+                    {
+                        if (controllerHS.ThemHS(hs))
+                        {
+                            MessageBox.Show("Thêm mới thành công");
+
+                            textBoxTenHS.Text = "";
+                            textBoxGT.Text = "";
+                            textBoxSDT.Text = "";
+                            textBoxDiaChi.Text = "";
+                            comboBoxThuocLop.SelectedValue = 0;
+
+                            DanhSachHocSinh.Dths.DataSource = controllerHS.XemTatCaHS();
+                            DanhSachHocSinh.Dths.Refresh();
+                            int i = DanhSachHocSinh.Dths.Rows.Count;
+                            DanhSachHocSinh.TextboxSoLuongHS.Text = i.ToString();
+                            DanhSachHocSinh.TextboxSoLuongHS.Refresh();
+                        }
+                        else MessageBox.Show("Thêm mới thất bại");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đang thêm mới");
+                        if (controllerHS.ThemHS(hs, image))
+                        {
+                            MessageBox.Show("Thêm mới thành công");
+
+                            textBoxTenHS.Text = "";
+                            textBoxGT.Text = "";
+                            textBoxSDT.Text = "";
+                            textBoxDiaChi.Text = "";
+                            comboBoxThuocLop.SelectedValue = 0;
+
+                            DanhSachHocSinh.Dths.DataSource = controllerHS.XemTatCaHS();
+                            DanhSachHocSinh.Dths.Refresh();
+                            int i = DanhSachHocSinh.Dths.Rows.Count;
+                            DanhSachHocSinh.TextboxSoLuongHS.Text = i.ToString();
+                            DanhSachHocSinh.TextboxSoLuongHS.Refresh();
+                        }
+                        else MessageBox.Show("Thêm mới thất bại");
+                    }
+
                     
-                    if (controllerHS.ThemHS(hs))
-                    {
-                        MessageBox.Show("Thêm mới thành công");
-
-                        textBoxTenHS.Text = "";
-                        textBoxGT.Text = "";
-                        textBoxSDT.Text = "";
-                        textBoxDiaChi.Text = "";
-                        comboBoxThuocLop.SelectedValue = 0;
-
-                        DanhSachHocSinh.Dths.DataSource = controllerHS.XemTatCaHS();
-                        DanhSachHocSinh.Dths.Refresh();
-                        int i = DanhSachHocSinh.Dths.Rows.Count;
-                        DanhSachHocSinh.TextboxSoLuongHS.Text = i.ToString();
-                        DanhSachHocSinh.TextboxSoLuongHS.Refresh();
-                    }
-                    else if(controllerHS.ThemHS(hs , image) )
-                    {
-                        MessageBox.Show("Thêm mới thành công");
-
-                        textBoxTenHS.Text = "";
-                        textBoxGT.Text = "";
-                        textBoxSDT.Text = "";
-                        textBoxDiaChi.Text = "";
-                        comboBoxThuocLop.SelectedValue = 0;
-
-                        DanhSachHocSinh.Dths.DataSource = controllerHS.XemTatCaHS();
-                        DanhSachHocSinh.Dths.Refresh();
-                        int i = DanhSachHocSinh.Dths.Rows.Count;
-                        DanhSachHocSinh.TextboxSoLuongHS.Text = i.ToString();
-                        DanhSachHocSinh.TextboxSoLuongHS.Refresh();
-                    }
-
-                    else MessageBox.Show("Thêm mới thất bại");
                 }
             }
         }
 
-       
+
     }
 }

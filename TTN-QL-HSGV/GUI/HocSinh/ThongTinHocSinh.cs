@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTN_QL_HSGV.BUS;
+using TTN_QL_HSGV.DTO;
 
 namespace TTN_QL_HSGV.GUI.HocSinh
 {
@@ -61,11 +63,13 @@ namespace TTN_QL_HSGV.GUI.HocSinh
 
         private void ThongTinHocSinh_Load(object sender, EventArgs e)
         {
-            textBoxTenHS.Text = controllerHS.XemChiTietHS(ID).TenHS;
-            textBoxDiaChi.Text = controllerHS.XemChiTietHS(ID).DiaChi;
-            textBoxGT.Text = controllerHS.XemChiTietHS(ID).GioiTinh;
-            textBoxSDT.Text = controllerHS.XemChiTietHS(ID).Sdt;
-            comboBoxThuocLop.SelectedValue = controllerHS.XemChiTietHS(ID).MaLop.ToString();
+            DTO.HocSinh hocSinh = controllerHS.XemChiTietHS(ID);
+            textBoxTenHS.Text = hocSinh.TenHS;
+            textBoxDiaChi.Text = hocSinh.DiaChi;
+            textBoxGT.Text = hocSinh.GioiTinh;
+            textBoxSDT.Text = hocSinh.Sdt;
+            comboBoxThuocLop.SelectedValue = hocSinh.MaLop.ToString();
+            pictureBox1.Image = controllerHS.XemAnhHS(ID);
         }
     }
 }

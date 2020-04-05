@@ -21,7 +21,7 @@ namespace TTN_QL_HSGV.DAL
         private DataProvider() { }
 
 
-        private string str = @"Data Source=DESKTOP-cdu70qa;Initial Catalog=TTN_QLHSGV;Integrated Security=True";
+        private string str = @"Data Source=DESKTOP-CTR1TPG;Initial Catalog=TNN_QLHSGV;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query)
         {
@@ -54,6 +54,24 @@ namespace TTN_QL_HSGV.DAL
                 SqlCommand command = new SqlCommand(query, conn);
 
                 data = command.ExecuteNonQuery();
+
+                conn.Close();
+            }
+
+            return data;
+        }
+
+        public int ExecuteNonQuery(SqlCommand query)
+        {
+            int data = 0;
+
+            using (SqlConnection conn = new SqlConnection(str))
+            {
+                conn.Open();
+
+                query.Connection = conn;
+
+                data = query.ExecuteNonQuery();
 
                 conn.Close();
             }

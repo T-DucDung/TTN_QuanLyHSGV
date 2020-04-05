@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using TTN_QL_HSGV.DAL;
 using TTN_QL_HSGV.DTO;
 
@@ -16,15 +20,22 @@ namespace TTN_QL_HSGV.BUS
     {
         public bool ThemHS(HocSinh hocSinh)
         {
-            string query = string.Format("exec ThemHS N'{0}', N'{1}', N'{2}', {3}, {4}, '{5}' ", hocSinh.TenHS, hocSinh.DiaChi, hocSinh.GioiTinh,0, hocSinh.Sdt, hocSinh.MaLop);
+            string query = string.Format("exec ThemHS N'{0}', N'{1}', N'{2}', {3}, {4}, '{5}' ", hocSinh.TenHS, hocSinh.DiaChi, hocSinh.GioiTinh, hocSinh.Sdt, 0 , hocSinh.MaLop);
 
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
         public bool ThemHS(HocSinh hocSinh ,byte[] img)
         {
-            string query = string.Format("exec ThemHS N'{0}', N'{1}', N'{2}', {3}, {4}, '{5}' ", hocSinh.TenHS, hocSinh.DiaChi, hocSinh.GioiTinh, hocSinh.Sdt, img ,hocSinh.MaLop);
-
-            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+            string query = string.Format("exec  ThemHS @TenHS ,@DiaChi, @GioiTinh,@SDT , @AnhDaiDien , @MaLop");
+            SqlCommand command = new SqlCommand();
+            command.CommandText = query;
+            command.Parameters.AddWithValue("@TenHS", hocSinh.TenHS);
+            command.Parameters.AddWithValue("@DiaChi", hocSinh.DiaChi);
+            command.Parameters.AddWithValue("@GioiTinh", hocSinh.GioiTinh);
+            command.Parameters.AddWithValue("@SDT", hocSinh.Sdt);
+            command.Parameters.AddWithValue("@AnhDaiDien",img);
+            command.Parameters.AddWithValue("@MaLop", hocSinh.MaLop);
+            return DataProvider.Instance.ExecuteNonQuery(command) > 0;
         }
 
         public bool SuaHS(HocSinh hocSinh)
@@ -95,6 +106,35 @@ namespace TTN_QL_HSGV.BUS
             hs.MaLop = dt.Rows[0]["MaLop"].ToString();
 
             return hs;
+        }
+
+        public Image XemAnhHS(string maHS)
+        {
+            string query = string.Format("exec XemAnhHS '{0}' ", maHS);
+            DataTable obj = DataProvider.Instance.ExecuteQuery(query);
+            DataRow row = obj.Rows[0];
+            byte[] img = (byte[])row[0];
+            return byteArrayToImage(img);
+        }
+
+        public Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            try
+            {
+                MemoryStream ms = new MemoryStream(byteArrayIn);
+                Image returnImage = Image.FromStream(ms);
+                return returnImage;
+            }
+            catch(Exception ex)
+            {
+                Bitmap bmp = new Bitmap(90, 130);
+                using (Graphics graph = Graphics.FromImage(bmp))
+                {
+                    Rectangle ImageSize = new Rectangle(0, 0, 90, 130);
+                    graph.FillRectangle(Brushes.White, ImageSize);
+                }
+                return bmp;
+            }
         }
 
         public DataTable XemTatCaLopHoc()
