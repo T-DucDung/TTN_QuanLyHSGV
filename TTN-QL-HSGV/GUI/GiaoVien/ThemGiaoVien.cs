@@ -14,6 +14,7 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
 {
     public partial class ThemGiaoVien : Form
     {
+        private byte[] image;
         public ThemGiaoVien()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
             comboBoxDayMon.DataSource = controllerGV.XemTatCaMonHoc();
             comboBoxDayMon.DisplayMember = "TenMon";
             comboBoxDayMon.ValueMember = "MaMon";
+            image = null;
         }
 
         GiaoVienBUS controllerGV = new GiaoVienBUS();
@@ -39,7 +41,7 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
         {
 
         }
-        private byte[] image;
+
 
         private void ImageChooseBtn_Click(object sender, EventArgs e)
         {
@@ -131,43 +133,50 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
                 {
 
                     DTO.GiaoVien gv = new DTO.GiaoVien("0", textBoxTenGV.Text, textBoxDiaChi.Text, textBoxGT.Text, textBoxSDT.Text, textBoxChucVu.Text, comboBoxDayMon.SelectedValue.ToString());
-
-                    if (controllerGV.ThemGV(gv))
+                    if (image == null)
                     {
-                        MessageBox.Show("Thêm mới thành công");
+                        if (controllerGV.ThemGV(gv))
+                        {
+                            MessageBox.Show("Thêm mới thành công");
 
-                        textBoxTenGV.Text = "";
-                        textBoxGT.Text = "";
-                        textBoxChucVu.Text = "";
-                        textBoxSDT.Text = "";
-                        textBoxDiaChi.Text = "";
-                        comboBoxDayMon.SelectedValue = 0;
+                            textBoxTenGV.Text = "";
+                            textBoxGT.Text = "";
+                            textBoxChucVu.Text = "";
+                            textBoxSDT.Text = "";
+                            textBoxDiaChi.Text = "";
+                            comboBoxDayMon.SelectedValue = 0;
 
-                        DanhSachGiaoVien.Dtgv.DataSource = controllerGV.XemTatCaGV();
-                        DanhSachGiaoVien.Dtgv.Refresh();
-                        int i = DanhSachGiaoVien.Dtgv.Rows.Count;
-                        DanhSachGiaoVien.TextboxSoLuong.Text = i.ToString();
-                        DanhSachGiaoVien.TextboxSoLuong.Refresh();
-                    }
-                    else if (controllerGV.ThemGV(gv,image))
-                    {
-                        MessageBox.Show("Thêm mới thành công");
-
-                        textBoxTenGV.Text = "";
-                        textBoxGT.Text = "";
-                        textBoxChucVu.Text = "";
-                        textBoxSDT.Text = "";
-                        textBoxDiaChi.Text = "";
-                        comboBoxDayMon.SelectedValue = 0;
-
-                        DanhSachGiaoVien.Dtgv.DataSource = controllerGV.XemTatCaGV();
-                        DanhSachGiaoVien.Dtgv.Refresh();
-                        int i = DanhSachGiaoVien.Dtgv.Rows.Count;
-                        DanhSachGiaoVien.TextboxSoLuong.Text = i.ToString();
-                        DanhSachGiaoVien.TextboxSoLuong.Refresh();
+                            DanhSachGiaoVien.Dtgv.DataSource = controllerGV.XemTatCaGV();
+                            DanhSachGiaoVien.Dtgv.Refresh();
+                            int i = DanhSachGiaoVien.Dtgv.Rows.Count;
+                            DanhSachGiaoVien.TextboxSoLuong.Text = i.ToString();
+                            DanhSachGiaoVien.TextboxSoLuong.Refresh();
+                        }
+                        else MessageBox.Show("Thêm mới thất bại");
                     }
 
-                    else MessageBox.Show("Thêm mới thất bại");
+                    else
+                    {
+                        if (controllerGV.ThemGV(gv, image))
+                        {
+                            MessageBox.Show("Thêm mới thành công");
+                            textBoxTenGV.Text = "";
+                            textBoxGT.Text = "";
+                            textBoxChucVu.Text = "";
+                            textBoxSDT.Text = "";
+                            textBoxDiaChi.Text = "";
+                            comboBoxDayMon.SelectedValue = 0;
+
+                            DanhSachGiaoVien.Dtgv.DataSource = controllerGV.XemTatCaGV();
+                            DanhSachGiaoVien.Dtgv.Refresh();
+                            int i = DanhSachGiaoVien.Dtgv.Rows.Count;
+                            DanhSachGiaoVien.TextboxSoLuong.Text = i.ToString();
+                            DanhSachGiaoVien.TextboxSoLuong.Refresh();
+                        }
+                        else MessageBox.Show("Thêm mới thất bại");
+                    }
+
+
                 }
             }
         }
@@ -185,6 +194,6 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
             this.Hide();
         }
 
-        
+
     }
 }

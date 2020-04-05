@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,9 +24,11 @@ namespace TTN_QL_HSGV.BUS
 
         public bool ThemGV(GiaoVien giaoVien,byte[] img)
         {
-            string query = string.Format("exec ThemGV N'{0}', N'{1}', N'{2}', {3}, N'{4}', {5}, '{6}' ", giaoVien.TenGV, giaoVien.DiaChi, giaoVien.GioiTinh, giaoVien.Sdt, giaoVien.ChucVu, img , giaoVien.MaMon);
-
-            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+            string query = string.Format("exec ThemGV N'{0}', N'{1}', N'{2}', {3}, N'{4}', @AnhDaiDien, '{5}' ", giaoVien.TenGV, giaoVien.DiaChi, giaoVien.GioiTinh, giaoVien.Sdt, giaoVien.ChucVu , giaoVien.MaMon);
+            SqlCommand command = new SqlCommand();
+            command.CommandText = query;
+            command.Parameters.AddWithValue("@AnhDaiDien", img);
+            return DataProvider.Instance.ExecuteNonQuery(command) > 0;
         }
 
         public bool SuaGV(GiaoVien giaoVien)
@@ -75,6 +79,35 @@ namespace TTN_QL_HSGV.BUS
             gv.MaMon = dt.Rows[0]["MaMon"].ToString();
 
             return gv;
+        }
+
+        public Image XemAnhGV(string maGV)
+        {
+            string query = string.Format("exec XemAnhGV '{0}' ", maGV);
+            DataTable obj = DataProvider.Instance.ExecuteQuery(query);
+            DataRow row = obj.Rows[0];
+            byte[] img = (byte[])row[0];
+            return byteArrayToImage(img);
+        }
+
+        public Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            try
+            {
+                MemoryStream ms = new MemoryStream(byteArrayIn);
+                Image returnImage = Image.FromStream(ms);
+                return returnImage;
+            }
+            catch (Exception ex)
+            {
+                Bitmap bmp = new Bitmap(90, 130);
+                using (Graphics graph = Graphics.FromImage(bmp))
+                {
+                    Rectangle ImageSize = new Rectangle(0, 0, 90, 130);
+                    graph.FillRectangle(Brushes.White, ImageSize);
+                }
+                return bmp;
+            }
         }
 
         public DataTable XemTatCaMonHoc()

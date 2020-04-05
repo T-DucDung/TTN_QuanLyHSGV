@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTN_QL_HSGV.BUS;
 
@@ -62,13 +55,17 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
 
         private void ThongTinGiaoVien_Load(object sender, EventArgs e)
         {
-            textBoxTenGV.Text = controllerGV.XemChiTietGV(ID).TenGV;
-            textBoxDiaChi.Text = controllerGV.XemChiTietGV(ID).DiaChi;
-            textBoxChucVu.Text = controllerGV.XemChiTietGV(ID).ChucVu;
-            textBoxGT.Text = controllerGV.XemChiTietGV(ID).GioiTinh;
-            textBoxSDT.Text = controllerGV.XemChiTietGV(ID).Sdt;
-            comboBoxDayMon.SelectedValue = controllerGV.XemChiTietGV(ID).MaMon.ToString();
+            DTO.GiaoVien giaoVien = controllerGV.XemChiTietGV(ID);
+            textBoxTenGV.Text = giaoVien.TenGV;
+            textBoxDiaChi.Text = giaoVien.DiaChi;
+            textBoxChucVu.Text = giaoVien.ChucVu;
+            textBoxGT.Text = giaoVien.GioiTinh;
+            textBoxSDT.Text = giaoVien.Sdt;
+            comboBoxDayMon.SelectedValue = giaoVien.MaMon.ToString();
+            pictureBox1.Image = controllerGV.XemAnhGV(ID);
         }
+
+        
 
         private void MonHoc_FormClosed(object sender, FormClosedEventArgs e)
         {
