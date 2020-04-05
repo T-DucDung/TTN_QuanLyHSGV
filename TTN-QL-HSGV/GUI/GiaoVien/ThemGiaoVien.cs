@@ -39,6 +39,15 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
         {
 
         }
+        private byte[] image;
+
+        private void ImageChooseBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.ShowDialog();
+            pictureBox1.Image = Image.FromFile(fileDialog.FileName);
+            image = (byte[])(new ImageConverter()).ConvertTo(pictureBox1.Image, typeof(byte[]));
+        }
 
         private void ButtonThem_Click(object sender, EventArgs e)
         {
@@ -140,6 +149,24 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
                         DanhSachGiaoVien.TextboxSoLuong.Text = i.ToString();
                         DanhSachGiaoVien.TextboxSoLuong.Refresh();
                     }
+                    else if (controllerGV.ThemGV(gv,image))
+                    {
+                        MessageBox.Show("Thêm mới thành công");
+
+                        textBoxTenGV.Text = "";
+                        textBoxGT.Text = "";
+                        textBoxChucVu.Text = "";
+                        textBoxSDT.Text = "";
+                        textBoxDiaChi.Text = "";
+                        comboBoxDayMon.SelectedValue = 0;
+
+                        DanhSachGiaoVien.Dtgv.DataSource = controllerGV.XemTatCaGV();
+                        DanhSachGiaoVien.Dtgv.Refresh();
+                        int i = DanhSachGiaoVien.Dtgv.Rows.Count;
+                        DanhSachGiaoVien.TextboxSoLuong.Text = i.ToString();
+                        DanhSachGiaoVien.TextboxSoLuong.Refresh();
+                    }
+
                     else MessageBox.Show("Thêm mới thất bại");
                 }
             }
@@ -157,5 +184,7 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
             monHoc.Show();
             this.Hide();
         }
+
+        
     }
 }

@@ -47,8 +47,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.ImageChooseBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonQuayLai
@@ -56,7 +57,7 @@
             this.buttonQuayLai.AutoSize = true;
             this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonQuayLai.Location = new System.Drawing.Point(321, 348);
-            this.buttonQuayLai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonQuayLai.Margin = new System.Windows.Forms.Padding(2);
             this.buttonQuayLai.Name = "buttonQuayLai";
             this.buttonQuayLai.Size = new System.Drawing.Size(75, 27);
             this.buttonQuayLai.TabIndex = 27;
@@ -69,7 +70,7 @@
             this.buttonThem.AutoSize = true;
             this.buttonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThem.Location = new System.Drawing.Point(206, 348);
-            this.buttonThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonThem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(56, 27);
             this.buttonThem.TabIndex = 24;
@@ -83,7 +84,7 @@
             this.comboBoxThuocLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxThuocLop.FormattingEnabled = true;
             this.comboBoxThuocLop.Location = new System.Drawing.Point(299, 239);
-            this.comboBoxThuocLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxThuocLop.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxThuocLop.Name = "comboBoxThuocLop";
             this.comboBoxThuocLop.Size = new System.Drawing.Size(273, 25);
             this.comboBoxThuocLop.TabIndex = 22;
@@ -92,7 +93,7 @@
             // 
             this.textBoxDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDiaChi.Location = new System.Drawing.Point(299, 198);
-            this.textBoxDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDiaChi.Name = "textBoxDiaChi";
             this.textBoxDiaChi.Size = new System.Drawing.Size(273, 23);
             this.textBoxDiaChi.TabIndex = 20;
@@ -101,7 +102,7 @@
             // 
             this.textBoxSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSDT.Location = new System.Drawing.Point(299, 158);
-            this.textBoxSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSDT.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSDT.Name = "textBoxSDT";
             this.textBoxSDT.Size = new System.Drawing.Size(273, 23);
             this.textBoxSDT.TabIndex = 19;
@@ -110,7 +111,7 @@
             // 
             this.textBoxGT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxGT.Location = new System.Drawing.Point(299, 117);
-            this.textBoxGT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxGT.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxGT.Name = "textBoxGT";
             this.textBoxGT.Size = new System.Drawing.Size(273, 23);
             this.textBoxGT.TabIndex = 17;
@@ -119,7 +120,7 @@
             // 
             this.textBoxTenHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTenHS.Location = new System.Drawing.Point(299, 76);
-            this.textBoxTenHS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTenHS.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTenHS.Name = "textBoxTenHS";
             this.textBoxTenHS.Size = new System.Drawing.Size(273, 23);
             this.textBoxTenHS.TabIndex = 16;
@@ -256,20 +257,32 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Thêm Mới Học Sinh\r\n";
             // 
-            // pictureBox1
+            // pictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(37, 79);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 130);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox.Location = new System.Drawing.Point(24, 79);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(103, 130);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 15;
+            this.pictureBox.TabStop = false;
+            // 
+            // ImageChooseBtn
+            // 
+            this.ImageChooseBtn.Location = new System.Drawing.Point(24, 240);
+            this.ImageChooseBtn.Name = "ImageChooseBtn";
+            this.ImageChooseBtn.Size = new System.Drawing.Size(109, 23);
+            this.ImageChooseBtn.TabIndex = 35;
+            this.ImageChooseBtn.Text = "Chọn ảnh";
+            this.ImageChooseBtn.UseVisualStyleBackColor = true;
+            this.ImageChooseBtn.Click += new System.EventHandler(this.ImageChooseBtn_Click);
             // 
             // ThemHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 409);
+            this.Controls.Add(this.ImageChooseBtn);
             this.Controls.Add(this.buttonQuayLai);
             this.Controls.Add(this.buttonThem);
             this.Controls.Add(this.comboBoxThuocLop);
@@ -289,12 +302,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.pictureBox);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "ThemHocSinh";
             this.Text = "ThemHocSinh";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,6 +334,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.Button ImageChooseBtn;
     }
 }

@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TTN_QL_HSGV.BUS;
+using System.IO;
 
 namespace TTN_QL_HSGV.GUI.HocSinh
 {
@@ -33,6 +34,14 @@ namespace TTN_QL_HSGV.GUI.HocSinh
         private void buttonQuayLai_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private byte[] image;
+        private void ImageChooseBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.ShowDialog();
+            pictureBox.Image = Image.FromFile(fileDialog.FileName);
+            image = (byte[])(new ImageConverter()).ConvertTo(pictureBox.Image, typeof(byte[]));
         }
 
         private void ButtonThem_Click(object sender, EventArgs e)
@@ -103,8 +112,10 @@ namespace TTN_QL_HSGV.GUI.HocSinh
                 }
                 else
                 {
-                    DTO.HocSinh hs = new DTO.HocSinh("0", textBoxTenHS.Text, textBoxDiaChi.Text, textBoxGT.Text, textBoxSDT.Text, comboBoxThuocLop.SelectedValue.ToString());
+                    DTO.HocSinh hs = new DTO.HocSinh("0", textBoxTenHS.Text, textBoxDiaChi.Text, textBoxGT.Text, textBoxSDT.Text,comboBoxThuocLop.SelectedValue.ToString());
 
+                    // nam sửa lại theo biến .
+                    
                     if (controllerHS.ThemHS(hs))
                     {
                         MessageBox.Show("Thêm mới thành công");
@@ -121,9 +132,28 @@ namespace TTN_QL_HSGV.GUI.HocSinh
                         DanhSachHocSinh.TextboxSoLuongHS.Text = i.ToString();
                         DanhSachHocSinh.TextboxSoLuongHS.Refresh();
                     }
+                    else if(controllerHS.ThemHS(hs , image) )
+                    {
+                        MessageBox.Show("Thêm mới thành công");
+
+                        textBoxTenHS.Text = "";
+                        textBoxGT.Text = "";
+                        textBoxSDT.Text = "";
+                        textBoxDiaChi.Text = "";
+                        comboBoxThuocLop.SelectedValue = 0;
+
+                        DanhSachHocSinh.Dths.DataSource = controllerHS.XemTatCaHS();
+                        DanhSachHocSinh.Dths.Refresh();
+                        int i = DanhSachHocSinh.Dths.Rows.Count;
+                        DanhSachHocSinh.TextboxSoLuongHS.Text = i.ToString();
+                        DanhSachHocSinh.TextboxSoLuongHS.Refresh();
+                    }
+
                     else MessageBox.Show("Thêm mới thất bại");
                 }
             }
         }
+
+       
     }
 }

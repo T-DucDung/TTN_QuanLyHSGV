@@ -19,6 +19,14 @@ namespace TTN_QL_HSGV.BUS
 
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
+
+        public bool ThemGV(GiaoVien giaoVien,byte[] img)
+        {
+            string query = string.Format("exec ThemGV N'{0}', N'{1}', N'{2}', {3}, N'{4}', {5}, '{6}' ", giaoVien.TenGV, giaoVien.DiaChi, giaoVien.GioiTinh, giaoVien.Sdt, giaoVien.ChucVu, img , giaoVien.MaMon);
+
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
+
         public bool SuaGV(GiaoVien giaoVien)
         {
             string query = string.Format("exec SuaGV '{0}', N'{1}', N'{2}', N'{3}', '{4}', N'{5}', {6}, '{7}' ", giaoVien.MaGV, giaoVien.TenGV, giaoVien.DiaChi, giaoVien.GioiTinh, giaoVien.Sdt, giaoVien.ChucVu, 0, giaoVien.MaMon);
