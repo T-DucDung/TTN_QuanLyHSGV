@@ -60,7 +60,7 @@
             // 
             this.textBoxChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxChucVu.Location = new System.Drawing.Point(299, 155);
-            this.textBoxChucVu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxChucVu.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxChucVu.Name = "textBoxChucVu";
             this.textBoxChucVu.Size = new System.Drawing.Size(273, 23);
             this.textBoxChucVu.TabIndex = 68;
@@ -92,7 +92,7 @@
             this.buttonQuayLai.AutoSize = true;
             this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonQuayLai.Location = new System.Drawing.Point(321, 348);
-            this.buttonQuayLai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonQuayLai.Margin = new System.Windows.Forms.Padding(2);
             this.buttonQuayLai.Name = "buttonQuayLai";
             this.buttonQuayLai.Size = new System.Drawing.Size(75, 27);
             this.buttonQuayLai.TabIndex = 65;
@@ -105,7 +105,7 @@
             this.buttonThem.AutoSize = true;
             this.buttonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThem.Location = new System.Drawing.Point(206, 348);
-            this.buttonThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonThem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(56, 27);
             this.buttonThem.TabIndex = 64;
@@ -119,7 +119,7 @@
             this.comboBoxDayMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxDayMon.FormattingEnabled = true;
             this.comboBoxDayMon.Location = new System.Drawing.Point(299, 277);
-            this.comboBoxDayMon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxDayMon.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxDayMon.Name = "comboBoxDayMon";
             this.comboBoxDayMon.Size = new System.Drawing.Size(273, 25);
             this.comboBoxDayMon.TabIndex = 63;
@@ -128,7 +128,7 @@
             // 
             this.textBoxDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDiaChi.Location = new System.Drawing.Point(299, 236);
-            this.textBoxDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDiaChi.Name = "textBoxDiaChi";
             this.textBoxDiaChi.Size = new System.Drawing.Size(273, 23);
             this.textBoxDiaChi.TabIndex = 62;
@@ -137,7 +137,7 @@
             // 
             this.textBoxSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSDT.Location = new System.Drawing.Point(299, 196);
-            this.textBoxSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSDT.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSDT.Name = "textBoxSDT";
             this.textBoxSDT.Size = new System.Drawing.Size(273, 23);
             this.textBoxSDT.TabIndex = 61;
@@ -146,7 +146,7 @@
             // 
             this.textBoxGT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxGT.Location = new System.Drawing.Point(299, 115);
-            this.textBoxGT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxGT.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxGT.Name = "textBoxGT";
             this.textBoxGT.Size = new System.Drawing.Size(273, 23);
             this.textBoxGT.TabIndex = 60;
@@ -155,7 +155,7 @@
             // 
             this.textBoxTenGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTenGV.Location = new System.Drawing.Point(299, 76);
-            this.textBoxTenGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTenGV.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTenGV.Name = "textBoxTenGV";
             this.textBoxTenGV.Size = new System.Drawing.Size(273, 23);
             this.textBoxTenGV.TabIndex = 59;
@@ -295,7 +295,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(37, 79);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(90, 130);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -307,7 +307,7 @@
             this.buttonThemMon.AutoSize = true;
             this.buttonThemMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThemMon.Location = new System.Drawing.Point(487, 303);
-            this.buttonThemMon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonThemMon.Margin = new System.Windows.Forms.Padding(2);
             this.buttonThemMon.Name = "buttonThemMon";
             this.buttonThemMon.Size = new System.Drawing.Size(85, 27);
             this.buttonThemMon.TabIndex = 69;
@@ -355,9 +355,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "ThemGiaoVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemGiaoVien";
             this.Load += new System.EventHandler(this.ThemGiaoVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

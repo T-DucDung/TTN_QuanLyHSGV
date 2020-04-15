@@ -15,6 +15,7 @@ namespace TTN_QL_HSGV.GUI.HocSinh
 {
     public partial class ThongTinHocSinh : Form
     {
+        private byte[] image;
         //ID sử dụng truy xuất và sửa thông tin
         private string ID;
         public ThongTinHocSinh(string IDHocSinh)
@@ -26,6 +27,7 @@ namespace TTN_QL_HSGV.GUI.HocSinh
             comboBoxThuocLop.DataSource = controllerHS.XemTatCaLopHoc();
             comboBoxThuocLop.DisplayMember = "TenLop";
             comboBoxThuocLop.ValueMember = "MaLop";
+            image = null;
         }
 
         HocSinhBUS controllerHS = new HocSinhBUS();
@@ -39,6 +41,21 @@ namespace TTN_QL_HSGV.GUI.HocSinh
         {
             this.Close();
         }
+        private void btnSuaAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(fileDialog.FileName);
+                image = (byte[])(new ImageConverter()).ConvertTo(pictureBox1.Image, typeof(byte[]));
+            }
+            else
+            {
+                MessageBox.Show("Chưa Chọn Ảnh !!");
+            }
+        }
+
 
         private void ButtonSua_Click(object sender, EventArgs e)
         {
@@ -51,14 +68,29 @@ namespace TTN_QL_HSGV.GUI.HocSinh
             hs.Sdt = textBoxSDT.Text;
             hs.MaLop = comboBoxThuocLop.SelectedValue.ToString();
 
-            if (controllerHS.SuaHS(hs))
+            
+            if (image==null)
             {
-                MessageBox.Show("Sửa thành công");
+                if (controllerHS.SuaHS(hs))
+                {
+                    MessageBox.Show("Sửa thành công");
 
-                DanhSachHocSinh.Dths.DataSource = controllerHS.XemTatCaHS();
-                DanhSachHocSinh.Dths.Refresh();
+                    DanhSachHocSinh.Dths.DataSource = controllerHS.XemTatCaHS();
+                    DanhSachHocSinh.Dths.Refresh();
+                }
+                else MessageBox.Show("Sửa thất bại");
             }
-            else MessageBox.Show("Sửa thất bại");
+            else
+            {
+                if (controllerHS.SuaHS(hs,image))
+                {
+                    MessageBox.Show("Sửa thành công");
+
+                    DanhSachHocSinh.Dths.DataSource = controllerHS.XemTatCaHS();
+                    DanhSachHocSinh.Dths.Refresh();
+                }
+                else MessageBox.Show("Sửa thất bại");
+            }
         }
 
         private void ThongTinHocSinh_Load(object sender, EventArgs e)
@@ -71,5 +103,7 @@ namespace TTN_QL_HSGV.GUI.HocSinh
             comboBoxThuocLop.SelectedValue = hocSinh.MaLop.ToString();
             pictureBox1.Image = controllerHS.XemAnhHS(ID);
         }
+
+       
     }
 }

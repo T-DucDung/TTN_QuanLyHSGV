@@ -238,6 +238,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "DanhSachGiaoVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DanhSachGiaoVien";
             this.Load += new System.EventHandler(this.DanhSachGiaoVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_GV)).EndInit();

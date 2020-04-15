@@ -46,9 +46,16 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
         private void ImageChooseBtn_Click(object sender, EventArgs e)
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.ShowDialog();
-            pictureBox1.Image = Image.FromFile(fileDialog.FileName);
-            image = (byte[])(new ImageConverter()).ConvertTo(pictureBox1.Image, typeof(byte[]));
+
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(fileDialog.FileName);
+                image = (byte[])(new ImageConverter()).ConvertTo(pictureBox1.Image, typeof(byte[]));
+            }
+            else
+            {
+                MessageBox.Show("Chưa Chọn Ảnh !!");
+            }
         }
 
         private void ButtonThem_Click(object sender, EventArgs e)

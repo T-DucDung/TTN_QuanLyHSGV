@@ -306,6 +306,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "ThemHocSinh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemHocSinh";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);

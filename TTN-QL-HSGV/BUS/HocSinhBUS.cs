@@ -45,6 +45,14 @@ namespace TTN_QL_HSGV.BUS
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
 
+        public bool SuaHS(HocSinh hocSinh, byte[] img)
+        {
+            string query = string.Format("exec SuaHS '{0}', N'{1}', N'{2}', N'{3}', '{4}', @AnhDaiDien , '{5}' ", hocSinh.MaHS, hocSinh.TenHS, hocSinh.DiaChi, hocSinh.GioiTinh, hocSinh.Sdt, hocSinh.MaLop);
+            SqlCommand command = new SqlCommand();
+            command.CommandText = query;
+            command.Parameters.AddWithValue("@AnhDaiDien", img);
+            return DataProvider.Instance.ExecuteNonQuery(command) > 0;
+        }
 
         public List<HocSinh> XemTatCaHS()
         {

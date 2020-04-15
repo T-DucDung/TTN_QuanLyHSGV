@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -38,6 +39,18 @@ namespace TTN_QL_HSGV.BUS
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
 
+        public bool SuaGV(GiaoVien giaoVien, byte[] img)
+        {
+            string query = string.Format("exec SuaGV '{0}', N'{1}', N'{2}', N'{3}', '{4}', N'{5}', @AnhDaiDien, '{6}' ", giaoVien.MaGV, giaoVien.TenGV, giaoVien.DiaChi, giaoVien.GioiTinh, giaoVien.Sdt, giaoVien.ChucVu, giaoVien.MaMon);
+            SqlCommand command = new SqlCommand();
+            command.CommandText = query;
+            
+            command.Parameters.AddWithValue("@AnhDaiDien", img);
+            
+            return DataProvider.Instance.ExecuteNonQuery(command) > 0;
+        }
+
+
         public List<GiaoVien> XemTatCaGV()
         {
             string query = string.Format("exec XemTatCaGV ");
@@ -45,6 +58,8 @@ namespace TTN_QL_HSGV.BUS
             return DataProvider.Instance.ExecuteQuery(query).AsEnumerable().Select(m =>
            new GiaoVien(m.Field<string>("MaGV"), m.Field<string>("TenGV"), m.Field<string>("DiaChi"), m.Field<string>("GioiTinh"), m.Field<string>("SDT"), m.Field<string>("ChucVu"), m.Field<string>("MaMon"))).ToList();
         }
+
+        
 
         public List<string> XemDanhSachTenGV()
         {
