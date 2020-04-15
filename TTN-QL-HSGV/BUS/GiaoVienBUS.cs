@@ -86,8 +86,14 @@ namespace TTN_QL_HSGV.BUS
             string query = string.Format("exec XemAnhGV '{0}' ", maGV);
             DataTable obj = DataProvider.Instance.ExecuteQuery(query);
             DataRow row = obj.Rows[0];
-            byte[] img = (byte[])row[0];
-            return byteArrayToImage(img);
+            try{
+                byte[] img = (byte[])row[0];
+                return byteArrayToImage(img);
+            }
+            catch
+            {
+                return byteArrayToImage(new byte[1]);
+            }
         }
 
         public Image byteArrayToImage(byte[] byteArrayIn)
