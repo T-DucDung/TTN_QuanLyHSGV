@@ -60,6 +60,9 @@ namespace TTN_QL_HSGV.GUI.Lop
         private void FormTMHS_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
+            hocSinhs = HSbus.XemTatCaHSLop(this.ID);
+            dataGridViewDS_HS.DataSource = null;
+            dataGridViewDS_HS.DataSource = hocSinhs;
         }
 
         private void buttonChiTiet_Click(object sender, EventArgs e)

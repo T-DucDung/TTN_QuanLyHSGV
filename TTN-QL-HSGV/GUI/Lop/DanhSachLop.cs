@@ -52,6 +52,9 @@ namespace TTN_QL_HSGV.GUI.Lop
         private void FormTTL_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
+            lops = bus.GetDanhSachLop();
+            dataGridViewDS_Lop.DataSource = null;
+            dataGridViewDS_Lop.DataSource = lops;
         }
 
         private void buttonThem_Click(object sender, EventArgs e)
@@ -65,6 +68,9 @@ namespace TTN_QL_HSGV.GUI.Lop
         private void FormTL_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
+            lops = bus.GetDanhSachLop();
+            dataGridViewDS_Lop.DataSource = null;
+            dataGridViewDS_Lop.DataSource = lops;
         }
 
         private void DanhSachLop_Load(object sender, EventArgs e)

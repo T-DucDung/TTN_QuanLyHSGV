@@ -211,7 +211,6 @@
             // 
             // buttonLuu
             // 
-            this.buttonLuu.Enabled = false;
             this.buttonLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLuu.Location = new System.Drawing.Point(633, 103);
             this.buttonLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

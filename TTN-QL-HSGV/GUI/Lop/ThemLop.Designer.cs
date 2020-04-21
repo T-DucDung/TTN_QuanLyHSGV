@@ -162,6 +162,7 @@
             // 
             // dataGridViewDS_HS
             // 
+            this.dataGridViewDS_HS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDS_HS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDS_HS.Location = new System.Drawing.Point(13, 142);
             this.dataGridViewDS_HS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
