@@ -39,13 +39,14 @@
             this.textBoxTenKH = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonThem = new System.Windows.Forms.Button();
+            this.buttonXoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_KH)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSua
             // 
             this.buttonSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSua.Location = new System.Drawing.Point(478, 103);
+            this.buttonSua.Location = new System.Drawing.Point(478, 99);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Size = new System.Drawing.Size(84, 27);
             this.buttonSua.TabIndex = 65;
@@ -98,6 +99,7 @@
             // 
             // dataGridViewDS_KH
             // 
+            this.dataGridViewDS_KH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDS_KH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDS_KH.Location = new System.Drawing.Point(12, 168);
             this.dataGridViewDS_KH.Name = "dataGridViewDS_KH";
@@ -155,11 +157,23 @@
             this.buttonThem.UseVisualStyleBackColor = true;
             this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
+            // buttonXoa
+            // 
+            this.buttonXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXoa.Location = new System.Drawing.Point(479, 132);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(84, 27);
+            this.buttonXoa.TabIndex = 71;
+            this.buttonXoa.Text = "Xóa";
+            this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
+            // 
             // KhoaHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 499);
+            this.Controls.Add(this.buttonXoa);
             this.Controls.Add(this.buttonThem);
             this.Controls.Add(this.textBoxTenKH);
             this.Controls.Add(this.label4);
@@ -195,5 +209,6 @@
         private System.Windows.Forms.TextBox textBoxTenKH;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonThem;
+        private System.Windows.Forms.Button buttonXoa;
     }
 }

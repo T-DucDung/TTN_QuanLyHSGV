@@ -67,5 +67,11 @@ namespace TTN_QL_HSGV.GUI.Lop
             dataGridViewDS_KH.DataSource = KhoaHocBUS.SelectAllKhoaHoc();
             textBoxTongSo.Text = (dataGridViewDS_KH.RowCount - 1).ToString();
         }
+
+        private void buttonXoa_Click(object sender, EventArgs e)
+        {
+            textBoxMaKhoa.Text = "";
+            textBoxTenKH.Text = "";
+        }
     }
 }

@@ -60,7 +60,7 @@ namespace TTN_QL_HSGV.GUI.FormPhu
                 }    
             }
             else
-                MessageBox.Show("Nhập đầy đỏ mã môn và mã môn");
+                MessageBox.Show("Nhập đầy đủ mã môn và mã môn");
         }
 
         private void buttonSua_Click(object sender, EventArgs e)
@@ -68,6 +68,12 @@ namespace TTN_QL_HSGV.GUI.FormPhu
             monhocbus.SuaMonHoc(textBoxMaMon.Text, textBoxTenMon.Text, comboMaKhoa.SelectedItem.ToString());
             dataGridViewDS_MH.DataSource = monhocbus.XemTatCaMonHoc();
             textBoxTongSo.Text = (dataGridViewDS_MH.RowCount - 1).ToString();
+        }
+
+        private void buttonXoa_Click(object sender, EventArgs e)
+        {
+            textBoxMaMon.Text = "";
+            textBoxTenMon.Text = "";
         }
     }
 }

@@ -19,17 +19,17 @@ namespace TTN_QL_HSGV.BUS
         public void ThemMonHoc(string MaMon,string TenMon,string MaKhoa)
         {
             DataProvider.Instance.ExecuteQuery("insert into MONHOC(MaMon,TenMon,MaKhoa)" +
-                $"values('{MaMon}','{TenMon}','{MaKhoa}')");
+                $"values('{MaMon}',N'{TenMon}','{MaKhoa}')");
         }
         public void SuaMonHoc(string MaMon,string TenMon,string MaKhoa)
         {
-            DataProvider.Instance.ExecuteQuery("update MONHOC" +
-                $"set TenMon = '{TenMon}',MaKhoa = '{MaKhoa}' where MaMon = '{MaMon}'");
+            DataProvider.Instance.ExecuteQuery("update MONHOC " +
+                $"set TenMon = N'{TenMon}', MaKhoa = '{MaKhoa}' where MaMon = '{MaMon}'");
         }
         public bool KiemTraMaMonHoc(string MaMon)
         {
             bool s;
-            if (DataProvider.Instance.ExecuteScalar("select * from MONHOC") != null)
+            if (DataProvider.Instance.ExecuteScalar($"select * from MONHOC where MaMon = '{MaMon}'") != null)
             {
                 s = true;
             }

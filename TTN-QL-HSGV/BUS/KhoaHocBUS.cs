@@ -19,7 +19,7 @@ namespace TTN_QL_HSGV.BUS
         public static bool KiemTraMa(string MaKH)
         {
             bool s;
-            if (DAL.DataProvider.Instance.ExecuteScalar($"select * from KHOAHOC where MaKH = 'MaKH'") != null)
+            if (DAL.DataProvider.Instance.ExecuteScalar($"select * from KHOAHOC where MaKH = '{MaKH}'") != null)
             {
                 s = true;
             }
@@ -30,12 +30,12 @@ namespace TTN_QL_HSGV.BUS
         public static void ThemKH(string MaKH,string TenKH)
         {
             DAL.DataProvider.Instance.ExecuteNonQuery("insert into KHOAHOC(MaKH,TenKH) " +
-                $"values('{MaKH}','{TenKH}'");
+                $"values('{MaKH}',N'{TenKH}'");
         }
         public static void SuaKH(string MaKH,string TenKH)
         {
             DAL.DataProvider.Instance.ExecuteNonQuery("update KHOAHOC " +
-                $"set TenKH = '{TenKH}' where MaKH = '{MaKH}'");
+                $"set TenKH = N'{TenKH}' where MaKH = '{MaKH}'");
         }
     }
 }

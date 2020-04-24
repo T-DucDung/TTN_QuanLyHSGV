@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboMaKhoa = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.buttonXoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_MH)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +88,7 @@
             this.buttonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThem.Location = new System.Drawing.Point(468, 74);
             this.buttonThem.Name = "buttonThem";
-            this.buttonThem.Size = new System.Drawing.Size(79, 27);
+            this.buttonThem.Size = new System.Drawing.Size(79, 33);
             this.buttonThem.TabIndex = 77;
             this.buttonThem.Text = "Thêm";
             this.buttonThem.UseVisualStyleBackColor = true;
@@ -138,6 +139,7 @@
             // 
             // dataGridViewDS_MH
             // 
+            this.dataGridViewDS_MH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDS_MH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDS_MH.Location = new System.Drawing.Point(13, 191);
             this.dataGridViewDS_MH.Name = "dataGridViewDS_MH";
@@ -180,11 +182,23 @@
             this.label5.TabIndex = 84;
             this.label5.Text = "Mã Khoa :";
             // 
+            // buttonXoa
+            // 
+            this.buttonXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXoa.Location = new System.Drawing.Point(468, 150);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(79, 30);
+            this.buttonXoa.TabIndex = 85;
+            this.buttonXoa.Text = "Xóa";
+            this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
+            // 
             // MonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 503);
+            this.Controls.Add(this.buttonXoa);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboMaKhoa);
             this.Controls.Add(this.buttonSua);
@@ -224,5 +238,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboMaKhoa;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonXoa;
     }
 }
