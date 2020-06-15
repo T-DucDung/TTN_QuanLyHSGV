@@ -164,6 +164,12 @@
     <Compile Include="GUI\Lop\ThongTinLop.Designer.cs">
       <DependentUpon>ThongTinLop.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\NewMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NewMain.Designer.cs">
+      <DependentUpon>NewMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\TimKiem\ChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Lop\ThongTinLop.resx">
       <DependentUpon>ThongTinLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NewMain.resx">
+      <DependentUpon>NewMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\TimKiem\ChiTiet.resx">
       <DependentUpon>ChiTiet.cs</DependentUpon>

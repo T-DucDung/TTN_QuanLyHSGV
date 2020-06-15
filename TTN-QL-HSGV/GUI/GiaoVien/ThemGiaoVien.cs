@@ -68,7 +68,7 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
             bool matchDayMon = Regex.IsMatch(comboBoxDayMon.Text, @"^\s");
 
             textBoxTenGV.Text = textBoxTenGV.Text.Trim();
-            textBoxGT.Text = textBoxGT.Text.Trim();
+            textBoxGT.Text = textBoxGT.Text.Trim().ToUpper();
             textBoxChucVu.Text = textBoxChucVu.Text.Trim();
             textBoxSDT.Text = textBoxSDT.Text.Trim();
             textBoxDiaChi.Text = textBoxDiaChi.Text.Trim();

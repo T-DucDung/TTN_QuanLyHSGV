@@ -236,6 +236,8 @@
             // 
             // dataGridViewDS_HS
             // 
+            this.dataGridViewDS_HS.AllowUserToAddRows = false;
+            this.dataGridViewDS_HS.AllowUserToDeleteRows = false;
             this.dataGridViewDS_HS.AutoGenerateColumns = false;
             this.dataGridViewDS_HS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDS_HS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -249,6 +251,7 @@
             this.dataGridViewDS_HS.Location = new System.Drawing.Point(10, 87);
             this.dataGridViewDS_HS.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDS_HS.Name = "dataGridViewDS_HS";
+            this.dataGridViewDS_HS.ReadOnly = true;
             this.dataGridViewDS_HS.RowTemplate.Height = 24;
             this.dataGridViewDS_HS.Size = new System.Drawing.Size(606, 260);
             this.dataGridViewDS_HS.TabIndex = 51;
@@ -340,6 +343,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DanhSachGiangDay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DanhSachGiangDay";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_HS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tTNQLHSGVDataSetBindingSource)).EndInit();

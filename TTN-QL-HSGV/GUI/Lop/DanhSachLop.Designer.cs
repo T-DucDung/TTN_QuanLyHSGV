@@ -44,10 +44,10 @@
             // buttonLoc
             // 
             this.buttonLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLoc.Location = new System.Drawing.Point(763, 71);
-            this.buttonLoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonLoc.Location = new System.Drawing.Point(572, 58);
+            this.buttonLoc.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLoc.Name = "buttonLoc";
-            this.buttonLoc.Size = new System.Drawing.Size(59, 30);
+            this.buttonLoc.Size = new System.Drawing.Size(44, 24);
             this.buttonLoc.TabIndex = 65;
             this.buttonLoc.Text = "Lọc";
             this.buttonLoc.UseVisualStyleBackColor = true;
@@ -58,19 +58,20 @@
             this.comboBoxKhoaHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxKhoaHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxKhoaHoc.FormattingEnabled = true;
-            this.comboBoxKhoaHoc.Location = new System.Drawing.Point(495, 71);
-            this.comboBoxKhoaHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxKhoaHoc.Location = new System.Drawing.Point(371, 58);
+            this.comboBoxKhoaHoc.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxKhoaHoc.Name = "comboBoxKhoaHoc";
-            this.comboBoxKhoaHoc.Size = new System.Drawing.Size(261, 28);
+            this.comboBoxKhoaHoc.Size = new System.Drawing.Size(197, 25);
             this.comboBoxKhoaHoc.TabIndex = 64;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(373, 75);
+            this.label6.Location = new System.Drawing.Point(280, 61);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 20);
+            this.label6.Size = new System.Drawing.Size(78, 17);
             this.label6.TabIndex = 63;
             this.label6.Text = "Khóa Học :";
             // 
@@ -78,9 +79,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 76);
+            this.label3.Location = new System.Drawing.Point(8, 62);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 20);
+            this.label3.Size = new System.Drawing.Size(84, 17);
             this.label3.TabIndex = 57;
             this.label3.Text = "Tên GVCN :";
             // 
@@ -88,10 +90,10 @@
             // 
             this.buttonQuayLai.AutoSize = true;
             this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonQuayLai.Location = new System.Drawing.Point(524, 462);
-            this.buttonQuayLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonQuayLai.Location = new System.Drawing.Point(393, 375);
+            this.buttonQuayLai.Margin = new System.Windows.Forms.Padding(2);
             this.buttonQuayLai.Name = "buttonQuayLai";
-            this.buttonQuayLai.Size = new System.Drawing.Size(119, 33);
+            this.buttonQuayLai.Size = new System.Drawing.Size(89, 27);
             this.buttonQuayLai.TabIndex = 56;
             this.buttonQuayLai.Text = "Quay Lại";
             this.buttonQuayLai.UseVisualStyleBackColor = true;
@@ -99,11 +101,12 @@
             // 
             // buttonChiTiet
             // 
+            this.buttonChiTiet.AutoSize = true;
             this.buttonChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonChiTiet.Location = new System.Drawing.Point(377, 462);
-            this.buttonChiTiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonChiTiet.Location = new System.Drawing.Point(283, 375);
+            this.buttonChiTiet.Margin = new System.Windows.Forms.Padding(2);
             this.buttonChiTiet.Name = "buttonChiTiet";
-            this.buttonChiTiet.Size = new System.Drawing.Size(115, 30);
+            this.buttonChiTiet.Size = new System.Drawing.Size(86, 27);
             this.buttonChiTiet.TabIndex = 55;
             this.buttonChiTiet.Text = "Chi Tiết ";
             this.buttonChiTiet.UseVisualStyleBackColor = true;
@@ -113,10 +116,10 @@
             // 
             this.buttonThem.AutoSize = true;
             this.buttonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThem.Location = new System.Drawing.Point(224, 462);
-            this.buttonThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonThem.Location = new System.Drawing.Point(168, 375);
+            this.buttonThem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonThem.Name = "buttonThem";
-            this.buttonThem.Size = new System.Drawing.Size(115, 33);
+            this.buttonThem.Size = new System.Drawing.Size(86, 27);
             this.buttonThem.TabIndex = 54;
             this.buttonThem.Text = "Thêm Lớp";
             this.buttonThem.UseVisualStyleBackColor = true;
@@ -124,13 +127,16 @@
             // 
             // dataGridViewDS_Lop
             // 
+            this.dataGridViewDS_Lop.AllowUserToAddRows = false;
+            this.dataGridViewDS_Lop.AllowUserToDeleteRows = false;
             this.dataGridViewDS_Lop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDS_Lop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDS_Lop.Location = new System.Drawing.Point(13, 107);
-            this.dataGridViewDS_Lop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewDS_Lop.Location = new System.Drawing.Point(10, 87);
+            this.dataGridViewDS_Lop.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDS_Lop.Name = "dataGridViewDS_Lop";
+            this.dataGridViewDS_Lop.ReadOnly = true;
             this.dataGridViewDS_Lop.RowTemplate.Height = 24;
-            this.dataGridViewDS_Lop.Size = new System.Drawing.Size(808, 350);
+            this.dataGridViewDS_Lop.Size = new System.Drawing.Size(606, 284);
             this.dataGridViewDS_Lop.TabIndex = 51;
             this.dataGridViewDS_Lop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDS_Lop_CellClick);
             this.dataGridViewDS_Lop.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewDS_Lop_ColumnHeaderMouseClick);
@@ -139,26 +145,27 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(325, 9);
+            this.label1.Location = new System.Drawing.Point(244, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 32);
+            this.label1.Size = new System.Drawing.Size(162, 26);
             this.label1.TabIndex = 50;
             this.label1.Text = "Danh Sách Lớp\r\n";
             // 
             // textBoxtenGVCN
             // 
             this.textBoxtenGVCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxtenGVCN.Location = new System.Drawing.Point(116, 71);
-            this.textBoxtenGVCN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxtenGVCN.Location = new System.Drawing.Point(87, 58);
+            this.textBoxtenGVCN.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxtenGVCN.Name = "textBoxtenGVCN";
-            this.textBoxtenGVCN.Size = new System.Drawing.Size(251, 27);
+            this.textBoxtenGVCN.Size = new System.Drawing.Size(189, 23);
             this.textBoxtenGVCN.TabIndex = 66;
             // 
             // DanhSachLop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 503);
+            this.ClientSize = new System.Drawing.Size(624, 409);
             this.Controls.Add(this.textBoxtenGVCN);
             this.Controls.Add(this.buttonLoc);
             this.Controls.Add(this.comboBoxKhoaHoc);
@@ -169,8 +176,9 @@
             this.Controls.Add(this.buttonThem);
             this.Controls.Add(this.dataGridViewDS_Lop);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DanhSachLop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DanhSachLop";
             this.Load += new System.EventHandler(this.DanhSachLop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_Lop)).EndInit();

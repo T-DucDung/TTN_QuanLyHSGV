@@ -109,6 +109,8 @@
             // 
             // dataGridViewDS_HS
             // 
+            this.dataGridViewDS_HS.AllowUserToAddRows = false;
+            this.dataGridViewDS_HS.AllowUserToDeleteRows = false;
             this.dataGridViewDS_HS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDS_HS.Location = new System.Drawing.Point(9, 86);
             this.dataGridViewDS_HS.Margin = new System.Windows.Forms.Padding(2);
@@ -236,6 +238,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "DanhSachHocSinh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DanhSachHocSinh";
             this.Load += new System.EventHandler(this.DanhSachHocSinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_HS)).EndInit();

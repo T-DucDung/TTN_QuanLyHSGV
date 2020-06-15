@@ -58,6 +58,8 @@
             // 
             // dataGridViewDS_GV
             // 
+            this.dataGridViewDS_GV.AllowUserToAddRows = false;
+            this.dataGridViewDS_GV.AllowUserToDeleteRows = false;
             this.dataGridViewDS_GV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDS_GV.Location = new System.Drawing.Point(9, 86);
             this.dataGridViewDS_GV.Margin = new System.Windows.Forms.Padding(2);

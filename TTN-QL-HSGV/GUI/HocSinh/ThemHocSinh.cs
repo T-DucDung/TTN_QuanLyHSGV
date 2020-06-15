@@ -62,7 +62,7 @@ namespace TTN_QL_HSGV.GUI.HocSinh
             bool matchLop = Regex.IsMatch(comboBoxThuocLop.Text, @"^\s");
 
             textBoxTenHS.Text = textBoxTenHS.Text.Trim();
-            textBoxGT.Text = textBoxGT.Text.Trim();
+            textBoxGT.Text = textBoxGT.Text.Trim().ToUpper();
             textBoxSDT.Text = textBoxSDT.Text.Trim();
             textBoxDiaChi.Text = textBoxDiaChi.Text.Trim();
             comboBoxThuocLop.Text = comboBoxThuocLop.Text.Trim();

@@ -39,10 +39,13 @@
             this.buttonLop = new System.Windows.Forms.Button();
             this.buttonGiaoVien = new System.Windows.Forms.Button();
             this.tabPageTroGiup = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.tabControl1.SuspendLayout();
             this.tabPageChinh.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPageTroGiup.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -62,7 +65,7 @@
             this.tabControl1.Controls.Add(this.tabPageTroGiup);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(9, 68);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(606, 331);
@@ -73,9 +76,9 @@
             this.tabPageChinh.Controls.Add(this.groupBox2);
             this.tabPageChinh.Controls.Add(this.groupBox1);
             this.tabPageChinh.Location = new System.Drawing.Point(4, 26);
-            this.tabPageChinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageChinh.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageChinh.Name = "tabPageChinh";
-            this.tabPageChinh.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageChinh.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageChinh.Size = new System.Drawing.Size(598, 301);
             this.tabPageChinh.TabIndex = 0;
             this.tabPageChinh.Text = "Chức Năng";
@@ -85,9 +88,9 @@
             // 
             this.groupBox2.Controls.Add(this.buttonTimKiem);
             this.groupBox2.Location = new System.Drawing.Point(4, 197);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(591, 102);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
@@ -97,7 +100,7 @@
             // 
             this.buttonTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTimKiem.Location = new System.Drawing.Point(4, 21);
-            this.buttonTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTimKiem.Name = "buttonTimKiem";
             this.buttonTimKiem.Size = new System.Drawing.Size(582, 76);
             this.buttonTimKiem.TabIndex = 4;
@@ -112,9 +115,9 @@
             this.groupBox1.Controls.Add(this.buttonLop);
             this.groupBox1.Controls.Add(this.buttonGiaoVien);
             this.groupBox1.Location = new System.Drawing.Point(4, 5);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(591, 188);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -124,7 +127,7 @@
             // 
             this.buttonLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLich.Location = new System.Drawing.Point(4, 106);
-            this.buttonLich.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLich.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLich.Name = "buttonLich";
             this.buttonLich.Size = new System.Drawing.Size(288, 76);
             this.buttonLich.TabIndex = 2;
@@ -136,7 +139,7 @@
             // 
             this.buttonHocSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHocSinh.Location = new System.Drawing.Point(300, 21);
-            this.buttonHocSinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonHocSinh.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHocSinh.Name = "buttonHocSinh";
             this.buttonHocSinh.Size = new System.Drawing.Size(288, 76);
             this.buttonHocSinh.TabIndex = 1;
@@ -148,7 +151,7 @@
             // 
             this.buttonLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLop.Location = new System.Drawing.Point(300, 106);
-            this.buttonLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLop.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLop.Name = "buttonLop";
             this.buttonLop.Size = new System.Drawing.Size(286, 76);
             this.buttonLop.TabIndex = 3;
@@ -160,7 +163,7 @@
             // 
             this.buttonGiaoVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonGiaoVien.Location = new System.Drawing.Point(4, 21);
-            this.buttonGiaoVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonGiaoVien.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGiaoVien.Name = "buttonGiaoVien";
             this.buttonGiaoVien.Size = new System.Drawing.Size(288, 76);
             this.buttonGiaoVien.TabIndex = 0;
@@ -170,14 +173,33 @@
             // 
             // tabPageTroGiup
             // 
+            this.tabPageTroGiup.Controls.Add(this.vScrollBar1);
+            this.tabPageTroGiup.Controls.Add(this.textBox1);
             this.tabPageTroGiup.Location = new System.Drawing.Point(4, 26);
-            this.tabPageTroGiup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageTroGiup.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageTroGiup.Name = "tabPageTroGiup";
-            this.tabPageTroGiup.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageTroGiup.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageTroGiup.Size = new System.Drawing.Size(598, 301);
             this.tabPageTroGiup.TabIndex = 1;
             this.tabPageTroGiup.Text = "Trợ Giúp";
             this.tabPageTroGiup.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 6);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(587, 290);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "Hướng Dẫn Sử Dụng\r\nPhần Mềm";
+            // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(576, 6);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(17, 290);
+            this.vScrollBar1.TabIndex = 1;
             // 
             // FormChinh
             // 
@@ -187,7 +209,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -197,6 +219,8 @@
             this.tabPageChinh.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.tabPageTroGiup.ResumeLayout(false);
+            this.tabPageTroGiup.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,6 +239,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button buttonTimKiem;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
