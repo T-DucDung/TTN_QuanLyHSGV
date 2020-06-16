@@ -55,6 +55,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             lops = bus.GetDanhSachLop();
             dataGridViewDS_Lop.DataSource = null;
             dataGridViewDS_Lop.DataSource = lops;
+            ReName();
         }
 
         private void buttonThem_Click(object sender, EventArgs e)
@@ -71,16 +72,19 @@ namespace TTN_QL_HSGV.GUI.Lop
             lops = bus.GetDanhSachLop();
             dataGridViewDS_Lop.DataSource = null;
             dataGridViewDS_Lop.DataSource = lops;
+            ReName();
         }
 
         private void DanhSachLop_Load(object sender, EventArgs e)
         {
             lops = bus.GetDanhSachLop();
             dataGridViewDS_Lop.DataSource = lops;
+            ReName();
             textBoxtenGVCN.Text = bus.GetTenGiaoVien(dataGridViewDS_Lop.CurrentRow.Cells[0].Value.ToString());
             List<string> danhSachKhoaHoc = bus.GetDanhSachKhoaHoc();
             danhSachKhoaHoc.Insert(0, "None");
             comboBoxKhoaHoc.DataSource = danhSachKhoaHoc;
+
         }
 
         private void dataGridViewDS_Lop_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -93,12 +97,16 @@ namespace TTN_QL_HSGV.GUI.Lop
             if (comboBoxKhoaHoc.Text == "None")
             {
                 lops = bus.GetDanhSachLop();
+                dataGridViewDS_Lop.DataSource = null;
                 dataGridViewDS_Lop.DataSource = lops;
+                ReName();
             }
             else
             {
                 lops = bus.GetDanhSachLop(comboBoxKhoaHoc.Text);
+                dataGridViewDS_Lop.DataSource = null;
                 dataGridViewDS_Lop.DataSource = lops;
+                ReName();
             }
         }
 
@@ -110,6 +118,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             dataGridViewDS_Lop.DataSource = null;
             dataGridViewDS_Lop.DataSource = lops;
             dataGridViewDS_Lop.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection = strSortOrder;
+            ReName();
         }
         private SortOrder getSortOrder(int columnIndex)
         {
@@ -124,6 +133,13 @@ namespace TTN_QL_HSGV.GUI.Lop
                 dataGridViewDS_Lop.Columns[columnIndex].HeaderCell.SortGlyphDirection = SortOrder.Descending;
                 return SortOrder.Descending;
             }
+        }
+        private void ReName()
+        {
+            dataGridViewDS_Lop.Columns[0].HeaderText = "Mã Lớp";
+            dataGridViewDS_Lop.Columns[1].HeaderText = "Tên Lớp";
+            dataGridViewDS_Lop.Columns[2].HeaderText = "Mã GVCN";
+            dataGridViewDS_Lop.Columns[3].HeaderText = "Mã Khóa Học";
         }
     }
 }

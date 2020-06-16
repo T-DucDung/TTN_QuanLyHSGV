@@ -85,6 +85,9 @@ namespace TTN_QL_HSGV.GUI.Lop
         private void FormTTHS_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
+            hocSinhs = HSbus.XemTatCaHSLop(this.ID);
+            dataGridViewDS_HS.DataSource = null;
+            dataGridViewDS_HS.DataSource = hocSinhs;
         }
 
         private void buttonQuayLai_Click(object sender, EventArgs e)
@@ -112,6 +115,8 @@ namespace TTN_QL_HSGV.GUI.Lop
         private void FormTTGV_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
+            comboBoxGVCN.DataSource = null;
+            comboBoxGVCN.DataSource = GVbus.XemDanhSachTenGV();
         }
 
         private void ThongTinLop_Load(object sender, EventArgs e)

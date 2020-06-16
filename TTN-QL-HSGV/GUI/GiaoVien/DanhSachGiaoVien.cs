@@ -123,7 +123,13 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
             this.KeyPreview = true;
 
             textBoxTongSo.Text = dataGridViewDS_GV.Rows.Count.ToString();
-
+            dataGridViewDS_GV.Columns[0].HeaderText = "Mã GV";
+            dataGridViewDS_GV.Columns[1].HeaderText = "Tên GV";
+            dataGridViewDS_GV.Columns[2].HeaderText = "Địa Chỉ";
+            dataGridViewDS_GV.Columns[3].HeaderText = "Giới Tính";
+            dataGridViewDS_GV.Columns[4].HeaderText = "SĐT";
+            dataGridViewDS_GV.Columns[5].HeaderText = "Chức Vụ";
+            dataGridViewDS_GV.Columns[6].HeaderText = "Mã Môn";
         }
 
         private void ButtonLoc_Click(object sender, EventArgs e)

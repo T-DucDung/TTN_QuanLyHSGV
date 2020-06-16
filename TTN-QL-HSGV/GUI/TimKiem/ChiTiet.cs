@@ -58,12 +58,12 @@ namespace TTN_QL_HSGV.GUI.TimKiem
             if(ChucVu1 == "Giáo Viên")
             {
                 dataGridViewDS_HS.DataSource = BUS.ChiTietBUS.XemLichGiaoVien(ID);
-                textBoxTongSo.Text = (dataGridViewDS_HS.RowCount - 1).ToString();
+                textBoxTongSo.Text = (dataGridViewDS_HS.Rows.Count).ToString();
             }    
             else
             {
                 dataGridViewDS_HS.DataSource = BUS.ChiTietBUS.XemLichHocSinh(ID);
-                textBoxTongSo.Text = (dataGridViewDS_HS.RowCount - 1).ToString();
+                textBoxTongSo.Text = (dataGridViewDS_HS.Rows.Count).ToString();
             }
             foreach(DataGridViewRow dr in dataGridViewDS_HS.Rows)
             {
@@ -87,19 +87,21 @@ namespace TTN_QL_HSGV.GUI.TimKiem
 
         private void buttonLoc_Click(object sender, EventArgs e)
         {
-            string Thu = comboBoxThu.SelectedItem.ToString();
-            string Buoi = comboBoxBuoi.SelectedItem.ToString();
-            string MaLop = comboBoxLop.SelectedItem.ToString();
-            string MaGV = comboBoxGiaoVien.SelectedItem.ToString();
+            string Thu = comboBoxThu.Text.ToString();
+            string Buoi = comboBoxBuoi.Text.ToString();
+            string MaLop = comboBoxLop.Text.ToString();
+            string MaGV = comboBoxGiaoVien.Text.ToString();
             if(ChucVu1 == "Học Sinh")
             {
+                dataGridViewDS_HS.DataSource = null;
                 dataGridViewDS_HS.DataSource = BUS.ChiTietBUS.LocThongTinHocSinh(Thu,Buoi,MaLop,MaGV,ID);
-                textBoxTongSo.Text = (dataGridViewDS_HS.RowCount - 1).ToString();
+                textBoxTongSo.Text = (dataGridViewDS_HS.Rows.Count).ToString();
             }  
             else if (ChucVu1 == "Giáo Viên")
             {
+                dataGridViewDS_HS.DataSource = null;
                 dataGridViewDS_HS.DataSource = BUS.ChiTietBUS.LocThongTinGiaoVien(Thu, Buoi, MaLop, ID);
-                textBoxTongSo.Text = (dataGridViewDS_HS.RowCount - 1).ToString();
+                textBoxTongSo.Text = (dataGridViewDS_HS.Rows.Count).ToString();
             }    
         }
     }

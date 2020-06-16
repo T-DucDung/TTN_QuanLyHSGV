@@ -29,7 +29,10 @@ namespace TTN_QL_HSGV.GUI.Lop
         {
             dataGridViewDS_KH.DataSource = KhoaHocBUS.SelectAllKhoaHoc();
             buttonSua.Enabled = false;
-            textBoxTongSo.Text = (dataGridViewDS_KH.RowCount - 1).ToString();
+            textBoxTongSo.Text = (dataGridViewDS_KH.RowCount).ToString();
+
+            dataGridViewDS_KH.Columns[0].HeaderText = "Mã KH";
+            dataGridViewDS_KH.Columns[1].HeaderText = "Tên KH";
         }
 
         private void dataGridViewDS_KH_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -52,7 +55,7 @@ namespace TTN_QL_HSGV.GUI.Lop
                 {
                     KhoaHocBUS.ThemKH(textBoxMaKhoa.Text, textBoxTenKH.Text);
                     dataGridViewDS_KH.DataSource = KhoaHocBUS.SelectAllKhoaHoc();
-                    textBoxTongSo.Text = (dataGridViewDS_KH.RowCount - 1).ToString();
+                    textBoxTongSo.Text = (dataGridViewDS_KH.RowCount).ToString();
                 }    
             }
             else
@@ -65,7 +68,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             DataGridViewRow current = dataGridViewDS_KH.CurrentRow;
             KhoaHocBUS.SuaKH(current.Cells[0].Value.ToString(), textBoxTenKH.Text);
             dataGridViewDS_KH.DataSource = KhoaHocBUS.SelectAllKhoaHoc();
-            textBoxTongSo.Text = (dataGridViewDS_KH.RowCount - 1).ToString();
+            textBoxTongSo.Text = (dataGridViewDS_KH.RowCount).ToString();
         }
 
         private void buttonXoa_Click(object sender, EventArgs e)

@@ -39,8 +39,8 @@
             this.buttonLop = new System.Windows.Forms.Button();
             this.buttonGiaoVien = new System.Windows.Forms.Button();
             this.tabPageTroGiup = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPageChinh.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -51,11 +51,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(100, 15);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(89, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(436, 26);
+            this.label1.Size = new System.Drawing.Size(452, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Phần Mềm Quản Lý Giáo Viên Và Học Sinh";
             // 
@@ -63,7 +63,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPageChinh);
             this.tabControl1.Controls.Add(this.tabPageTroGiup);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.tabControl1.Location = new System.Drawing.Point(9, 68);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
@@ -98,14 +98,16 @@
             // 
             // buttonTimKiem
             // 
-            this.buttonTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTimKiem.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.buttonTimKiem.Location = new System.Drawing.Point(4, 21);
             this.buttonTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTimKiem.Name = "buttonTimKiem";
             this.buttonTimKiem.Size = new System.Drawing.Size(582, 76);
             this.buttonTimKiem.TabIndex = 4;
             this.buttonTimKiem.Text = "Tìm Kiếm";
-            this.buttonTimKiem.UseVisualStyleBackColor = true;
+            this.buttonTimKiem.UseVisualStyleBackColor = false;
             this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
             // groupBox1
@@ -125,50 +127,58 @@
             // 
             // buttonLich
             // 
-            this.buttonLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLich.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonLich.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonLich.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.buttonLich.Location = new System.Drawing.Point(4, 106);
             this.buttonLich.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLich.Name = "buttonLich";
             this.buttonLich.Size = new System.Drawing.Size(288, 76);
             this.buttonLich.TabIndex = 2;
             this.buttonLich.Text = "Lịch Giảng Dạy";
-            this.buttonLich.UseVisualStyleBackColor = true;
+            this.buttonLich.UseVisualStyleBackColor = false;
             this.buttonLich.Click += new System.EventHandler(this.buttonLich_Click);
             // 
             // buttonHocSinh
             // 
-            this.buttonHocSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHocSinh.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonHocSinh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonHocSinh.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.buttonHocSinh.Location = new System.Drawing.Point(300, 21);
             this.buttonHocSinh.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHocSinh.Name = "buttonHocSinh";
             this.buttonHocSinh.Size = new System.Drawing.Size(288, 76);
             this.buttonHocSinh.TabIndex = 1;
             this.buttonHocSinh.Text = "Học Sinh";
-            this.buttonHocSinh.UseVisualStyleBackColor = true;
+            this.buttonHocSinh.UseVisualStyleBackColor = false;
             this.buttonHocSinh.Click += new System.EventHandler(this.buttonHocSinh_Click);
             // 
             // buttonLop
             // 
-            this.buttonLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLop.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonLop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonLop.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.buttonLop.Location = new System.Drawing.Point(300, 106);
             this.buttonLop.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLop.Name = "buttonLop";
             this.buttonLop.Size = new System.Drawing.Size(286, 76);
             this.buttonLop.TabIndex = 3;
             this.buttonLop.Text = "Lớp";
-            this.buttonLop.UseVisualStyleBackColor = true;
+            this.buttonLop.UseVisualStyleBackColor = false;
             this.buttonLop.Click += new System.EventHandler(this.buttonLop_Click);
             // 
             // buttonGiaoVien
             // 
-            this.buttonGiaoVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGiaoVien.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonGiaoVien.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonGiaoVien.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.buttonGiaoVien.Location = new System.Drawing.Point(4, 21);
             this.buttonGiaoVien.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGiaoVien.Name = "buttonGiaoVien";
             this.buttonGiaoVien.Size = new System.Drawing.Size(288, 76);
             this.buttonGiaoVien.TabIndex = 0;
             this.buttonGiaoVien.Text = "Giáo Viên";
-            this.buttonGiaoVien.UseVisualStyleBackColor = true;
+            this.buttonGiaoVien.UseVisualStyleBackColor = false;
             this.buttonGiaoVien.Click += new System.EventHandler(this.buttonGiaoVien_Click);
             // 
             // tabPageTroGiup
@@ -184,6 +194,13 @@
             this.tabPageTroGiup.Text = "Trợ Giúp";
             this.tabPageTroGiup.UseVisualStyleBackColor = true;
             // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(576, 6);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(17, 290);
+            this.vScrollBar1.TabIndex = 1;
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(6, 6);
@@ -194,17 +211,11 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Hướng Dẫn Sử Dụng\r\nPhần Mềm";
             // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(576, 6);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 290);
-            this.vScrollBar1.TabIndex = 1;
-            // 
             // FormChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(624, 409);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);

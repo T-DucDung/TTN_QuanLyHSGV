@@ -63,7 +63,7 @@ namespace TTN_QL_HSGV.GUI.HocSinh
 
             hs.MaHS = ID;
             hs.TenHS = textBoxTenHS.Text;
-            hs.GioiTinh = textBoxGT.Text;
+            hs.GioiTinh = textBoxGT.Text.ToUpper();
             hs.DiaChi = textBoxDiaChi.Text;
             hs.Sdt = textBoxSDT.Text;
             hs.MaLop = comboBoxThuocLop.SelectedValue.ToString();
@@ -74,9 +74,11 @@ namespace TTN_QL_HSGV.GUI.HocSinh
                 if (controllerHS.SuaHS(hs))
                 {
                     MessageBox.Show("Sửa thành công");
-
-                    DanhSachHocSinh.Dths.DataSource = controllerHS.XemTatCaHS();
-                    DanhSachHocSinh.Dths.Refresh();
+                    if(DanhSachHocSinh.Dths != null)
+                    {
+                        DanhSachHocSinh.Dths.DataSource = controllerHS.XemTatCaHS();
+                        DanhSachHocSinh.Dths.Refresh();
+                    }
                 }
                 else MessageBox.Show("Sửa thất bại");
             }
@@ -85,9 +87,11 @@ namespace TTN_QL_HSGV.GUI.HocSinh
                 if (controllerHS.SuaHS(hs,image))
                 {
                     MessageBox.Show("Sửa thành công");
-
-                    DanhSachHocSinh.Dths.DataSource = controllerHS.XemTatCaHS();
-                    DanhSachHocSinh.Dths.Refresh();
+                    if (DanhSachHocSinh.Dths != null)
+                    {
+                        DanhSachHocSinh.Dths.DataSource = controllerHS.XemTatCaHS();
+                        DanhSachHocSinh.Dths.Refresh();
+                    }
                 }
                 else MessageBox.Show("Sửa thất bại");
             }

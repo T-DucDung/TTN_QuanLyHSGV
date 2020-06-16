@@ -45,13 +45,19 @@ namespace TTN_QL_HSGV.GUI.Lop
             //lấy id bằng cách chọn 1 dòng trong datagrv xong truyền qua form bên kia
             //nút chi tiết cần chỉ bật khi đang chọn 1 dòng trong datagrv nếu không chọn dòng nào thì để tắt
             this.Hide();
-            ThongTinHocSinh formTTHS = new ThongTinHocSinh("1");
+            ThongTinHocSinh formTTHS = new ThongTinHocSinh(hocSinhs[dataGridViewDS_HS.CurrentCell.RowIndex].MaHS.ToString());
             formTTHS.FormClosed += FormTTHS_FormClosed;
             formTTHS.Show();
         }
 
         private void FormTTHS_FormClosed(object sender, FormClosedEventArgs e)
         {
+            dataGridViewDS_HS.Columns.Remove("Checkbox");
+            hocSinhs = HSbus.XemTatCaHS();
+            dataGridViewDS_HS.DataSource = null;
+            dataGridViewDS_HS.DataSource = hocSinhs;
+            AddCotCheckbox();
+            CheckHocSinh();
             this.Show();
         }
 
@@ -136,6 +142,7 @@ namespace TTN_QL_HSGV.GUI.Lop
                     HSbus.SuaHS(new DTO.HocSinh(row.Cells["MaHS"].Value.ToString(), row.Cells["TenHS"].Value.ToString(), row.Cells["DiaChi"].Value.ToString(), row.Cells["GioiTinh"].Value.ToString(), row.Cells["Sdt"].Value.ToString(), MaLop));
                 }
             }
+            MessageBox.Show("Xong");
         }
 
         private void dataGridViewDS_HS_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)

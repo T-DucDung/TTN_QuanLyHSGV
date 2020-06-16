@@ -58,8 +58,8 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
 
             gv.MaGV = ID;
             gv.TenGV = textBoxTenGV.Text;
-            gv.ChucVu = textBoxChucVu.Text;
-            gv.GioiTinh = textBoxGT.Text;
+            gv.ChucVu = textBoxChucVu.Text.ToUpper();
+            gv.GioiTinh = textBoxGT.Text.ToUpper();
             gv.DiaChi = textBoxDiaChi.Text;
             gv.Sdt = textBoxSDT.Text;
             gv.MaMon = comboBoxDayMon.SelectedValue.ToString();
@@ -70,21 +70,25 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
                 if (controllerGV.SuaGV(gv))
                 {
                     MessageBox.Show("Sửa thành công");
-
-                    DanhSachGiaoVien.Dtgv.DataSource = controllerGV.XemTatCaGV();
-                    DanhSachGiaoVien.Dtgv.Refresh();
+                    if(DanhSachGiaoVien.Dtgv != null)
+                    {
+                        DanhSachGiaoVien.Dtgv.DataSource = controllerGV.XemTatCaGV();
+                        DanhSachGiaoVien.Dtgv.Refresh();
+                    }
                 }
                 else MessageBox.Show("Sửa thất bại");
             }
             else
             {
-                MessageBox.Show("im here");
                 if (controllerGV.SuaGV(gv , image))
                 {
                     MessageBox.Show("Sửa thành công");
 
-                    DanhSachGiaoVien.Dtgv.DataSource = controllerGV.XemTatCaGV();
-                    DanhSachGiaoVien.Dtgv.Refresh();
+                    if (DanhSachGiaoVien.Dtgv != null)
+                    {
+                        DanhSachGiaoVien.Dtgv.DataSource = controllerGV.XemTatCaGV();
+                        DanhSachGiaoVien.Dtgv.Refresh();
+                    }
                 }
                 else MessageBox.Show("Sửa thất bại");
             }
@@ -113,7 +117,7 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
 
         private void buttonThemMon_Click(object sender, EventArgs e)
         {
-            GUI.FormPhu.MonHoc monHoc = new FormPhu.MonHoc();
+            FormPhu.MonHoc monHoc = new FormPhu.MonHoc();
             monHoc.FormClosed += MonHoc_FormClosed;
             monHoc.Show();
             this.Hide();

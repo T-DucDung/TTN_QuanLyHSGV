@@ -94,6 +94,13 @@ namespace TTN_QL_HSGV.GUI.HocSinh
             this.KeyPreview = true;
 
             textBoxTongSo.Text = dataGridViewDS_HS.Rows.Count.ToString();
+
+            dataGridViewDS_HS.Columns[0].HeaderText = "Mã HS";
+            dataGridViewDS_HS.Columns[1].HeaderText = "Tên HS";
+            dataGridViewDS_HS.Columns[2].HeaderText = "Địa Chỉ";
+            dataGridViewDS_HS.Columns[3].HeaderText = "Giới Tính";
+            dataGridViewDS_HS.Columns[4].HeaderText = "SĐT";
+            dataGridViewDS_HS.Columns[5].HeaderText = "Mã Lớp";
         }
 
         private void DataGridViewDS_HS_Click(object sender, EventArgs e)

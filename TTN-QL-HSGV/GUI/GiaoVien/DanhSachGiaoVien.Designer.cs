@@ -48,11 +48,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.Location = new System.Drawing.Point(209, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 26);
+            this.label1.Size = new System.Drawing.Size(227, 28);
             this.label1.TabIndex = 25;
             this.label1.Text = "Danh Sách Giáo Viên\r\n";
             // 
@@ -60,11 +60,13 @@
             // 
             this.dataGridViewDS_GV.AllowUserToAddRows = false;
             this.dataGridViewDS_GV.AllowUserToDeleteRows = false;
+            this.dataGridViewDS_GV.AllowUserToResizeRows = false;
             this.dataGridViewDS_GV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDS_GV.Location = new System.Drawing.Point(9, 86);
             this.dataGridViewDS_GV.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDS_GV.Name = "dataGridViewDS_GV";
             this.dataGridViewDS_GV.ReadOnly = true;
+            this.dataGridViewDS_GV.RowHeadersVisible = false;
             this.dataGridViewDS_GV.RowTemplate.Height = 24;
             this.dataGridViewDS_GV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDS_GV.Size = new System.Drawing.Size(606, 260);
@@ -75,69 +77,76 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label2.Location = new System.Drawing.Point(446, 351);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 17);
+            this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 27;
             this.label2.Text = "Tổng Số  :";
             // 
             // textBoxTongSo
             // 
             this.textBoxTongSo.Enabled = false;
-            this.textBoxTongSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTongSo.Location = new System.Drawing.Point(515, 349);
+            this.textBoxTongSo.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.textBoxTongSo.Location = new System.Drawing.Point(514, 348);
             this.textBoxTongSo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTongSo.Name = "textBoxTongSo";
-            this.textBoxTongSo.Size = new System.Drawing.Size(101, 23);
+            this.textBoxTongSo.ReadOnly = true;
+            this.textBoxTongSo.Size = new System.Drawing.Size(101, 22);
             this.textBoxTongSo.TabIndex = 28;
             this.textBoxTongSo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // buttonThem
             // 
             this.buttonThem.AutoSize = true;
-            this.buttonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThem.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonThem.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.buttonThem.Location = new System.Drawing.Point(146, 375);
             this.buttonThem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(129, 27);
             this.buttonThem.TabIndex = 29;
             this.buttonThem.Text = "Thêm Giáo Viên";
-            this.buttonThem.UseVisualStyleBackColor = true;
+            this.buttonThem.UseVisualStyleBackColor = false;
             this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
             // buttonChiTiet
             // 
             this.buttonChiTiet.AutoSize = true;
+            this.buttonChiTiet.BackColor = System.Drawing.Color.SeaShell;
             this.buttonChiTiet.Enabled = false;
-            this.buttonChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonChiTiet.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.buttonChiTiet.Location = new System.Drawing.Point(291, 375);
             this.buttonChiTiet.Margin = new System.Windows.Forms.Padding(2);
             this.buttonChiTiet.Name = "buttonChiTiet";
             this.buttonChiTiet.Size = new System.Drawing.Size(86, 27);
             this.buttonChiTiet.TabIndex = 30;
             this.buttonChiTiet.Text = "Chi Tiết ";
-            this.buttonChiTiet.UseVisualStyleBackColor = true;
+            this.buttonChiTiet.UseVisualStyleBackColor = false;
             this.buttonChiTiet.Click += new System.EventHandler(this.buttonChiTiet_Click);
             // 
             // buttonQuayLai
             // 
             this.buttonQuayLai.AutoSize = true;
-            this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonQuayLai.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonQuayLai.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.buttonQuayLai.Location = new System.Drawing.Point(392, 375);
             this.buttonQuayLai.Margin = new System.Windows.Forms.Padding(2);
             this.buttonQuayLai.Name = "buttonQuayLai";
             this.buttonQuayLai.Size = new System.Drawing.Size(89, 27);
             this.buttonQuayLai.TabIndex = 31;
             this.buttonQuayLai.Text = "Quay Lại";
-            this.buttonQuayLai.UseVisualStyleBackColor = true;
+            this.buttonQuayLai.UseVisualStyleBackColor = false;
             this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
             // 
             // comboBoxGioiTinh
             // 
             this.comboBoxGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxGioiTinh.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.comboBoxGioiTinh.FormattingEnabled = true;
             this.comboBoxGioiTinh.Items.AddRange(new object[] {
             "NỮ",
@@ -146,82 +155,85 @@
             this.comboBoxGioiTinh.Location = new System.Drawing.Point(78, 59);
             this.comboBoxGioiTinh.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxGioiTinh.Name = "comboBoxGioiTinh";
-            this.comboBoxGioiTinh.Size = new System.Drawing.Size(74, 25);
+            this.comboBoxGioiTinh.Size = new System.Drawing.Size(74, 24);
             this.comboBoxGioiTinh.TabIndex = 35;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.Location = new System.Drawing.Point(9, 62);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 17);
+            this.label4.Size = new System.Drawing.Size(68, 16);
             this.label4.TabIndex = 34;
             this.label4.Text = "Giới Tính :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label5.Location = new System.Drawing.Point(165, 61);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 17);
+            this.label5.Size = new System.Drawing.Size(64, 16);
             this.label5.TabIndex = 36;
             this.label5.Text = "Chức Vụ :";
             // 
             // comboBoxChucVu
             // 
             this.comboBoxChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxChucVu.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.comboBoxChucVu.FormattingEnabled = true;
             this.comboBoxChucVu.Items.AddRange(new object[] {
             "None"});
             this.comboBoxChucVu.Location = new System.Drawing.Point(232, 58);
             this.comboBoxChucVu.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxChucVu.Name = "comboBoxChucVu";
-            this.comboBoxChucVu.Size = new System.Drawing.Size(108, 25);
+            this.comboBoxChucVu.Size = new System.Drawing.Size(108, 24);
             this.comboBoxChucVu.TabIndex = 37;
             // 
             // comboBoxMon
             // 
             this.comboBoxMon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxMon.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.comboBoxMon.FormattingEnabled = true;
             this.comboBoxMon.Location = new System.Drawing.Point(430, 58);
             this.comboBoxMon.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxMon.Name = "comboBoxMon";
-            this.comboBoxMon.Size = new System.Drawing.Size(111, 25);
+            this.comboBoxMon.Size = new System.Drawing.Size(111, 24);
             this.comboBoxMon.TabIndex = 39;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label6.Location = new System.Drawing.Point(361, 62);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 17);
+            this.label6.Size = new System.Drawing.Size(66, 16);
             this.label6.TabIndex = 38;
             this.label6.Text = "Dạy Môn :";
             // 
             // buttonLoc
             // 
-            this.buttonLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLoc.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonLoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonLoc.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.buttonLoc.Location = new System.Drawing.Point(571, 57);
             this.buttonLoc.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLoc.Name = "buttonLoc";
             this.buttonLoc.Size = new System.Drawing.Size(44, 24);
             this.buttonLoc.TabIndex = 40;
             this.buttonLoc.Text = "Lọc";
-            this.buttonLoc.UseVisualStyleBackColor = true;
+            this.buttonLoc.UseVisualStyleBackColor = false;
             this.buttonLoc.Click += new System.EventHandler(this.ButtonLoc_Click);
             // 
             // DanhSachGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(624, 409);
             this.Controls.Add(this.buttonLoc);
             this.Controls.Add(this.comboBoxMon);
@@ -241,7 +253,7 @@
             this.MaximizeBox = false;
             this.Name = "DanhSachGiaoVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DanhSachGiaoVien";
+            this.Text = "Danh Sách Giáo Viên";
             this.Load += new System.EventHandler(this.DanhSachGiaoVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_GV)).EndInit();
             this.ResumeLayout(false);

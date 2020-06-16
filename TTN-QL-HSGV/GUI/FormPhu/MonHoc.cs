@@ -27,7 +27,10 @@ namespace TTN_QL_HSGV.GUI.FormPhu
         private void MonHoc_Load(object sender, EventArgs e)
         {
             dataGridViewDS_MH.DataSource = monhocbus.XemTatCaMonHoc();
-            textBoxTongSo.Text = (dataGridViewDS_MH.RowCount - 1).ToString();
+            textBoxTongSo.Text = (dataGridViewDS_MH.RowCount).ToString();
+            dataGridViewDS_MH.Columns[0].HeaderText = "Mã MH";
+            dataGridViewDS_MH.Columns[1].HeaderText = "Tên MH";
+            dataGridViewDS_MH.Columns[2].HeaderText = "Mã Khoa";
         }
 
         private void dataGridViewDS_MH_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -56,7 +59,7 @@ namespace TTN_QL_HSGV.GUI.FormPhu
                 {
                     monhocbus.ThemMonHoc(textBoxMaMon.Text, textBoxTenMon.Text, comboMaKhoa.SelectedItem.ToString());
                     dataGridViewDS_MH.DataSource = monhocbus.XemTatCaMonHoc();
-                    textBoxTongSo.Text = (dataGridViewDS_MH.RowCount - 1).ToString();
+                    textBoxTongSo.Text = (dataGridViewDS_MH.RowCount).ToString();
                 }    
             }
             else
@@ -67,7 +70,7 @@ namespace TTN_QL_HSGV.GUI.FormPhu
         {
             monhocbus.SuaMonHoc(textBoxMaMon.Text, textBoxTenMon.Text, comboMaKhoa.SelectedItem.ToString());
             dataGridViewDS_MH.DataSource = monhocbus.XemTatCaMonHoc();
-            textBoxTongSo.Text = (dataGridViewDS_MH.RowCount - 1).ToString();
+            textBoxTongSo.Text = (dataGridViewDS_MH.RowCount).ToString();
         }
 
         private void buttonXoa_Click(object sender, EventArgs e)

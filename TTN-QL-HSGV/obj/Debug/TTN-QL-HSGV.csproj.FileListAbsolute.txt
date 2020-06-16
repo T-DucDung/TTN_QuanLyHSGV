@@ -185,4 +185,3 @@ C:\Users\anhC\Desktop\ttn\fix\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.c
 C:\Users\anhC\Desktop\ttn\fix\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.exe
 C:\Users\anhC\Desktop\ttn\fix\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.pdb
 C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csprojAssemblyReference.cache
-C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.NewMain.resources

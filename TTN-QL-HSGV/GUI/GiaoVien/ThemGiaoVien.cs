@@ -69,7 +69,7 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
 
             textBoxTenGV.Text = textBoxTenGV.Text.Trim();
             textBoxGT.Text = textBoxGT.Text.Trim().ToUpper();
-            textBoxChucVu.Text = textBoxChucVu.Text.Trim();
+            textBoxChucVu.Text = textBoxChucVu.Text.Trim().ToUpper();
             textBoxSDT.Text = textBoxSDT.Text.Trim();
             textBoxDiaChi.Text = textBoxDiaChi.Text.Trim();
             comboBoxDayMon.Text = comboBoxDayMon.Text.Trim();
@@ -152,7 +152,7 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
                             textBoxSDT.Text = "";
                             textBoxDiaChi.Text = "";
                             comboBoxDayMon.SelectedValue = 0;
-
+                            
                             DanhSachGiaoVien.Dtgv.DataSource = controllerGV.XemTatCaGV();
                             DanhSachGiaoVien.Dtgv.Refresh();
                             int i = DanhSachGiaoVien.Dtgv.Rows.Count;

@@ -48,103 +48,110 @@
             // buttonSua
             // 
             this.buttonSua.AutoSize = true;
-            this.buttonSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSua.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonSua.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSua.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.buttonSua.Location = new System.Drawing.Point(351, 92);
             this.buttonSua.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Size = new System.Drawing.Size(59, 27);
             this.buttonSua.TabIndex = 82;
             this.buttonSua.Text = "Sửa";
-            this.buttonSua.UseVisualStyleBackColor = true;
+            this.buttonSua.UseVisualStyleBackColor = false;
             this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
             // 
             // textBoxTenMon
             // 
-            this.textBoxTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTenMon.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.textBoxTenMon.Location = new System.Drawing.Point(114, 92);
             this.textBoxTenMon.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTenMon.Name = "textBoxTenMon";
-            this.textBoxTenMon.Size = new System.Drawing.Size(202, 23);
+            this.textBoxTenMon.Size = new System.Drawing.Size(202, 22);
             this.textBoxTenMon.TabIndex = 80;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.Location = new System.Drawing.Point(9, 92);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(72, 17);
+            this.label4.Size = new System.Drawing.Size(65, 16);
             this.label4.TabIndex = 79;
             this.label4.Text = "Tên Môn :";
             // 
             // textBoxMaMon
             // 
-            this.textBoxMaMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMaMon.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.textBoxMaMon.Location = new System.Drawing.Point(114, 60);
             this.textBoxMaMon.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMaMon.Name = "textBoxMaMon";
-            this.textBoxMaMon.Size = new System.Drawing.Size(202, 23);
+            this.textBoxMaMon.Size = new System.Drawing.Size(202, 22);
             this.textBoxMaMon.TabIndex = 78;
             // 
             // buttonThem
             // 
             this.buttonThem.AutoSize = true;
-            this.buttonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThem.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonThem.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.buttonThem.Location = new System.Drawing.Point(351, 60);
             this.buttonThem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(59, 27);
             this.buttonThem.TabIndex = 77;
             this.buttonThem.Text = "Thêm";
-            this.buttonThem.UseVisualStyleBackColor = true;
+            this.buttonThem.UseVisualStyleBackColor = false;
             this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label3.Location = new System.Drawing.Point(9, 63);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 76;
             this.label3.Text = "Mã Môn :";
             // 
             // buttonQuayLai
             // 
             this.buttonQuayLai.AutoSize = true;
-            this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonQuayLai.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonQuayLai.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.buttonQuayLai.Location = new System.Drawing.Point(163, 374);
             this.buttonQuayLai.Margin = new System.Windows.Forms.Padding(2);
             this.buttonQuayLai.Name = "buttonQuayLai";
             this.buttonQuayLai.Size = new System.Drawing.Size(89, 27);
             this.buttonQuayLai.TabIndex = 75;
             this.buttonQuayLai.Text = "Quay Lại";
-            this.buttonQuayLai.UseVisualStyleBackColor = true;
+            this.buttonQuayLai.UseVisualStyleBackColor = false;
             this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
             // 
             // textBoxTongSo
             // 
             this.textBoxTongSo.Enabled = false;
-            this.textBoxTongSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTongSo.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.textBoxTongSo.Location = new System.Drawing.Point(310, 353);
             this.textBoxTongSo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTongSo.Name = "textBoxTongSo";
-            this.textBoxTongSo.Size = new System.Drawing.Size(101, 23);
+            this.textBoxTongSo.ReadOnly = true;
+            this.textBoxTongSo.Size = new System.Drawing.Size(101, 22);
             this.textBoxTongSo.TabIndex = 74;
             this.textBoxTongSo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label2.Location = new System.Drawing.Point(242, 355);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 17);
+            this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 73;
             this.label2.Text = "Tổng Số  :";
             // 
@@ -152,12 +159,14 @@
             // 
             this.dataGridViewDS_MH.AllowUserToAddRows = false;
             this.dataGridViewDS_MH.AllowUserToDeleteRows = false;
+            this.dataGridViewDS_MH.AllowUserToResizeRows = false;
             this.dataGridViewDS_MH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDS_MH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDS_MH.Location = new System.Drawing.Point(10, 155);
             this.dataGridViewDS_MH.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDS_MH.Name = "dataGridViewDS_MH";
             this.dataGridViewDS_MH.ReadOnly = true;
+            this.dataGridViewDS_MH.RowHeadersVisible = false;
             this.dataGridViewDS_MH.RowHeadersWidth = 51;
             this.dataGridViewDS_MH.RowTemplate.Height = 24;
             this.dataGridViewDS_MH.Size = new System.Drawing.Size(400, 193);
@@ -167,16 +176,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.Location = new System.Drawing.Point(111, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 26);
+            this.label1.Size = new System.Drawing.Size(222, 28);
             this.label1.TabIndex = 71;
             this.label1.Text = "Danh Sách Môn Học";
             // 
             // comboMaKhoa
             // 
+            this.comboMaKhoa.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.comboMaKhoa.FormattingEnabled = true;
             this.comboMaKhoa.Items.AddRange(new object[] {
             "NANGKHIEU",
@@ -185,38 +195,41 @@
             this.comboMaKhoa.Location = new System.Drawing.Point(114, 122);
             this.comboMaKhoa.Margin = new System.Windows.Forms.Padding(2);
             this.comboMaKhoa.Name = "comboMaKhoa";
-            this.comboMaKhoa.Size = new System.Drawing.Size(202, 21);
+            this.comboMaKhoa.Size = new System.Drawing.Size(202, 24);
             this.comboMaKhoa.TabIndex = 83;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label5.Location = new System.Drawing.Point(9, 122);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(72, 17);
+            this.label5.Size = new System.Drawing.Size(67, 16);
             this.label5.TabIndex = 84;
             this.label5.Text = "Mã Khoa :";
             // 
             // buttonXoa
             // 
             this.buttonXoa.AutoSize = true;
-            this.buttonXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXoa.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonXoa.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.buttonXoa.Location = new System.Drawing.Point(351, 122);
             this.buttonXoa.Margin = new System.Windows.Forms.Padding(2);
             this.buttonXoa.Name = "buttonXoa";
             this.buttonXoa.Size = new System.Drawing.Size(59, 27);
             this.buttonXoa.TabIndex = 85;
             this.buttonXoa.Text = "Xóa";
-            this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.UseVisualStyleBackColor = false;
             this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // MonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(423, 409);
             this.Controls.Add(this.buttonXoa);
             this.Controls.Add(this.label5);
@@ -236,7 +249,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MonHoc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MonHoc";
+            this.Text = "Môn Học";
             this.Load += new System.EventHandler(this.MonHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS_MH)).EndInit();
             this.ResumeLayout(false);

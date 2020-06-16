@@ -68,17 +68,17 @@ namespace TTN_QL_HSGV.GUI.TimKiem
             if (HoTen == "" && GioiTinh == "Không" && Lop == "" && KhoaHoc == "")
             {
                 dataGridViewDS_HS.DataSource = BUS.TimKiemBUS.TimKiemKoThongTin();
-                textBoxTongSo.Text = (dataGridViewDS_HS.RowCount -1).ToString();
+                textBoxTongSo.Text = (dataGridViewDS_HS.RowCount).ToString();
             }    
             else if (textBoxLop.Text == "")
             {
                 dataGridViewDS_HS.DataSource = BUS.TimKiemBUS.TimKiemThongTinKoDungLop(HoTen, GioiTinh);
-                textBoxTongSo.Text = (dataGridViewDS_HS.RowCount -1).ToString();
+                textBoxTongSo.Text = (dataGridViewDS_HS.RowCount).ToString();
             }   
             else if (textBoxLop.Text != "")
             {
                 dataGridViewDS_HS.DataSource = BUS.TimKiemBUS.TimKiemThongTinDungLop(HoTen, GioiTinh,Lop,KhoaHoc);
-                textBoxTongSo.Text = (dataGridViewDS_HS.RowCount -1 ).ToString();
+                textBoxTongSo.Text = (dataGridViewDS_HS.RowCount).ToString();
             }
 
         }
