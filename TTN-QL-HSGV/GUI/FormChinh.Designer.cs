@@ -39,7 +39,6 @@
             this.buttonLop = new System.Windows.Forms.Button();
             this.buttonGiaoVien = new System.Windows.Forms.Button();
             this.tabPageTroGiup = new System.Windows.Forms.TabPage();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPageChinh.SuspendLayout();
@@ -183,7 +182,6 @@
             // 
             // tabPageTroGiup
             // 
-            this.tabPageTroGiup.Controls.Add(this.vScrollBar1);
             this.tabPageTroGiup.Controls.Add(this.textBox1);
             this.tabPageTroGiup.Location = new System.Drawing.Point(4, 26);
             this.tabPageTroGiup.Margin = new System.Windows.Forms.Padding(2);
@@ -193,13 +191,6 @@
             this.tabPageTroGiup.TabIndex = 1;
             this.tabPageTroGiup.Text = "Trợ Giúp";
             this.tabPageTroGiup.UseVisualStyleBackColor = true;
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(576, 6);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 290);
-            this.vScrollBar1.TabIndex = 1;
             // 
             // textBox1
             // 
@@ -250,7 +241,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button buttonTimKiem;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.TextBox textBox1;
     }
 }

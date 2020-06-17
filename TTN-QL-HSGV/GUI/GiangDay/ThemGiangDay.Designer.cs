@@ -217,6 +217,7 @@
             // 
             // comboBoxLop
             // 
+            this.comboBoxLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLop.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.comboBoxLop.FormattingEnabled = true;
             this.comboBoxLop.Location = new System.Drawing.Point(112, 114);
@@ -274,6 +275,7 @@
             // 
             // comboBoxGiaoVien
             // 
+            this.comboBoxGiaoVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGiaoVien.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.comboBoxGiaoVien.FormattingEnabled = true;
             this.comboBoxGiaoVien.Location = new System.Drawing.Point(112, 49);
@@ -336,7 +338,6 @@
             this.textBoxMon.Name = "textBoxMon";
             this.textBoxMon.Size = new System.Drawing.Size(194, 22);
             this.textBoxMon.TabIndex = 106;
-            this.textBoxMon.TextChanged += new System.EventHandler(this.textBoxMon_TextChanged);
             // 
             // textBoxThu
             // 

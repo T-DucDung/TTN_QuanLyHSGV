@@ -80,6 +80,7 @@
             // 
             // comboBoxGiaoVien
             // 
+            this.comboBoxGiaoVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGiaoVien.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.comboBoxGiaoVien.FormattingEnabled = true;
             this.comboBoxGiaoVien.Location = new System.Drawing.Point(112, 48);
@@ -139,6 +140,7 @@
             // 
             // comboBoxLop
             // 
+            this.comboBoxLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLop.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.comboBoxLop.FormattingEnabled = true;
             this.comboBoxLop.Location = new System.Drawing.Point(112, 113);

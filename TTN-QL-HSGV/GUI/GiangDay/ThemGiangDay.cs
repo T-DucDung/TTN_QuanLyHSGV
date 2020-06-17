@@ -27,19 +27,6 @@ namespace TTN_QL_HSGV.GUI.GiangDay
             uploaddata();
         }
 
-        public ThemGiangDay(string maGV,string maLop , int soTiet, string diaDiem, string thu , string tiet )
-        {
-            InitializeComponent();
-            DataProvider.Instance.ToString();
-            comboBoxGiaoVien.Text = maGV;
-            comboBoxLop.Text = maLop;
-            textBoxSoTiet.Text = soTiet.ToString();
-            textBoxDiaDiem.Text = diaDiem;
-            textBoxThu.Text = thu;
-            textBoxTiet.Text = tiet;
-            //comboBoxGiaoVien.Enabled = false;
-
-        }
 
         #region MyMethods
 
@@ -69,10 +56,6 @@ namespace TTN_QL_HSGV.GUI.GiangDay
 
         #region Event
 
-        private void textBoxMon_TextChanged(object sender, EventArgs e)
-        {
-             
-        }
         private void comboBoxGiaoVien_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxGiaoVien.SelectedIndex > -1)
@@ -202,9 +185,10 @@ namespace TTN_QL_HSGV.GUI.GiangDay
                             MessageBox.Show("------Thành Công!!-------");
                             this.Close();
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
                             MessageBox.Show("Xảy 1 lỗi gì đó chờ bản nâng cấp sau fix!!");
+                            MessageBox.Show(ex.ToString());
                         }
                     }
                     else

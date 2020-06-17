@@ -18,15 +18,6 @@ namespace TTN_QL_HSGV.GUI.GiangDay
 {
     public partial class ThongTinGiangDay : Form
     {
-        
-        public ThongTinGiangDay()
-        {
-            InitializeComponent();
-            
-            comboBoxGiaoVien.DataSource = GiangDayBUS.GetDanhSachGiaoVienCaTruong();
-            comboBoxLop.DataSource = GiangDayBUS.GetDanhSachLop();
-
-        }
         public string maGVTam;
         public string maLopTam;
 
@@ -34,15 +25,16 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         public ThongTinGiangDay(string maGV, string maLop, int soTiet, string diaDiem, string thu, string tiet)
         {
             InitializeComponent();
-            DataProvider.Instance.ToString();
-            comboBoxGiaoVien.Text = maGV;
-            comboBoxLop.Text = maLop;
+
+            comboBoxGiaoVien.DataSource = GiangDayBUS.GetDanhSachGiaoVienCaTruong();
+            comboBoxLop.DataSource = GiangDayBUS.GetDanhSachLop();
+            
+            comboBoxGiaoVien.SelectedItem = maGV;
+            comboBoxLop.SelectedItem = maLop;
             textBoxSoTiet.Text = soTiet.ToString();
             textBoxDiaDiem.Text = diaDiem;
             textBoxThu.Text = thu;
             textBoxTiet.Text = tiet;
-            comboBoxGiaoVien.Enabled = true;
-            textBoxDiaDiem.Enabled = true;
             textBoxMon.Text = DataProvider.Instance.ExecuteScalar("gettenmonhoc '" + maGV + "'").ToString();
             
             maGVTam = maGV;
