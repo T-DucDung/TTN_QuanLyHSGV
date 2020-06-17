@@ -21,7 +21,8 @@ namespace TTN_QL_HSGV.GUI.Lop
         private HocSinhBUS HSbus;
         private GiaoVienBUS GVbus;
         private List<DTO.HocSinh> hocSinhs;
-        public ThongTinLop(string IDLop)
+        private string tenGV;
+        public ThongTinLop(string IDLop, string TenGV)
         {
             ID = IDLop;
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             HSbus = new HocSinhBUS();
             GVbus = new GiaoVienBUS();
             hocSinhs = new List<DTO.HocSinh>();
+            tenGV = TenGV;
         }
         // Phần lọc 2 textbox đằng sau chỉ hiển thị tên lớp với khóa học 
         // lấy danh sách từ database ra add dưới dạng list<A> thêm 'None' vào 
@@ -123,12 +125,16 @@ namespace TTN_QL_HSGV.GUI.Lop
 
         private void ThongTinLop_Load(object sender, EventArgs e)
         {
-            comboBoxKhoaHoc.DataSource = Lbus.GetDanhSachKhoaHoc();
+            List<string> khs = Lbus.GetDanhSachKhoaHoc();
+            comboBoxKhoaHoc.DataSource = khs;
+            comboBoxKhoaHoc.SelectedItem = Lbus.GetKhoaHoc(ID);
             hocSinhs = HSbus.XemTatCaHSLop(this.ID);
             dataGridViewDS_HS.DataSource = hocSinhs;
             ReName();
-            comboBoxGVCN.DataSource = GVbus.XemDanhSachTenGV();
+            List<string> gvs= GVbus.XemDanhSachTenGV();
+            comboBoxGVCN.DataSource = gvs;
             textBoxLop.Text = Lbus.GetTenLop(ID);
+            comboBoxGVCN.SelectedItem = gvs.FirstOrDefault(x => x.Contains(tenGV));
         }
 
         private void buttonLuu_Click(object sender, EventArgs e)

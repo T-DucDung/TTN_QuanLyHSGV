@@ -73,6 +73,11 @@ namespace TTN_QL_HSGV.BUS
             return ConvertString(dataTable);
         }
 
+        public string GetKhoaHoc(string malop)
+        {
+            return DataProvider.Instance.ExecuteScalar("GetTenKhoaHoc '"+malop+"'").ToString();
+        }
+
         public void UpdateLop(string malop, string tenlop, string tengvcn, string tenkhoahoc)
         {
             DataProvider.Instance.ExecuteNonQuery("UpdateLop '" + malop + "','" + tenlop + "','" + tengvcn + "',N'" + tenkhoahoc + "'");

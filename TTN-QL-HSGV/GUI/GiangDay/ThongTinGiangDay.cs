@@ -85,7 +85,7 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         private void buttonChiTietLop_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ThongTinLop formTTL = new ThongTinLop(comboBoxLop.Text);
+            ThongTinLop formTTL = new ThongTinLop(comboBoxLop.Text,comboBoxGiaoVien.Text);
             formTTL.FormClosed += FormTTL_FormClosed;
             formTTL.Show();
         }
