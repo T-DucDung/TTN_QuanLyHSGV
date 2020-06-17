@@ -79,7 +79,6 @@ C:\Users\admin\source\repos\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.pdb
 E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\bin\Debug\TTN-QL-HSGV.exe.config
 E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\bin\Debug\TTN-QL-HSGV.exe
 E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\bin\Debug\TTN-QL-HSGV.pdb
-E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csprojAssemblyReference.cache
 E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.FormChinh.resources
 E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.FormPhu.MonHoc.resources
 E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN_QL_HSGV.GUI.GiangDay.DanhSachGiangDay.resources
@@ -185,3 +184,4 @@ C:\Users\anhC\Desktop\ttn\fix\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.c
 C:\Users\anhC\Desktop\ttn\fix\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.exe
 C:\Users\anhC\Desktop\ttn\fix\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.pdb
 C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csprojAssemblyReference.cache
+E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csprojAssemblyReference.cache
