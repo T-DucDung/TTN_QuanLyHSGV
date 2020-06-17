@@ -168,6 +168,7 @@
             this.textBoxtenGVCN.Location = new System.Drawing.Point(87, 58);
             this.textBoxtenGVCN.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxtenGVCN.Name = "textBoxtenGVCN";
+            this.textBoxtenGVCN.ReadOnly = true;
             this.textBoxtenGVCN.Size = new System.Drawing.Size(189, 22);
             this.textBoxtenGVCN.TabIndex = 66;
             // 
@@ -188,6 +189,7 @@
             this.Controls.Add(this.dataGridViewDS_Lop);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "DanhSachLop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Sách Lớp";

@@ -63,6 +63,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             hocSinhs = HSbus.XemTatCaHSLop(this.ID);
             dataGridViewDS_HS.DataSource = null;
             dataGridViewDS_HS.DataSource = hocSinhs;
+            ReName();
         }
 
         private void buttonChiTiet_Click(object sender, EventArgs e)
@@ -88,6 +89,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             hocSinhs = HSbus.XemTatCaHSLop(this.ID);
             dataGridViewDS_HS.DataSource = null;
             dataGridViewDS_HS.DataSource = hocSinhs;
+            ReName();
         }
 
         private void buttonQuayLai_Click(object sender, EventArgs e)
@@ -124,6 +126,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             comboBoxKhoaHoc.DataSource = Lbus.GetDanhSachKhoaHoc();
             hocSinhs = HSbus.XemTatCaHSLop(this.ID);
             dataGridViewDS_HS.DataSource = hocSinhs;
+            ReName();
             comboBoxGVCN.DataSource = GVbus.XemDanhSachTenGV();
             textBoxLop.Text = Lbus.GetTenLop(ID);
         }
@@ -149,6 +152,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             hocSinhs.Sort(new HocSinhComparer(strColumnName, strSortOrder));
             dataGridViewDS_HS.DataSource = null;
             dataGridViewDS_HS.DataSource = hocSinhs;
+            ReName();
             dataGridViewDS_HS.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection = strSortOrder;
         }
         private SortOrder getSortOrder(int columnIndex)
@@ -164,6 +168,15 @@ namespace TTN_QL_HSGV.GUI.Lop
                 dataGridViewDS_HS.Columns[columnIndex].HeaderCell.SortGlyphDirection = SortOrder.Descending;
                 return SortOrder.Descending;
             }
+        }
+        private void ReName()
+        {
+            dataGridViewDS_HS.Columns["MaHS"].HeaderText = "Mã HS";
+            dataGridViewDS_HS.Columns["TenHS"].HeaderText = "Tên HS";
+            dataGridViewDS_HS.Columns["DiaChi"].HeaderText = "Địa Chỉ";
+            dataGridViewDS_HS.Columns["Sdt"].HeaderText = "SĐT";
+            dataGridViewDS_HS.Columns["GioiTinh"].HeaderText = "Giới Tính";
+            dataGridViewDS_HS.Columns["MaLop"].HeaderText = "Mã Lớp";
         }
 
     }

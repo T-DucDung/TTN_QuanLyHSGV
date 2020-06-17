@@ -230,6 +230,7 @@
             this.Controls.Add(this.dataGridViewDS_HS);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "ThongTinLop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông Tin Lớp";

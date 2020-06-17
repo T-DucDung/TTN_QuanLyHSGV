@@ -41,17 +41,16 @@ namespace TTN_QL_HSGV.GUI.Lop
             ThemHocSinh formTMHS = new ThemHocSinh();
             formTMHS.FormClosed += FormTMHS_FormClosed;
             formTMHS.Show();
-            hocSinhs = HSbus.XemTatCaHS();
-            dataGridViewDS_HS.DataSource = hocSinhs;
-            AddCotCheckbox();
         }
 
         private void FormTMHS_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Enabled = true;
             hocSinhs = HSbus.XemTatCaHS();
+            dataGridViewDS_HS.Columns.Remove("Checkbox");
             dataGridViewDS_HS.DataSource = null;
             dataGridViewDS_HS.DataSource = hocSinhs;
+            AddCotCheckbox();
         }
 
         private void buttonChiTietHS_Click(object sender, EventArgs e)
@@ -67,6 +66,11 @@ namespace TTN_QL_HSGV.GUI.Lop
         private void FormTTHS_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
+            hocSinhs = HSbus.XemTatCaHS();
+            dataGridViewDS_HS.Columns.Remove("Checkbox");
+            dataGridViewDS_HS.DataSource = null;
+            dataGridViewDS_HS.DataSource = hocSinhs;
+            AddCotCheckbox();
         }
 
         private void buttonQuayLai_Click(object sender, EventArgs e)
@@ -95,6 +99,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             khoaHocs.Add("Thêm khoá học");
             comboBoxKhoaHoc.DataSource = khoaHocs;
             hocSinhs = HSbus.XemTatCaHS();
+            dataGridViewDS_HS.DataSource = null;
             dataGridViewDS_HS.DataSource = hocSinhs;
             AddCotCheckbox();
             comboBoxGVCN.DataSource = GVbus.XemDanhSachTenGV();
@@ -107,6 +112,13 @@ namespace TTN_QL_HSGV.GUI.Lop
             boxColumn.Name = "Checkbox";
             boxColumn.HeaderText = "Thêm";
             dataGridViewDS_HS.Columns.Add(boxColumn);
+            dataGridViewDS_HS.Columns["Checkbox"].ReadOnly = false;
+            dataGridViewDS_HS.Columns["MaHS"].ReadOnly = true;
+            dataGridViewDS_HS.Columns["TenHS"].ReadOnly = true;
+            dataGridViewDS_HS.Columns["DiaChi"].ReadOnly = true;
+            dataGridViewDS_HS.Columns["GioiTinh"].ReadOnly = true;
+            dataGridViewDS_HS.Columns["Sdt"].ReadOnly = true;
+            dataGridViewDS_HS.Columns["MaLop"].ReadOnly = true;
         }
 
         private void buttonLưu_Click(object sender, EventArgs e)
@@ -188,6 +200,16 @@ namespace TTN_QL_HSGV.GUI.Lop
                 comboBoxKhoaHoc.SelectedIndex = 0;
                 GoiKhoaHoc();
             }
+        }
+
+        private void dataGridViewDS_HS_DataSourceChanged(object sender, EventArgs e)
+        {
+            dataGridViewDS_HS.Columns["MaHS"].HeaderText = "Mã HS";
+            dataGridViewDS_HS.Columns["TenHS"].HeaderText = "Tên HS";
+            dataGridViewDS_HS.Columns["DiaChi"].HeaderText = "Địa Chỉ";
+            dataGridViewDS_HS.Columns["GioiTinh"].HeaderText = "Giới Tính";
+            dataGridViewDS_HS.Columns["Sdt"].HeaderText = "SĐT";
+            dataGridViewDS_HS.Columns["MaLop"].HeaderText = "Mã Lớp";
         }
     }
 }

@@ -9,7 +9,7 @@ namespace TTN_QL_HSGV.BUS
 {
     class ChiTietBUS
     {
-        private static void XuLyDauVao(ref string Thu,ref string Buoi,ref string MaGV,ref string MaLop)
+        private static void XuLyDauVao(ref string Thu, ref string Buoi, ref string MaGV, ref string MaLop)
         {
             if (Thu == "Cả Tuần")
                 Thu = "%";
@@ -24,13 +24,13 @@ namespace TTN_QL_HSGV.BUS
             if (MaLop == "None")
                 MaLop = "%";
         }
- 
+
         private static void XuLyBuoi(ref string Buoi)
         {
             if (Buoi == "Cả sáng, chiều")
                 Buoi = "and " +
                     "Tiet like '%' ";
-            else if(Buoi == "Sáng")
+            else if (Buoi == "Sáng")
             {
                 Buoi = "" +
                     "and " +
@@ -45,7 +45,7 @@ namespace TTN_QL_HSGV.BUS
                     "Tiet like '%5%' " +
                     "or " +
                     "Tiet like '%6%') ";
-            }   
+            }
             else if (Buoi == "Chiều")
             {
                 Buoi = "" +
@@ -61,8 +61,8 @@ namespace TTN_QL_HSGV.BUS
                     "Tiet like '%11%' " +
                     "or " +
                     "Tiet like '%12%') ";
-            }    
-            
+            }
+
         }
         public static DataTable XemLichGiaoVien(string MaGV)
         {
@@ -82,9 +82,9 @@ namespace TTN_QL_HSGV.BUS
                 "HOCSINH.MaLop = GIANGDAY.MaLop ");
             return result;
         }
-        public static DataTable LocThongTinHocSinh(string Thu,string Buoi,string MaLop,string MaGV,string MaHS)
+        public static DataTable LocThongTinHocSinh(string Thu, string Buoi, string MaLop, string MaGV, string MaHS)
         {
-            XuLyDauVao(ref Thu, ref Buoi,ref MaGV,ref MaLop);
+            XuLyDauVao(ref Thu, ref Buoi, ref MaGV, ref MaLop);
             DataTable result = DAL.DataProvider.Instance.ExecuteQuery("" +
                 "select MaGV,HOCSINH.MaLop,SoTiet,DiaDiem,Thu,Tiet " +
                 "from GIANGDAY,HOCSINH " +
@@ -94,7 +94,7 @@ namespace TTN_QL_HSGV.BUS
                 "and " +
                 $"GIANGDAY.Thu like '{Thu}' " +
                 "and " +
-                $"GIANGDAY.MaGV = '{MaGV}' "
+                $"GIANGDAY.MaGV like '{MaGV}' "
                 + Buoi);
             return result;
         }

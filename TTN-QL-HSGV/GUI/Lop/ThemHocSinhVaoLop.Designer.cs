@@ -160,7 +160,6 @@
             this.dataGridViewDS_HS.Location = new System.Drawing.Point(10, 87);
             this.dataGridViewDS_HS.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDS_HS.Name = "dataGridViewDS_HS";
-            this.dataGridViewDS_HS.ReadOnly = true;
             this.dataGridViewDS_HS.RowHeadersVisible = false;
             this.dataGridViewDS_HS.RowTemplate.Height = 24;
             this.dataGridViewDS_HS.Size = new System.Drawing.Size(606, 285);
@@ -212,6 +211,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "ThemHocSinhVaoLop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Học Sinh Vào Lớp";

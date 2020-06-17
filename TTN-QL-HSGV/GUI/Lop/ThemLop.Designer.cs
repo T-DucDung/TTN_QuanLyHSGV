@@ -182,11 +182,11 @@
             this.dataGridViewDS_HS.Location = new System.Drawing.Point(10, 115);
             this.dataGridViewDS_HS.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDS_HS.Name = "dataGridViewDS_HS";
-            this.dataGridViewDS_HS.ReadOnly = true;
             this.dataGridViewDS_HS.RowHeadersVisible = false;
             this.dataGridViewDS_HS.RowTemplate.Height = 24;
             this.dataGridViewDS_HS.Size = new System.Drawing.Size(606, 256);
             this.dataGridViewDS_HS.TabIndex = 75;
+            this.dataGridViewDS_HS.DataSourceChanged += new System.EventHandler(this.dataGridViewDS_HS_DataSourceChanged);
             this.dataGridViewDS_HS.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewDS_HS_ColumnHeaderMouseClick);
             // 
             // label1
@@ -233,6 +233,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "ThemLop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Lớp";

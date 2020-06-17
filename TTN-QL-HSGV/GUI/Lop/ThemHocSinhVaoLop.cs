@@ -58,6 +58,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             dataGridViewDS_HS.DataSource = hocSinhs;
             AddCotCheckbox();
             CheckHocSinh();
+            ReName();
             this.Show();
         }
 
@@ -84,6 +85,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             dataGridViewDS_HS.DataSource = hocSinhs;
             AddCotCheckbox();
             CheckHocSinh();
+            ReName();
         }
 
         private void CheckHocSinh()
@@ -106,30 +108,50 @@ namespace TTN_QL_HSGV.GUI.Lop
             boxColumn.Name = "Checkbox";
             boxColumn.HeaderText = "Thêm";
             dataGridViewDS_HS.Columns.Add(boxColumn);
+            dataGridViewDS_HS.Columns["Checkbox"].ReadOnly = false;
+            dataGridViewDS_HS.Columns["MaHS"].ReadOnly = true;
+            dataGridViewDS_HS.Columns["TenHS"].ReadOnly = true;
+            dataGridViewDS_HS.Columns["DiaChi"].ReadOnly = true;
+            dataGridViewDS_HS.Columns["GioiTinh"].ReadOnly = true;
+            dataGridViewDS_HS.Columns["Sdt"].ReadOnly = true;
+            dataGridViewDS_HS.Columns["MaLop"].ReadOnly = true;
         }
 
         private void buttonLoc_Click(object sender, EventArgs e)
         {
             if (comboBoxGioiTinh.Text == "None" && comboBoxLop.Text == "None")
             {
+                dataGridViewDS_HS.Columns.Remove("Checkbox");
+                dataGridViewDS_HS.DataSource = null;
                 hocSinhs = HSbus.XemTatCaHS();
                 dataGridViewDS_HS.DataSource = hocSinhs;
+                AddCotCheckbox();
             }
             else if (comboBoxGioiTinh.Text == "None" && comboBoxLop.Text != "None")
             {
+                dataGridViewDS_HS.Columns.Remove("Checkbox");
+                dataGridViewDS_HS.DataSource = null;
                 hocSinhs = HSbus.XemTatCaHSLop(comboBoxLop.Text);
                 dataGridViewDS_HS.DataSource = hocSinhs;
+                AddCotCheckbox();
             }
             else if (comboBoxGioiTinh.Text != "None" && comboBoxLop.Text == "None")
             {
+                dataGridViewDS_HS.Columns.Remove("Checkbox");
+                dataGridViewDS_HS.DataSource = null;
                 hocSinhs = HSbus.XemTatCaHSGT(comboBoxGioiTinh.Text);
                 dataGridViewDS_HS.DataSource = hocSinhs;
+                AddCotCheckbox();
             }
             else if (comboBoxGioiTinh.Text != "None" && comboBoxLop.Text != "None")
             {
+                dataGridViewDS_HS.Columns.Remove("Checkbox");
                 hocSinhs = HSbus.XemTatCaHSLopGT(comboBoxLop.Text, comboBoxGioiTinh.Text);
+                dataGridViewDS_HS.DataSource = null;
                 dataGridViewDS_HS.DataSource = hocSinhs;
+                AddCotCheckbox();
             }
+            ReName();
             CheckHocSinh();
         }
 
@@ -152,8 +174,12 @@ namespace TTN_QL_HSGV.GUI.Lop
                 string strColumnName = dataGridViewDS_HS.Columns[e.ColumnIndex].Name;
                 SortOrder strSortOrder = getSortOrder(e.ColumnIndex);
                 hocSinhs.Sort(new HocSinhComparer(strColumnName, strSortOrder));
+                dataGridViewDS_HS.Columns.Remove("Checkbox");
                 dataGridViewDS_HS.DataSource = null;
                 dataGridViewDS_HS.DataSource = hocSinhs;
+                AddCotCheckbox();
+                ReName();
+                CheckHocSinh();
                 dataGridViewDS_HS.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection = strSortOrder;
             }
             catch(Exception ex)
@@ -182,6 +208,16 @@ namespace TTN_QL_HSGV.GUI.Lop
                 MessageBox.Show("Không thể sắp xếp cột này");
                 return SortOrder.None;
             }
+        }
+
+        private void ReName()
+        {
+            dataGridViewDS_HS.Columns["MaHS"].HeaderText = "Mã HS";
+            dataGridViewDS_HS.Columns["TenHS"].HeaderText = "Tên HS";
+            dataGridViewDS_HS.Columns["DiaChi"].HeaderText = "Địa Chỉ";
+            dataGridViewDS_HS.Columns["GioiTinh"].HeaderText = "Giới Tính";
+            dataGridViewDS_HS.Columns["Sdt"].HeaderText = "SĐT";
+            dataGridViewDS_HS.Columns["MaLop"].HeaderText = "Mã Lớp";
         }
     }
 }
