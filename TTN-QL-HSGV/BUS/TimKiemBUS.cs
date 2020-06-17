@@ -132,16 +132,17 @@ namespace TTN_QL_HSGV.BUS
         {
             DataTable Result = new DataTable();
             Result = DAL.DataProvider.Instance.ExecuteQuery("" +
-                "select MaHS as Mã,TenHS as Họ_Tên,GioiTinh as Giới_Tính,SDT,DiaChi as Địa_Chỉ " +
-                "from HOCSINh " +
+                "select HOCSINH.MaHS as Mã,TenHS as Họ_Tên,GioiTinh as Giới_Tính,SDT,DiaChi as Địa_Chỉ " +
+                "from HOCSINH,LOP,KHOAHOC " +
                 "where " +
-                $"KHOAHOC.TenKH like '{KhoaHoc}' " +
+                $"KHOAHOC.TenKH like N'{KhoaHoc}' " +
                 "and " +
                 "LOP.MaKH = KHOAHOC.MaKH " +
                 "and " +
                 $"LOP.TenLop like '{Lop}' " +
                 "and " +
                 "HOCSINH.MaLop = LOP.MaLop " +
+                "and " +
                 $"HOCSINH.TenHS like N'{HoTen}' " +
                 "and " +
                 $"HOCSINH.GioiTinh like N'{GioiTinh}' ");
@@ -163,10 +164,10 @@ namespace TTN_QL_HSGV.BUS
         {
             DataTable Result = new DataTable();
             Result = DAL.DataProvider.Instance.ExecuteQuery("" +
-                "select MaGV as Mã,TenGV as Họ_Tên,GioiTinh as Giới_Tính,SDT,DiaChi as Địa_Chỉ  " +
-                "from GIAOVIEN " +
+                "select GIAOVIEN.MaGV as Mã,TenGV as Họ_Tên,GioiTinh as Giới_Tính,SDT,DiaChi as Địa_Chỉ  " +
+                "from GIAOVIEN,KHOAHOC,LOP,GIANGDAY " +
                 "where " +
-                $"KHOAHOC.TenKH like '{KhoaHoc}' " +
+                $"KHOAHOC.TenKH like N'{KhoaHoc}' " +
                 "and " +
                 "LOP.MaKH = KHOAHOC.MaKH " +
                 "and " +

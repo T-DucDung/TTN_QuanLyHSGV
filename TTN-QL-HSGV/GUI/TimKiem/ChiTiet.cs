@@ -65,24 +65,35 @@ namespace TTN_QL_HSGV.GUI.TimKiem
                 dataGridViewDS_HS.DataSource = BUS.ChiTietBUS.XemLichHocSinh(ID);
                 textBoxTongSo.Text = (dataGridViewDS_HS.Rows.Count).ToString();
             }
+            List<string> listGiaoVien = new List<string>();
+            List<string> listLop = new List<string>();
             foreach(DataGridViewRow dr in dataGridViewDS_HS.Rows)
             {
                 
 
                 if(dr.Cells[0].Value != null && ChucVu1 != "Giáo Viên")
                 {
-                    comboBoxGiaoVien.Items.Add(dr.Cells[0].Value.ToString());
+                    listGiaoVien.Add(dr.Cells[0].Value.ToString());
                 }    
                 if(dr.Cells[1].Value != null)
                 {
-                    comboBoxLop.Items.Add(dr.Cells[1].Value.ToString());
+                    listLop.Add(dr.Cells[1].Value.ToString());
                 }    
                 
             }
+            List<string> list = new List<string>();
+            
+            comboBoxLop.DataSource = listLop.Distinct().ToList();
+            
+            
             if (ChucVu1 == "Giáo Viên")
             {
                 comboBoxGiaoVien.Items.Add(ID);
             }
+            else
+            {
+                comboBoxGiaoVien.DataSource = listGiaoVien.Distinct().ToList();
+            }    
         }
 
         private void buttonLoc_Click(object sender, EventArgs e)
@@ -103,6 +114,16 @@ namespace TTN_QL_HSGV.GUI.TimKiem
                 dataGridViewDS_HS.DataSource = BUS.ChiTietBUS.LocThongTinGiaoVien(Thu, Buoi, MaLop, ID);
                 textBoxTongSo.Text = (dataGridViewDS_HS.Rows.Count).ToString();
             }    
+        }
+
+        private void dataGridViewDS_HS_DataSourceChanged(object sender, EventArgs e)
+        {
+            dataGridViewDS_HS.Columns["MaGV"].HeaderText = "Mã GV";
+            dataGridViewDS_HS.Columns["MaLop"].HeaderText = "Mã Lớp";
+            dataGridViewDS_HS.Columns["SoTiet"].HeaderText = "Số Tiết";
+            dataGridViewDS_HS.Columns["DiaDiem"].HeaderText = "Địa Điểm";
+            dataGridViewDS_HS.Columns["Thu"].HeaderText = "Thứ";
+            dataGridViewDS_HS.Columns["Tiet"].HeaderText = "Tiết";
         }
     }
 }

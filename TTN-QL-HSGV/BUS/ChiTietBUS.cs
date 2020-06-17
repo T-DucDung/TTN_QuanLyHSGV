@@ -94,7 +94,7 @@ namespace TTN_QL_HSGV.BUS
                 "and " +
                 $"GIANGDAY.Thu like '{Thu}' " +
                 "and " +
-                $"GIANGDAY.MaGV = '{MaGV}' "
+                $"GIANGDAY.MaGV like '{MaGV}' "
                 + Buoi);
             return result;
         }
@@ -104,7 +104,8 @@ namespace TTN_QL_HSGV.BUS
             DataTable result = DAL.DataProvider.Instance.ExecuteQuery("" +
                 "select MaGV,MaLop,SoTiet,DiaDiem,Thu,Tiet " +
                 "from GIANGDAY " +
-                $"where MaGV like '{MaGV}' " +
+                $"where " +
+                $"MaGV like '{MaGV}' " +
                 "and " +
                 $"MaLop like '{MaLop}' " +
                 "and " +
