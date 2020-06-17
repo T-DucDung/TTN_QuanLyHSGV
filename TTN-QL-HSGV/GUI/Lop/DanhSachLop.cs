@@ -39,7 +39,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             try
             {
                 this.Hide();
-                ThongTinLop formTTL = new ThongTinLop(dataGridViewDS_Lop.CurrentRow.Cells[0].Value.ToString());
+                ThongTinLop formTTL = new ThongTinLop(dataGridViewDS_Lop.CurrentRow.Cells[0].Value.ToString(),textBoxtenGVCN.Text);
                 formTTL.FormClosed += FormTTL_FormClosed;
                 formTTL.Show();
             }

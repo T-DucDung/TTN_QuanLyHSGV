@@ -125,16 +125,23 @@ namespace TTN_QL_HSGV.GUI.Lop
         {
             try
             {
-                string[] info = comboBoxGVCN.Text.Split(':');
-                string maGV = info[0];
-                string malop = Lbus.ThemLop(textBoxLop.Text, maGV, comboBoxKhoaHoc.Text);
-                foreach (DataGridViewRow row in dataGridViewDS_HS.Rows)
+                if (textBoxLop.Text.Trim() != "")
                 {
-                    if (row.Cells["Checkbox"].Value != null && (bool)row.Cells["Checkbox"].Value)
+                    string[] info = comboBoxGVCN.Text.Split(':');
+                    string maGV = info[0];
+                    string malop = Lbus.ThemLop(textBoxLop.Text, maGV, comboBoxKhoaHoc.Text);
+                    foreach (DataGridViewRow row in dataGridViewDS_HS.Rows)
                     {
-                        HSbus.SuaHS(new DTO.HocSinh(row.Cells["MaHS"].Value.ToString(), row.Cells["TenHS"].Value.ToString(), row.Cells["DiaChi"].Value.ToString(), row.Cells["GioiTinh"].Value.ToString(), row.Cells["Sdt"].Value.ToString(), malop));
+                        if (row.Cells["Checkbox"].Value != null && (bool)row.Cells["Checkbox"].Value)
+                        {
+                            HSbus.SuaHS(new DTO.HocSinh(row.Cells["MaHS"].Value.ToString(), row.Cells["TenHS"].Value.ToString(), row.Cells["DiaChi"].Value.ToString(), row.Cells["GioiTinh"].Value.ToString(), row.Cells["Sdt"].Value.ToString(), malop));
+                        }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Tên lớp không thể để trống");
+                }    
             }
             catch (Exception ex)
             {
