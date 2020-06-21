@@ -51,6 +51,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             dataGridViewDS_HS.DataSource = null;
             dataGridViewDS_HS.DataSource = hocSinhs;
             AddCotCheckbox();
+            ReName();
         }
 
         private void buttonChiTietHS_Click(object sender, EventArgs e)
@@ -71,6 +72,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             dataGridViewDS_HS.DataSource = null;
             dataGridViewDS_HS.DataSource = hocSinhs;
             AddCotCheckbox();
+            ReName();
         }
 
         private void buttonQuayLai_Click(object sender, EventArgs e)
@@ -102,6 +104,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             dataGridViewDS_HS.DataSource = null;
             dataGridViewDS_HS.DataSource = hocSinhs;
             AddCotCheckbox();
+            ReName();
             comboBoxGVCN.DataSource = GVbus.XemDanhSachTenGV();
         }
 
@@ -137,6 +140,7 @@ namespace TTN_QL_HSGV.GUI.Lop
                             HSbus.SuaHS(new DTO.HocSinh(row.Cells["MaHS"].Value.ToString(), row.Cells["TenHS"].Value.ToString(), row.Cells["DiaChi"].Value.ToString(), row.Cells["GioiTinh"].Value.ToString(), row.Cells["Sdt"].Value.ToString(), malop));
                         }
                     }
+                    MessageBox.Show("Thêm lớp thành công");
                 }
                 else
                 {
@@ -158,6 +162,7 @@ namespace TTN_QL_HSGV.GUI.Lop
                 hocSinhs.Sort(new HocSinhComparer(strColumnName, strSortOrder));
                 dataGridViewDS_HS.DataSource = null;
                 dataGridViewDS_HS.DataSource = hocSinhs;
+                ReName();
                 dataGridViewDS_HS.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection = strSortOrder;
             }
             catch (Exception ex)
@@ -197,6 +202,10 @@ namespace TTN_QL_HSGV.GUI.Lop
 
         private void KhoaHoc_FormClosed(object sender, FormClosedEventArgs e)
         {
+            List<string> khoaHocs = Lbus.GetDanhSachKhoaHoc();
+            khoaHocs.Add("Thêm khoá học");
+            comboBoxKhoaHoc.DataSource = null;
+            comboBoxKhoaHoc.DataSource = khoaHocs;
             this.Show();
         }
 
@@ -209,7 +218,7 @@ namespace TTN_QL_HSGV.GUI.Lop
             }
         }
 
-        private void dataGridViewDS_HS_DataSourceChanged(object sender, EventArgs e)
+        private void ReName()
         {
             dataGridViewDS_HS.Columns["MaHS"].HeaderText = "Mã HS";
             dataGridViewDS_HS.Columns["TenHS"].HeaderText = "Tên HS";
@@ -217,6 +226,11 @@ namespace TTN_QL_HSGV.GUI.Lop
             dataGridViewDS_HS.Columns["GioiTinh"].HeaderText = "Giới Tính";
             dataGridViewDS_HS.Columns["Sdt"].HeaderText = "SĐT";
             dataGridViewDS_HS.Columns["MaLop"].HeaderText = "Mã Lớp";
+        }
+
+        private void dataGridViewDS_HS_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            buttonChiTietHS.Enabled = true;
         }
     }
 }

@@ -219,5 +219,10 @@ namespace TTN_QL_HSGV.GUI.Lop
             dataGridViewDS_HS.Columns["Sdt"].HeaderText = "SĐT";
             dataGridViewDS_HS.Columns["MaLop"].HeaderText = "Mã Lớp";
         }
+
+        private void dataGridViewDS_HS_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            buttonChiTiet.Enabled = true;
+        }
     }
 }

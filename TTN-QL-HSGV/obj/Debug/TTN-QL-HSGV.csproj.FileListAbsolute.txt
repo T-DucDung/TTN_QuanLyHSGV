@@ -183,5 +183,5 @@ C:\Users\anhC\Desktop\ttn\fix\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.c
 C:\Users\anhC\Desktop\ttn\fix\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csproj.CoreCompileInputs.cache
 C:\Users\anhC\Desktop\ttn\fix\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.exe
 C:\Users\anhC\Desktop\ttn\fix\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.pdb
-C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csprojAssemblyReference.cache
 E:\$_E_School\$_School_Pj\New folder\TTN_QuanLy_HocSinh_GiaoVien\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csprojAssemblyReference.cache
+C:\Users\Welcome\Documents\GitHub\TTN_QuanLyHSGV\TTN-QL-HSGV\obj\Debug\TTN-QL-HSGV.csprojAssemblyReference.cache

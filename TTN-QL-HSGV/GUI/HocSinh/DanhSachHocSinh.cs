@@ -103,22 +103,6 @@ namespace TTN_QL_HSGV.GUI.HocSinh
             dataGridViewDS_HS.Columns[5].HeaderText = "Mã Lớp";
         }
 
-        private void DataGridViewDS_HS_Click(object sender, EventArgs e)
-        {
-            if (dataGridViewDS_HS.Rows.Count == 0)
-            {
-                MessageBox.Show("Hãy thêm học sinh mới");
-            }
-            else
-            {
-                int index = dataGridViewDS_HS.SelectedRows[0].Index;
-
-                maHS = dataGridViewDS_HS.Rows[index].Cells["MaHS"].Value.ToString();
-
-                buttonChiTiet.Enabled = true;
-            }
-        }
-
         private void ButtonLoc_Click(object sender, EventArgs e)
         {
             string gt = comboBoxGioiTinh.SelectedItem.ToString();
@@ -173,6 +157,22 @@ namespace TTN_QL_HSGV.GUI.HocSinh
             {
                 dataGridViewDS_HS.Columns[columnIndex].HeaderCell.SortGlyphDirection = SortOrder.Descending;
                 return SortOrder.Descending;
+            }
+        }
+
+        private void dataGridViewDS_HS_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewDS_HS.Rows.Count == 0)
+            {
+                MessageBox.Show("Hãy thêm học sinh mới");
+            }
+            else
+            {
+                int index = dataGridViewDS_HS.SelectedRows[0].Index;
+
+                maHS = dataGridViewDS_HS.Rows[index].Cells["MaHS"].Value.ToString();
+
+                buttonChiTiet.Enabled = true;
             }
         }
     }

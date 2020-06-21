@@ -124,6 +124,7 @@
             // 
             this.buttonChiTiet.AutoSize = true;
             this.buttonChiTiet.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonChiTiet.Enabled = false;
             this.buttonChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonChiTiet.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.buttonChiTiet.Location = new System.Drawing.Point(331, 376);
@@ -164,6 +165,7 @@
             this.dataGridViewDS_HS.RowTemplate.Height = 24;
             this.dataGridViewDS_HS.Size = new System.Drawing.Size(606, 285);
             this.dataGridViewDS_HS.TabIndex = 51;
+            this.dataGridViewDS_HS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDS_HS_CellClick);
             this.dataGridViewDS_HS.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewDS_HS_ColumnHeaderMouseClick);
             // 
             // label1

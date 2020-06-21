@@ -90,6 +90,7 @@ namespace TTN_QL_HSGV.GUI.Lop
         private void dataGridViewDS_Lop_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             textBoxtenGVCN.Text = bus.GetTenGiaoVien(dataGridViewDS_Lop.CurrentRow.Cells[0].Value.ToString());
+            buttonChiTiet.Enabled = true;
         }
 
         private void buttonLoc_Click(object sender, EventArgs e)

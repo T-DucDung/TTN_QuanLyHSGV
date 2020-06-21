@@ -48,6 +48,19 @@ namespace TTN_QL_HSGV.GUI.GiangDay
             textBoxMon.Text = DataProvider.Instance.ExecuteScalar("gettenmonhoc '" + comboBoxGiaoVien.Text + "'").ToString();
         }
 
+        public string GhepChuoi(string str)
+        {
+            string result = "";
+            foreach (var item in str)
+            {
+                if (item != ' ')
+                {
+                    result += item;
+                }
+            }
+            return result;
+        }
+
         #endregion
 
 
@@ -107,6 +120,9 @@ namespace TTN_QL_HSGV.GUI.GiangDay
             textBoxSoTiet.Text = textBoxSoTiet.Text.Trim();
             textBoxThu.Text = textBoxThu.Text.Trim();
             textBoxTiet.Text = textBoxTiet.Text.Trim();
+
+            textBoxThu.Text = GhepChuoi(textBoxThu.Text);
+            textBoxTiet.Text = GhepChuoi(textBoxTiet.Text);
 
             if (textBoxDiaDiem.Text == "")
             {

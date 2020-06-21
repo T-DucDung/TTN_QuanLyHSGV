@@ -107,6 +107,7 @@
             // 
             this.buttonChiTiet.AutoSize = true;
             this.buttonChiTiet.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonChiTiet.Enabled = false;
             this.buttonChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonChiTiet.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.buttonChiTiet.Location = new System.Drawing.Point(283, 375);

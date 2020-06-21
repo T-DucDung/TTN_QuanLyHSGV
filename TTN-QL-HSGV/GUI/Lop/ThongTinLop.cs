@@ -185,5 +185,9 @@ namespace TTN_QL_HSGV.GUI.Lop
             dataGridViewDS_HS.Columns["MaLop"].HeaderText = "Mã Lớp";
         }
 
+        private void dataGridViewDS_HS_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            buttonChiTietHS.Enabled = true;
+        }
     }
 }

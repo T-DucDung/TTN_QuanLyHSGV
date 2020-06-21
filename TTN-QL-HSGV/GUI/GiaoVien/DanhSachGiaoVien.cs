@@ -98,23 +98,6 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
             this.Show();
         }
 
-        private void DataGridViewDS_GV_Click(object sender, EventArgs e)
-        {
-            if (dataGridViewDS_GV.Rows.Count == 0)
-            {
-                MessageBox.Show("Hãy thêm giáo viên mới");
-            }
-            else
-            {
-                int index = dataGridViewDS_GV.SelectedRows[0].Index;
-
-                maGV = dataGridViewDS_GV.Rows[index].Cells["MaGV"].Value.ToString();
-
-                buttonChiTiet.Enabled = true;
-
-            }
-        }
-
         private void DanhSachGiaoVien_Load(object sender, EventArgs e)
         {
             dataGridViewDS_GV.DataSource = controllerGV.XemTatCaGV();
@@ -186,6 +169,23 @@ namespace TTN_QL_HSGV.GUI.GiaoVien
             {
                 dataGridViewDS_GV.Columns[columnIndex].HeaderCell.SortGlyphDirection = SortOrder.Descending;
                 return SortOrder.Descending;
+            }
+        }
+
+        private void dataGridViewDS_GV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewDS_GV.Rows.Count == 0)
+            {
+                MessageBox.Show("Hãy thêm giáo viên mới");
+            }
+            else
+            {
+                int index = dataGridViewDS_GV.SelectedRows[0].Index;
+
+                maGV = dataGridViewDS_GV.Rows[index].Cells["MaGV"].Value.ToString();
+
+                buttonChiTiet.Enabled = true;
+
             }
         }
     }

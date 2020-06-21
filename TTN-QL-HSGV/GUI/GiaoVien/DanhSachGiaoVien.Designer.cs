@@ -71,8 +71,8 @@
             this.dataGridViewDS_GV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDS_GV.Size = new System.Drawing.Size(606, 260);
             this.dataGridViewDS_GV.TabIndex = 26;
+            this.dataGridViewDS_GV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDS_GV_CellClick);
             this.dataGridViewDS_GV.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridViewDS_GV_ColumnHeaderMouseClick);
-            this.dataGridViewDS_GV.Click += new System.EventHandler(this.DataGridViewDS_GV_Click);
             // 
             // label2
             // 
