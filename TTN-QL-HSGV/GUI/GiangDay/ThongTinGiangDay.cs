@@ -26,9 +26,11 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         {
             InitializeComponent();
 
+            comboBoxGiaoVien.DisplayMember = "TenGV";
+            comboBoxGiaoVien.ValueMember = "MaGV";
             comboBoxGiaoVien.DataSource = GiangDayBUS.GetDanhSachGiaoVienCaTruong();
             comboBoxLop.DataSource = GiangDayBUS.GetDanhSachLop();
-            
+
             comboBoxGiaoVien.SelectedItem = maGV;
             comboBoxLop.SelectedItem = maLop;
             textBoxSoTiet.Text = soTiet.ToString();
@@ -77,7 +79,7 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         private void buttonChiTietGV_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ThongTinGiaoVien formTTGV = new ThongTinGiaoVien(comboBoxGiaoVien.Text);
+            ThongTinGiaoVien formTTGV = new ThongTinGiaoVien(comboBoxGiaoVien.SelectedValue.ToString());
             formTTGV.FormClosed += FormTTGV_FormClosed;
             formTTGV.Show();
         }
@@ -89,7 +91,7 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         private void buttonChiTietLop_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ThongTinLop formTTL = new ThongTinLop(comboBoxLop.Text,comboBoxGiaoVien.Text);
+            ThongTinLop formTTL = new ThongTinLop(comboBoxLop.Text,comboBoxGiaoVien.SelectedValue.ToString());
             formTTL.FormClosed += FormTTL_FormClosed;
             formTTL.Show();
         }
@@ -194,26 +196,27 @@ namespace TTN_QL_HSGV.GUI.GiangDay
                             textBoxTiet.Text = XoaKiTuTrangOGiua(textBoxTiet.Text);
                             textBoxSoTiet.Text = XoaKiTuTrangOGiua(textBoxSoTiet.Text);
                             
-                            if (comboBoxGiaoVien.Text == maGVTam && comboBoxLop.Text != maLopTam)
+                            if (comboBoxGiaoVien.SelectedValue.ToString() == maGVTam && comboBoxLop.Text != maLopTam)
                             {
-                                GiangDayBUS.UpdateGiangDay(comboBoxGiaoVien.Text, comboBoxGiaoVien.Text, maLopTam, comboBoxLop.Text, int.Parse(textBoxSoTiet.Text), textBoxDiaDiem.Text, textBoxThu.Text, textBoxTiet.Text);                            
+                                GiangDayBUS.UpdateGiangDay(comboBoxGiaoVien.SelectedValue.ToString(), comboBoxGiaoVien.SelectedValue.ToString(), maLopTam, comboBoxLop.Text, int.Parse(textBoxSoTiet.Text), textBoxDiaDiem.Text, textBoxThu.Text, textBoxTiet.Text);                            
                             }
-                            else if(comboBoxGiaoVien.Text != maGVTam && comboBoxLop.Text == maLopTam)
+                            else if(comboBoxGiaoVien.SelectedValue.ToString() != maGVTam && comboBoxLop.Text == maLopTam)
                             {
-                                GiangDayBUS.UpdateGiangDay(maGVTam , comboBoxGiaoVien.Text, comboBoxLop.Text, comboBoxLop.Text, int.Parse(textBoxSoTiet.Text), textBoxDiaDiem.Text, textBoxThu.Text, textBoxTiet.Text);
+                                GiangDayBUS.UpdateGiangDay(maGVTam , comboBoxGiaoVien.SelectedValue.ToString(), comboBoxLop.Text, comboBoxLop.Text, int.Parse(textBoxSoTiet.Text), textBoxDiaDiem.Text, textBoxThu.Text, textBoxTiet.Text);
                             }
                             else
                             {
-                                GiangDayBUS.UpdateGiangDay(comboBoxGiaoVien.Text, comboBoxGiaoVien.Text, comboBoxLop.Text, comboBoxLop.Text, int.Parse(textBoxSoTiet.Text), textBoxDiaDiem.Text, textBoxThu.Text, textBoxTiet.Text);
+                                GiangDayBUS.UpdateGiangDay(comboBoxGiaoVien.SelectedValue.ToString(), comboBoxGiaoVien.SelectedValue.ToString(), comboBoxLop.Text, comboBoxLop.Text, int.Parse(textBoxSoTiet.Text), textBoxDiaDiem.Text, textBoxThu.Text, textBoxTiet.Text);
                             }
 
                             MessageBox.Show("------Thành Công!!-------");
                             this.Close();
 
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
                             MessageBox.Show("Xảy 1 lỗi gì đó chờ bản nâng cấp sau fix!!");
+                            MessageBox.Show(e.ToString());
                         }
                     }
                     else
@@ -238,7 +241,7 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         {
             if (comboBoxGiaoVien.SelectedIndex > -1)
             {
-                textBoxMon.Text = DataProvider.Instance.ExecuteScalar("gettenmonhoc '" + comboBoxGiaoVien.Text + "'").ToString();
+                textBoxMon.Text = DataProvider.Instance.ExecuteScalar("gettenmonhoc '" + comboBoxGiaoVien.SelectedValue.ToString() + "'").ToString();
             }
         }
 

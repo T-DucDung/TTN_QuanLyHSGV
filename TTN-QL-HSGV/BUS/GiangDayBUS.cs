@@ -49,13 +49,29 @@ namespace TTN_QL_HSGV.BUS
         }
 
 
-        public static List<string> GetDanhSachGiaoVienCaTruong()
+        public static List<GiaoVien> GetDanhSachGiaoVienCaTruong()
         {
             DataTable dt = new DataTable();
 
-            dt = DataProvider.Instance.ExecuteQuery("SELECT MaGV From GIAOVIEN");
+            dt = DataProvider.Instance.ExecuteQuery("SELECT * From GIAOVIEN");
 
-            return Convert(dt);
+            return GetDSGV(dt);
+        }
+        public static List<GiaoVien> GetDSGV(DataTable dt)
+        {
+            List<GiaoVien> lgv = new List<GiaoVien>();
+            lgv = (from DataRow dr in dt.Rows
+                    select new GiaoVien()
+                    {
+                        MaGV = dr["MaGV"].ToString(),
+                        TenGV = dr["TenGV"].ToString(),
+                        ChucVu = dr["ChucVu"].ToString(),
+                        DiaChi = dr["DiaChi"].ToString(),
+                        GioiTinh = dr["GioiTinh"].ToString(),
+                        MaMon = dr["MaMon"].ToString(),
+                        Sdt = dr["Sdt"].ToString()
+                    }).ToList();
+            return lgv;
         }
 
 
