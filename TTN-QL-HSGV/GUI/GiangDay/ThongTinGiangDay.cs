@@ -31,7 +31,7 @@ namespace TTN_QL_HSGV.GUI.GiangDay
             comboBoxGiaoVien.DataSource = GiangDayBUS.GetDanhSachGiaoVienCaTruong();
             comboBoxLop.DataSource = GiangDayBUS.GetDanhSachLop();
 
-            comboBoxGiaoVien.SelectedItem = maGV;
+            comboBoxGiaoVien.SelectedValue = maGV;
             comboBoxLop.SelectedItem = maLop;
             textBoxSoTiet.Text = soTiet.ToString();
             textBoxDiaDiem.Text = diaDiem;
@@ -213,10 +213,9 @@ namespace TTN_QL_HSGV.GUI.GiangDay
                             this.Close();
 
                         }
-                        catch (Exception ex)
+                        catch
                         {
-                            MessageBox.Show("Xảy 1 lỗi gì đó chờ bản nâng cấp sau fix!!");
-                            MessageBox.Show(e.ToString());
+                            MessageBox.Show("Lịch giảng dạy cho giáo viên tại lớp này đã tồn tại!");
                         }
                     }
                     else

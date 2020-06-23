@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChinh));
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageChinh = new System.Windows.Forms.TabPage();
@@ -200,7 +201,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(587, 290);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Hướng Dẫn Sử Dụng\r\nPhần Mềm";
+            this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
             // FormChinh
             // 

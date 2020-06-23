@@ -117,4 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Hướng Dẫn Sử Dụng Phần Mềm
+-----------------------------------------------------------------------------
+Các giao diện chung thường sẽ có một bộ lọc, một bảng danh sách và các nút chức năng
+Chọn một dòng trong bảng để xem chi tiết bên trong
+
+Trong phần quản lý học sinh hoặc quản lý giáo viên sẽ có phần thêm ảnh, điều này là không 
+bắt buộc nhưng nếu thêm không được thêm video làm ảnh đại diện việc này sẽ dẫn tới lỗi 
+không mong muốn.
+
+Trong phần quản lý lớp việc thêm học sinh vào lớp sẽ được tính bằng cách tích vào các ô trong
+cột 'Thêm' và nhấn Lưu</value>
+  </data>
 </root>

@@ -23,6 +23,8 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         {
             InitializeComponent();
             comboBoxLop.DataSource = GiangDayBUS.GetDanhSachLop();
+            comboBoxGiaoVien.DisplayMember = "TenGV";
+            comboBoxGiaoVien.ValueMember = "MaGV";
             comboBoxGiaoVien.DataSource = GiangDayBUS.GetDanhSachGiaoVienCaTruong();
             uploaddata();
         }
@@ -45,7 +47,7 @@ namespace TTN_QL_HSGV.GUI.GiangDay
 
         public void uploaddata()
         {
-            textBoxMon.Text = DataProvider.Instance.ExecuteScalar("gettenmonhoc '" + comboBoxGiaoVien.Text + "'").ToString();
+            textBoxMon.Text = DataProvider.Instance.ExecuteScalar("gettenmonhoc '" + comboBoxGiaoVien.SelectedValue.ToString() + "'").ToString();
         }
 
         public string GhepChuoi(string str)
@@ -73,14 +75,14 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         {
             if (comboBoxGiaoVien.SelectedIndex > -1)
             {
-                textBoxMon.Text = DataProvider.Instance.ExecuteScalar("gettenmonhoc '" + comboBoxGiaoVien.Text + "'").ToString();
+                textBoxMon.Text = DataProvider.Instance.ExecuteScalar("gettenmonhoc '" + comboBoxGiaoVien.SelectedValue.ToString() + "'").ToString();
             }
         }
 
         private void buttonChiTietGV_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ThongTinGiaoVien formTTGV = new ThongTinGiaoVien(comboBoxGiaoVien.Text);
+            ThongTinGiaoVien formTTGV = new ThongTinGiaoVien(comboBoxGiaoVien.SelectedValue.ToString());
             formTTGV.FormClosed += FormTTGV_FormClosed;
             formTTGV.Show();
         }
@@ -93,7 +95,7 @@ namespace TTN_QL_HSGV.GUI.GiangDay
         private void buttonChiTietLop_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ThongTinLop formTTL = new ThongTinLop(comboBoxLop.Text,comboBoxGiaoVien.Text);
+            ThongTinLop formTTL = new ThongTinLop(comboBoxLop.Text,comboBoxGiaoVien.SelectedValue.ToString());
             formTTL.FormClosed += FormTTL_FormClosed;
             formTTL.Show();
         }
@@ -196,15 +198,14 @@ namespace TTN_QL_HSGV.GUI.GiangDay
                             textBoxThu.Text = XoaKiTuTrangOGiua(textBoxThu.Text);
                             textBoxTiet.Text = XoaKiTuTrangOGiua(textBoxTiet.Text);
                             textBoxSoTiet.Text = XoaKiTuTrangOGiua(textBoxSoTiet.Text);
-                            GiangDayBUS.InsertGiangday(comboBoxGiaoVien.Text, comboBoxLop.Text, int.Parse(textBoxSoTiet.Text), textBoxDiaDiem.Text, textBoxThu.Text, textBoxTiet.Text);
+                            GiangDayBUS.InsertGiangday(comboBoxGiaoVien.SelectedValue.ToString(), comboBoxLop.Text, int.Parse(textBoxSoTiet.Text), textBoxDiaDiem.Text, textBoxThu.Text, textBoxTiet.Text);
 
                             MessageBox.Show("------Thành Công!!-------");
                             this.Close();
                         }
-                        catch (Exception ex)
+                        catch
                         {
-                            MessageBox.Show("Xảy 1 lỗi gì đó chờ bản nâng cấp sau fix!!");
-                            MessageBox.Show(ex.ToString());
+                            MessageBox.Show("Lịch giảng dạy cho giáo viên tại lớp này đã tồn tại!");
                         }
                     }
                     else

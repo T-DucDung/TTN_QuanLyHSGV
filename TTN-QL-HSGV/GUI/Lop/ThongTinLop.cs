@@ -144,6 +144,7 @@ namespace TTN_QL_HSGV.GUI.Lop
                 string[] info = comboBoxGVCN.Text.Split(':');
                 string maGV = info[0];
                 Lbus.UpdateLop(ID, textBoxLop.Text, maGV, comboBoxKhoaHoc.Text);
+                MessageBox.Show("Thành công!");
             }
             catch (Exception ex)
             {
